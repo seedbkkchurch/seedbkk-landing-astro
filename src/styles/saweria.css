@@ -27,7 +27,7 @@ body {
   padding: 5px 20px;
   font-weight: 400;
 }
-.custom-header .custom-nav .btn-masuk {
+.custom-header .custom-nav .btn-enter {
   background-color: #3cc4ce;
   padding: 10px 30px;
   border: 2px solid black;
@@ -37,7 +37,7 @@ body {
   /* bs: left top ambyar */
   box-shadow: 5px 7px 0px 1px rgb(20, 20, 20);
 }
-.custom-header .custom-nav .btn-daftar {
+.custom-header .custom-nav .btn-list {
   background-color: #e6b448;
   padding: 10px 30px;
   border: 2px solid black;
@@ -46,12 +46,12 @@ body {
   border-radius: 5px;
   box-shadow: 5px 7px 0px 1px rgb(20, 20, 20);
 }
-.custom-header .custom-nav .btn-masuk:hover {
+.custom-header .custom-nav .btn-enter:hover {
   margin-top: 3px;
   margin-bottom: -3px;
   box-shadow: 2px 3px 0px 1px rgb(20, 20, 20);
 }
-.custom-header .custom-nav .btn-daftar:hover {
+.custom-header .custom-nav .btn-list:hover {
   margin-top: 3px;
   margin-bottom: -3px;
   box-shadow: 2px 3px 0px 1px rgb(20, 20, 20);
