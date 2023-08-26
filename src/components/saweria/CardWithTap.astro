@@ -1,13 +1,17 @@
 ---
 interface Props {
+  title: string
   body: string
 }
 
-const { body } = Astro.props
+const { title, body } = Astro.props
 ---
 
-<div class="custom-content container">
+<div class="custom-mulai container">
   <div class="col-md-12 col-sm-12 col-12">
+    <div class="kanan">
+      <p>{title}</p>
+    </div>
     <div class="card">
       <div class="card-body">
         <p class="card-text">
