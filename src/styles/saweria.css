@@ -1,3 +1,5 @@
+
+
 body {
   font-family: 'IBM Plex Mono', 'Niramit', monospace;
   margin: 0;
@@ -12,8 +14,9 @@ body {
   padding: 50px 30px;
 }
 .custom-header .custom-header-title {
-  font-family: 'Comfortaa', cursive;
+  /*font-family: 'Comfortaa', cursive;*/
 }
+
 .custom-header .custom-header-title h1 {
   display: flex;
   justify-content: center;
@@ -71,7 +74,7 @@ body {
 .custom-content .card {
   justify-content: center;
   border: 3px solid black;
-  background-color: #f1f0f0;
+  background-color: #f2f7f5;
   box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
 }
 

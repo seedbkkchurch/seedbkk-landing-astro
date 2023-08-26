@@ -1,0 +1,17 @@
+.navbar-line-seedbkk {
+    border: 4px solid;
+    border-radius: 25px;
+}
+
+.nav-link{
+    color: white;
+}
+
+
+.nav-link:hover{
+    background-color: #7EC8E3;
+    border-radius: 25px ;
+    transform:scale(2);
+    opacity:1;
+}
+
