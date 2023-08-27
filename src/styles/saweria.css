@@ -1,5 +1,12 @@
 
 
+@font-face{
+	font-family: 'FuturaHandwritten';
+	font-style: normal;
+	src: url('/fonts/FuturaHandwritten.ttf') format('truetype');
+}
+
+
 body {
   font-family: 'IBM Plex Mono', 'Niramit', monospace;
   margin: 0;
@@ -95,7 +102,6 @@ body {
   box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
 }
 .custom-gabung .card .card-text {
-  font-family: 'Comfortaa', cursive;
   text-align: center;
   font-size: 20px;
 }
@@ -113,7 +119,7 @@ body {
   justify-content: flex-end;
 }
 .custom-mulai .kanan p {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'FuturaHandwritten', cursive;
   background-color: #df548e;
   padding: 5px 20px;
   border: 3px solid black;
@@ -146,7 +152,6 @@ body {
   justify-content: flex-end;
 }
 .custom-pricing .kanan p {
-  font-family: 'Comfortaa', cursive;
   background-color: #3cc4ce;
   padding: 5px 20px;
   border: 3px solid black;

@@ -12,7 +12,15 @@ const { title, description, pubDate, updatedDate } = Astro.props
 
 <html lang="en">
   <head>
+    <style >
+       main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+      }
+    </style>
     <BaseHead title={title} description={description} />
+  
   </head>
 
   <body>
