@@ -2,20 +2,27 @@
 interface Props {
   title: string
   body: string
+  color?: string
+  imageCovers?: Array<string>
 }
 
-const { title, body } = Astro.props
+const { title, body, color, imageCovers = [] } = Astro.props
+console.log(`imags: ${imageCovers}`)
 ---
 
 <div class="custom-pricing container">
   <div class="col-md-12 col-sm-12 col-12">
     <div class="kanan">
-      <p>{title}</p>
+      <p style=`background-color:${color};`>{title}</p>
     </div>
     <div class="card">
       <div class="card-body">
         <p class="card-text">
           {body}
+          
+          {imageCovers.map(item => 
+          <br/>
+          <img class=" img-fluid d-block mx-auto rounded" width={500} height={300} src={item} alt="" />)}
         </p>
       </div>
     </div>

@@ -10,7 +10,6 @@
 body {
   font-family: 'IBM Plex Mono', 'Niramit', monospace;
   margin: 0;
-  overflow: hidden;
   background: #fff;
   color: #333;
 }
