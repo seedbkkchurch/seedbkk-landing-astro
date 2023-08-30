@@ -6,40 +6,31 @@ import CardWithTap from '../components/saweria/CardWithTap.astro'
 import Layout from '../layouts/SeedBKK.astro'
 import Footer from '../components/Footer.astro'
 
-const msg = `โลกเราถูกสร้างขึ้นอย่างมีระบบระเบียบ
-ต้นไม้ที่ดูดซับแก๊สคาร์บอนไดออกไซด์และปล่อยแก๊สออกซิเจนในเวลากลางวัน
-การเกิดน้ำขึ้นน้ำลงเพราะแรงดึงดูดจากดวงจันทร์ รวมไปถึงระบบต่างๆ 
-ในร่างกายของมนุษย์ที่มีความซับซ้อน 
-เช่น ระบบหมุนเวียนเลือด ระบบขับถ่าย ระบบประสาท เป็นต้น หากระบบต่างๆ 
-เหล่านี้ทำงานผิดเพี้ยนไปโลกของเราก็คงไม่สามารถดำรงอยู่ได้ หากโลกเกิดจากการระเบิดครั้งใหญ่ 
-การระเบิดนั้นสร้างสิ่งที่เป็นระเบียบเหล่านี้ได้หรือ
-ต้องเกิดความบังเอิญมากเท่าไรจึงจะเกิดระบบที่สมบูรณ์และพอดีขนาดนี้ 
-สิ่งต่างๆ ล้วนราวกับว่าถูกออกแบบและสร้างโดยใครบางคน ผู้ที่ออกแบบและสร้างสิ่งต่างๆ
-เหล่านี้เองที่คริสเตียนเรียกว่าพระเจ้า
+const msg = `เราคือชุมชนคริสเตียน คริสเตียนคือคนที่เชื่อ รัก และติดตามคำสอนของพระเยซูคริสต์ เราเชื่อว่าพระเจ้าเป็นผู้สร้างทุกสิ่งรวมถึงชีวิตของคุณด้วย หากคุณสนใจที่จะรู้จักเรื่องราวของพระเจ้าเพิ่มเติม เรายินดีที่ให้มูลเพื่อที่คุณจะได้รู้จักเรื่องราวพระเจ้ามากขึ้น
 `
 
 const msg2 = `เราฟังเทศและ worship ไปด้วยกันไปหาอะไรกินกัน เราใช้เวลากับพระเจ้าและสร้างความสัมพันธ์ที่ดีกับพี่น้องในโบส`
 const msg3 = `เราเป็นโบสเล็กๆที่เพิ่งตั้งในองค์กรคริสจักรเมล็ดพันธุ์ที่สังกัดสหกินคริสเตียน  เราจะเน้นไปที่กลุ่มวัยรุ่น  วิธีการที่ทันสมัย แต่หลักการยังเหมือนเดิม`
-const imagesCover = ["/cover_2.jpg", "/cover_1.jpg"]
+const imagesCover = ['/covers/1.jpg', '/covers/2.jpg']
 ---
 
-<Layout title="About Me" description="Lorem ipsum dolor sit amet" pubDate={new Date('August 08 2021')}>
+<Layout title="ＳＥＥＤＢＫＫ" description="Lorem ipsum dolor sit amet" pubDate={new Date('August 08 2021')}>
   <Navbar />
 
   <Header />
 
   <Card body={msg} />
-  <!--  <div class="custom-gabung container">
-    <div class="col-md-12 col-sm-12 col-12">
-      <img src="/hand.png" alt="" />
+  <br>
+  <div class="custom-content container">
+    <div class="col-md-12 col-sm-12 col-12  " >
+      <img class="img-fluid rounded"  src="/peep_characters.png" alt="" />
     </div>
-  </div> -->
-
+  </div>
   <CardWithTap title="What We do?" body={msg2} />
 
-  <CardWithTap title="เราเป็นโบสแบบไหน?" body={msg3} color="#f5bfd2"  imageCovers={imagesCover}/> 
+<CardWithTap title="เราเป็นโบสแบบไหน?" body={msg3} color="#f5bfd2" imageCovers={imagesCover} />
 
-  <Footer />
+<Footer />
 </Layout>
 
 

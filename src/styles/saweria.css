@@ -10,7 +10,7 @@
 body {
   font-family: 'IBM Plex Mono', 'Niramit', monospace;
   margin: 0;
-  background: #fff;
+  background: #E6EDf5;
   color: #333;
 }
 
@@ -235,3 +235,5 @@ body {
 .custom-footer .kiri .card-text {
   margin-bottom: 1px;
 }
+
+
