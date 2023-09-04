@@ -12,13 +12,13 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const { title, description, image = '/SEED_CHURCH_LOGO_3.png' } = Astro.props
+const { title, description, image = './SEED_CHURCH_LOGO_3.png' } = Astro.props
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/SEED_CHURCH_LOGO_3.png" />
+<link rel="icon" type="image/svg+xml" href="./SEED_CHURCH_LOGO_3.png" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
