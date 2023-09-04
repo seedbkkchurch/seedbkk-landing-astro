@@ -6,7 +6,7 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://seedbkkchurch.github.io',
+  site: 'https://seedbkkchurch.github.io/seedbkk-landing-astro',
   base: '/seedbkk-landing-astro',
   integrations: [mdx(), sitemap(), image()]
 });
