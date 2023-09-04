@@ -1,0 +1,99 @@
+---
+import '../../styles/navbar.css'
+const mainTrust = 'https://www.seedchurch-thailand.com/%E0%B8%9E-%E0%B8%99%E0%B8%98%E0%B8%81-%E0%B8%88'
+const aboutUs =
+  'https://www.seedchurch-thailand.com/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87-%E0%B8%A3-%E0%B8%88-%E0%B8%81%E0%B9%82%E0%B8%9A%E0%B8%AA%E0%B8%96-1'
+const ourChruch = 'https://www.seedchurch-thailand.com/'
+---
+
+<div class="row">
+  <div class="col-md-2">
+    <div class="d-flex justify-content-center">
+      <div class="bg-border-time">
+        <h3 class="title-futuraHandwritten border-time">
+          <img src="/icons/stopwatch.png" alt="" width="32" height="32" class="rounded" />
+           Worship time Sunday 14.00-16.00
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="d-flex justify-content-center test" >
+      <nav class="navbar navbar-expand-lg navbar-light navbar-line-seedbkk">
+        <div class="container-fluid">
+          <img class="rounded" width={48} height={48} src="/SEED_CHURCH_LOGO_3.png" alt="" />
+          <a class="navbar-brand title-futuraHandwritten" href="#"> SeedBKK</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-lg-0 mb-2 me-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-bold fs-4 title-futuraHandwritten" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold fs-4 title-futuraHandwritten" href={ourChruch}>Our Chuch</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fw-bold fs-4 title-futuraHandwritten"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Data
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="https://www.youtube.com/@seedchurchthailand2297"
+                      >มานาจารย์ใหญ่และYoutube</a>
+                  </li>
+                  <li><a class="dropdown-item" href="https://www.youtube.com/@SEEDCHURCHTHAILAND">คำพยานชาวSeed</a></li>
+                  <li><a class="dropdown-item" href="https://www.seedchurch-thailand.com/leadership">Leadership</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fw-bold fs-4 title-futuraHandwritten"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Vision
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href={mainTrust}>หลักข้อเชื่อ</a></li>
+                  <li><a class="dropdown-item" href={aboutUs}>เกี่ยวกับเรา</a></li>
+                </ul>
+              </li>
+              <!---<li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="d-flex justify-content-center">
+      <div class="border-travel"> 
+       
+        เดินทางโดยรถไฟฟ้า BTS   <img src="/icons/railway.png"  width={48} height={48}/> ลงสถานีราชเทวี ออกประตูโรงแรมเอเชีย เดินมาทางขวา 130เมตร
+      </div>
+    </div>
+  </div>
+</div>
