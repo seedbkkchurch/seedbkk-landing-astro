@@ -8,6 +8,6 @@ import image from "@astrojs/image";
 export default defineConfig({
   //site: 'https://example.com',
   site: 'https://www.seedchurchbkk.org',
-  base: '/seedbkk-landing-astro/',
+
   integrations: [mdx(), sitemap(), image()]
 });
