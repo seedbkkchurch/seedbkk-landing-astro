@@ -1,6 +1,18 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "strictNullChecks": true
-  }
+    "forceConsistentCasingInFileNames": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "$types/*": ["src/@types/*"],
+      "$components/*": ["src/components/*",],
+  
+      "$constants/*": ["src/constants/*"],
+      "$functions/*": ["src/functions/*"],
+      "$layouts/*": ["src/layouts/*"]
+    },
+
+  },
+  "include": ["src"]
 }
