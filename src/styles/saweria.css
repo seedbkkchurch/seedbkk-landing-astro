@@ -8,7 +8,7 @@
 
 
 body {
-  font-family: 'IBM Plex Mono', 'Niramit', monospace;
+  font-family: 'Bai Jamjuree', monospace;
   margin: 0;
   background: #FAF8F6;
   color: #333;
@@ -237,3 +237,14 @@ body {
 }
 
 
+#typing {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}

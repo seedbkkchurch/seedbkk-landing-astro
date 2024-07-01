@@ -1,20 +1,186 @@
 ---
+
 const isHasGod =
   'https://www.seedchurch-thailand.com/%E0%B8%A3-%E0%B8%88-%E0%B8%81%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%88-%E0%B8%B2'
 ---
 
+
+
 <div class="custom-header container">
   <div class="custom-header-title">
-    <h1 class="title-futuraHandwritten">The Seed Of Bangkok City Church</h1>
-    <h4 class="">คริสตจักรเมล็ดพันธุ์กรุงเทพ</h1>
-    <img class="img-fluid rounded" width={600} height={272} src="./seed-anime.gif" alt="" />
+    <!-- <h1 class="title-futuraHandwritten">The Seed Of Bangkok City Church</h1> -->
+    <div class="body-typing">
+      <div class="container-typing">
+        <div class="text_hide"></div>
+        <!----------------------------->
+        <!--Change the number of words in the text and the animation will still work-->
+        <h1 class="title-futuraHandwritten text">The Seed Of Bangkok City Church</h4>
+        <!-------------------------------------->
+        <div class="text_cursor"></div>
+      </div>
+    </div>
+    <!--<img class="img-fluid rounded" width={600} height={272} src="./seed-anime.gif" alt="" /> -->
   </div>
   <div class="custom-nav">
-    <a class="btn btn-enter" href={isHasGod}
-      >พระเจ้ามีจริงไหม? <img height={32} width={32} src="./icons/JESUS.png" alt="" /></a
-    >
+    <a class="btn btn-enter" href={isHasGod}>
+      พระเจ้ามีจริงไหม? <img height={32} width={32} src="./icons/JESUS.png" alt="" />
+    </a>
     <a class="btn btn-list" href="https://line.me/R/ti/p/@501gghbd">
       Join SeedBKK <img height={32} width={32} src="./icons/LINE_Brand_icon.png" alt="" /></a
     >
   </div>
 </div>
+
+<script>
+  function typing_animation() {
+    let text_element: Element = document.querySelector('.text')!
+
+    let text_array = text_element.innerHTML.split('')
+    let text_array_slice = text_element.innerHTML.split(' ')
+    let text_len = text_array.length
+
+    const word_len = text_array_slice.map(word => {
+      return word.length
+    })
+
+    console.log(word_len)
+
+    let timings: KeyframeAnimationOptions = {
+      easing: `steps(${Number(word_len[0] + 1)}, end)`,
+      delay: 2000,
+      duration: 2000,
+      fill: 'forwards',
+    }
+
+    let cursor_timings = {
+      duration: 700,
+      iterations: Infinity,
+      easing: 'cubic-bezier(0,.26,.44,.93)',
+    }
+
+    // document.querySelector('.text_cursor').animate(
+    //   [
+    //     {
+    //       opacity: 0,
+    //     },
+    //     {
+    //       opacity: 0,
+    //       offset: 0.7,
+    //     },
+    //     {
+    //       opacity: 1,
+    //     },
+    //   ],
+    //   cursor_timings
+    // )
+
+    const cursorElement = document.querySelector('.text_cursor')
+    if (cursorElement !== null) {
+      cursorElement.animate([{ opacity: 0 }, { opacity: 0, offset: 0.7 }, { opacity: 1 }], cursor_timings)
+    }
+
+    if (text_array_slice.length == 1) {
+      timings.easing = `steps(${Number(word_len[0])}, end)`
+
+      let reveal_animation = document
+        .querySelector('.text_hide')!
+        .animate([{ left: '0%' }, { left: `${(100 / text_len) * word_len[0]}%` }], timings)
+
+      document
+        .querySelector('.text_cursor')!
+        .animate([{ left: '0%' }, { left: `${(100 / text_len) * word_len[0]}%` }], timings)
+
+      reveal_animation.onfinish = () => {
+        setTimeout(() => {
+          document.querySelector('.text_hide')!.animate([{ left: '0%' }], {
+            duration: 2000,
+            easing: 'cubic-bezier(.73,0,.38,.88)',
+          })
+          document.querySelector('.text_cursor')!.animate([{ left: '0%' }], {
+            duration: 2000,
+            easing: 'cubic-bezier(.73,0,.38,.88)',
+          })
+          typing_animation()
+        }, 1000)
+      }
+    } else {
+      document
+        .querySelector('.text_hide')!
+        .animate([{ left: '0%' }, { left: `${(100 / text_len) * (word_len[0] + 1)}%` }], timings)
+
+      document
+        .querySelector('.text_cursor')!
+        .animate([{ left: '0%' }, { left: `${(100 / text_len) * (word_len[0] + 1)}%` }], timings)
+    }
+
+    let left_instance = 0
+
+    for (let i = 1; i < text_array_slice.length; i++) {
+      console.log(word_len)
+      console.log(text_array_slice.length)
+      const single_word_len = word_len[i]
+      console.log(single_word_len)
+
+      if (i == 1) {
+        left_instance = (100 / text_len) * (word_len[i - 1] + 1)
+        console.log(left_instance)
+      }
+
+      let timings_2: KeyframeAnimationOptions = {
+        easing: `steps(${Number(single_word_len + 1)}, end)`,
+        delay: (2 * (i + 1) + 2 * i) * 1000,
+        // delay: ((i*2)-1)*1000,
+        duration: 2000,
+        fill: 'forwards',
+      }
+
+      if (i == text_array_slice.length - 1) {
+        timings_2.easing = `steps(${Number(single_word_len)}, end)`
+        let reveal_animation = document
+          .querySelector('.text_hide')!
+          .animate(
+            [{ left: `${left_instance}%` }, { left: `${left_instance + (100 / text_len) * word_len[i]}%` }],
+            timings_2
+          )
+
+        document
+          .querySelector('.text_cursor')!
+          .animate(
+            [{ left: `${left_instance}%` }, { left: `${left_instance + (100 / text_len) * word_len[i]}%` }],
+            timings_2
+          )
+
+        reveal_animation.onfinish = () => {
+          setTimeout(() => {
+            document.querySelector('.text_hide')!.animate([{ left: '0%' }], {
+              duration: 2000,
+              easing: 'cubic-bezier(.73,0,.38,.88)',
+            })
+            document.querySelector('.text_cursor')!.animate([{ left: '0%' }], {
+              duration: 2000,
+              easing: 'cubic-bezier(.73,0,.38,.88)',
+            })
+            typing_animation()
+          }, 1000)
+        }
+      } else {
+        document
+          .querySelector('.text_hide')!
+          .animate(
+            [{ left: `${left_instance}%` }, { left: `${left_instance + (100 / text_len) * (word_len[i] + 1)}%` }],
+            timings_2
+          )
+
+        document
+          .querySelector('.text_cursor')!
+          .animate(
+            [{ left: `${left_instance}%` }, { left: `${left_instance + (100 / text_len) * (word_len[i] + 1)}%` }],
+            timings_2
+          )
+      }
+
+      left_instance = left_instance + (100 / text_len) * (word_len[i] + 1)
+    }
+  }
+  typing_animation()
+</script>

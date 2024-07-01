@@ -1,0 +1,29 @@
+.body-typing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-typing {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .text_hide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #faf8f6;
+  }
+
+  .text_cursor {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #faf8f6;
+    border-left: 3px solid black;
+  }
