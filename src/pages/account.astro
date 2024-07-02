@@ -1,0 +1,44 @@
+---
+import Header from '$components/saweria/Header.astro'
+import Navbar from '$components/saweria/Navbar.astro'
+import Card from '$components/saweria/Card.astro'
+import CardWithTap from '$components/saweria/CardWithTap.astro'
+import Layout from '../layouts/SeedBKK.astro'
+import Footer from '$components/Footer.astro'
+import ContainerCards from '@/components/saweria/ContainerCards.astro'
+import ImageMove from '@/components/saweria/imageMove.astro'
+
+
+---
+
+<Layout
+  title="ＳＥＥＤＢＫＫ"
+  description="โบสกรุงเทพตอนบ่าย โบสเมล็ดพันพันธุ์กรุงเทพ โบสวัยรุ่น"
+  pubDate={new Date('Septerber 09 2023')}
+>
+  <Navbar />
+  <!-- <Header /> -->
+  <div class="custom-content container">
+    <div class="col-md-12 col-sm-12 col-12">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text ">
+             <h4>บัญชีธนาคาร คริสตจักรเมล็ดพันธุ์กรุงเทพ</h4>
+             <h4>ธนาคารไทยพานิชย์ สาขาสยามพารากอน</h4>
+             <h1>
+                <img src="./icons/SCB.BK_BIG-b5007084.png" width="200" height="64">
+                218-289481-4
+            </h1>
+            <p>ชื่อบัญชี น.ส เอกมณีและนันทิพัฒน์และนางวัธนี </p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <!-- <ContainerCards/> -->
+  
+  
+
+  <Footer />
+</Layout>
