@@ -1,0 +1,101 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import BaseHead from '$components/BaseHeadSeedBKK.astro'
+import '../styles/header.css'
+// import '../styles/saweria.css'
+import '../styles/typingEffect.css'
+
+
+type Props = CollectionEntry<'blog'>['data']
+
+const { title, description, pubDate, updatedDate } = Astro.props
+
+---
+
+<style>
+    video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+.viewport-header {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #ADFF2F;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 3vw; */
+  line-height: 1.2;
+  font-size: 3vw;
+  text-align: center;
+  /* span {
+    display: block;
+    font-size: 10vw;
+    letter-spacing: -1.3vw;
+  } */
+  text-shadow:
+    1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    /* 1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191, */
+    /* 1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191, */
+    1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2),
+    1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+main {
+  background: rgba(black, 0.66);
+  color: white;
+  position: relative;
+  padding: 1rem;
+  p {
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+}
+</style>
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  
+  </head>
+
+  <body>
+    <main>
+        <video id="background-video" autoplay loop muted poster="./bg.jfif">
+            <source src="https://rr3---sn-5np5po4v-c33zr.googlevideo.com/videoplayback?expire=1719935882&ei=Ks-DZtyKGajW6dsPhMqP6AQ&ip=168.119.148.247&id=o-AE4QXILSenY-U06tOCzaixn7z86-TtAV-GaW1l6YgBZt&itag=299&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=40213690&dur=76.666&lmt=1632026860074699&keepalive=yes&c=ANDROID_TESTSUITE&txp=5311224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAPKRjfe4xlwgw5DM96Vry-_nFuS2y69NN20IKmx0iP2MAiBEDrnZT8twT8DLEVIAiY2bB_jUhK9XUASADzg4fJY9yg%3D%3D&redirect_counter=1&rm=sn-4g5e6s7z&fexp=24350518&req_id=f1dd253a57a2a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=GL&mip=124.121.26.202&mm=31&mn=sn-5np5po4v-c33zr&ms=au&mt=1719913985&mv=m&mvi=3&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AHlkHjAwRAIgFhvGhyXrwPJvEy4oZWtiPqoCuEicRZZIcfKCrtSgk3sCICcbipHHgOhwEvQkzZWrurV3bjAhzzIELTaMenVV-e7q" type="video/mp4">
+          </video>
+        
+          <header class="viewport-header">
+            
+            <h1 class="title-futuraHandwritten">
+                The Seed Of Bangkok City Church
+            </h1>
+          </header>
+    </main>
+  </body>
+</html>
+
+
+
+  
