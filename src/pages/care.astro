@@ -1,0 +1,79 @@
+---
+import Header from '$components/saweria/Header.astro'
+import Navbar from '$components/saweria/Navbar.astro'
+import Card from '$components/saweria/Card.astro'
+import CardWithTap from '$components/saweria/CardWithTap.astro'
+import Layout from '../layouts/SeedBKK.astro'
+import Footer from '$components/Footer.astro'
+import ContainerCards from '@/components/saweria/ContainerCards.astro'
+import LoopImages from '@/components/saweria/LoopImages.astro'
+
+
+---
+
+<Layout
+  title="ＳＥＥＤＢＫＫ"
+  description="โบสกรุงเทพตอนบ่าย โบสเมล็ดพันพันธุ์กรุงเทพ โบสวัยรุ่น"
+  pubDate={new Date('Septerber 09 2023')}
+>
+  <Navbar />
+  <Header />
+   <div class="loop_css3">
+    <div>กลุ่มแคร์วันพุธ 19.00 pm. </div>
+    <div> at SCC Creative Space</div>
+    <div>กลุ่มแคร์วันพุธ 19.00 pm. </div>
+    <div> at SCC Creative Space</div>
+   </div>
+
+
+   <section class="container-cards">
+    <div class="category_container">
+      <div class="content">
+        <img src="./cardsEffect2/place1.jpg" class="professio_image" alt="Profession" />
+        <img src="./cardsEffect2/place2.jpg" class="profile_image" alt="Profile" />
+        <div class="profile_detail">
+          <span>สถานที่</span>
+          <p></p>
+        </div>
+  
+        <div class="wrapper">
+          <div class="profile_quote">
+            <p>เจอตึกสภามองซ้าย</p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <img src="./cardsEffect2/care2.jpg" class="profession_image" alt="Profession" />
+        <img src="./cardsEffect2/care1.jpg" class="profile_image" alt="Profile" />
+        <div class="profile_detail">
+          <span>ห้องประชุม</span>
+          <p></p>
+        </div>
+        <div class="wrapper">
+          <div class="profile_quote">
+            <p>แบ่งบันผ่านการขอบคุณพระเจ้า</p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <img src="./cardsEffect2/cafe1.jpg" class="professio_image" alt="Profession" />
+        <img src="./cardsEffect2/cafe2.jpg" class="profile_image" alt="Profile" />
+        <div class="profile_detail">
+          <span>SCC Creative Space</span>
+          <p></p>
+        </div>
+        <div class="wrapper">
+          <div class="profile_quote">
+            <p>
+              คาเฟ่ส่งต่อความรักของพระเจ้า 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+
