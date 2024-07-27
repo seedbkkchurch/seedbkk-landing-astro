@@ -1,0 +1,29 @@
+---
+import Header from '$components/saweria/Header.astro'
+import Navbar from '$components/saweria/Navbar.astro'
+import Card from '$components/saweria/Card.astro'
+import CardWithTap from '$components/saweria/CardWithTap.astro'
+import Layout from '../layouts/SeedBKK.astro'
+import Footer from '$components/Footer.astro'
+import ContainerCards from '@/components/saweria/ContainerCards.astro'
+import LoopImages from '@/components/saweria/LoopImages.astro'
+---
+
+<Layout
+  title="ＳＥＥＤＢＫＫ"
+  description="โบสกรุงเทพตอนบ่าย โบสเมล็ดพันพันธุ์กรุงเทพ โบสวัยรุ่น"
+  pubDate={new Date('Septerber 09 2023')}
+>
+  <Navbar />
+  <Header />
+  <div class="loop_css3">
+    <div>SEED CAMP 2024</div>
+    <div>SEED CAMP 2024</div>
+    <div>SEED CAMP 2024</div>
+  </div>
+  <div class="custom-content container">
+    <img src="detail_camp2024.png" alt="detail_camp2024" > 
+  </div>
+  <br />
+  <Footer />
+</Layout>
