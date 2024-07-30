@@ -8,7 +8,22 @@ import Footer from '$components/Footer.astro'
 import ContainerCards from '@/components/saweria/ContainerCards.astro'
 
 
+
 ---
+<style>
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full viewport height */
+    text-align: center; /* Center text horizontally */
+  }
+  .large {
+    font-size: 5vw; /* Font size scales with viewport width */
+  }
+</style>
+
 
 <Layout
   title="ＳＥＥＤＢＫＫ"
@@ -17,24 +32,29 @@ import ContainerCards from '@/components/saweria/ContainerCards.astro'
 >
   <Navbar />
   <!-- <Header /> -->
-  <div class="custom-content container">
+  <div class="center-container">
+    <h1 class="large">บัญชีธนาคาร คริสตจักร</h1>
+    <h1 class="large">ธนาคารไทยพานิชย์ สาขาสยามพารากอน</h1>
+    <h1 class="large">
+      <img src="/icons/SCB.BK_BIG-b5007084.png" width="400" height="128">
+      218-289481-4
+    </h1>
+    <h3>ชื่อบัญชี น.ส เอกมณีและนันทิพัฒน์และนางวัธนี </h3>
+  </div>
+  <!-- <div class="custom-content container">
+    
     <div class="col-md-12 col-sm-12 col-12">
+      
       <div class="card">
         <div class="card-body">
           <p class="card-text ">
-             <h4>บัญชีธนาคาร คริสตจักรเมล็ดพันธุ์กรุงเทพ</h4>
-             <h4>ธนาคารไทยพานิชย์ สาขาสยามพารากอน</h4>
-             <h1>
-                <img src="/icons/SCB.BK_BIG-b5007084.png" width="200" height="64">
-                218-289481-4
-            </h1>
-            <p>ชื่อบัญชี น.ส เอกมณีและนันทิพัฒน์และนางวัธนี </p>
+           
           </p>
         </div>
       </div>
     </div>
   </div>
-  <br/>
+  <br/> -->
   <!-- <ContainerCards/> -->
   
   
