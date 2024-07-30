@@ -12,6 +12,24 @@ const { title, description, pubDate, updatedDate } = Astro.props
 ---
 
 
+<style>
+  .iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <html lang="en">
   <head>
@@ -20,14 +38,14 @@ const { title, description, pubDate, updatedDate } = Astro.props
 
   <body>
     <main>
-      <iframe src="https://www.youtube.com/shorts/gzSySr_lQlQ" allow="autoplay"></iframe>
-
-      <!-- <header class="viewport-header">
-            
-            <h1 class="title-futuraHandwritten" >
-                The Seed Of Bangkok City Church
-            </h1>
-          </header> -->
+      <iframe width="1300" height="1500"
+      src="https://www.youtube.com/embed/gzSySr_lQlQ?autoplay=1&loop=1&playlist=gzSySr_lQlQ"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+      
+      
     </main>
   </body>
 </html>
