@@ -7,10 +7,22 @@ import Layout from '../layouts/SeedBKK.astro'
 import Footer from '$components/Footer.astro'
 import ContainerCards from '@/components/saweria/ContainerCards.astro'
 import LoopImages from '@/components/saweria/LoopImages.astro'
-
-
 ---
 
+<style>
+  .section {
+    padding: 100px 20px;
+  }
+  .bg-light-blue {
+    background-color:  #e3fbd5	; /* Light blue */
+  }
+  .bg-lighter {
+    background-color: #f7f9fc; /* Slightly lighter background */
+  }
+  p {
+    font-size: 30px;
+  }
+</style>
 <Layout
   title="ＳＥＥＤＢＫＫ"
   description="โบสกรุงเทพตอนบ่าย โบสเมล็ดพันพันธุ์กรุงเทพ โบสวัยรุ่น"
@@ -18,15 +30,52 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
 >
   <Navbar />
   <Header />
-   <div class="loop_css3">
+  <!-- <div class="loop_css3">
     <div>กลุ่มแคร์วันพุธ 19.00 pm. </div>
     <div> at SCC Creative Space</div>
     <div>กลุ่มแคร์วันพุธ 19.00 pm. </div>
     <div> at SCC Creative Space</div>
-   </div>
+   </div> -->
+  <div class="container-fluid">
+    <div class="row section bg-light-blue ">
+      <div class="col-md-2 d-flex justify-content-center align-items-center">
+        <!-- You can replace this with an actual image or SVG -->
+        <img src="/cardsEffect2/place2.jpg" width="450" height="300" class="float-left rounded" alt="care1" />
+      </div>
+      <div class="col-md-8">
+        <h2 class="fw-bold">ราชเทวี- creative space 19.00-21.00 วันพุธ</h2>
+        <p>
+          ราชเทวี- creative space
+        </p>
+      </div>
+    </div>
 
+    <div class="row section bg-lighter">
+      <div class="col-md-2 d-flex justify-content-center align-items-center">
+        <!-- You can replace this with an actual image or SVG -->
+        <i class="icon bi bi-gear-fill"></i>
+        <img src="/cardsEffect2/place2.jpg" width="450" height="300" class="float-left rounded" alt="care1" />
+      </div>
+      <div class="col-md-10">
+        <h2 class="fw-bold">ม.เกษตร- อาคารเรียนรวม 3 18.00-20.00 วันพฤหัส</h2>
+        <p>ม.เกษตร- อาคารเรียนรวม 3</p>
+      </div>
+      
+    </div>
 
-   <section class="container-cards">
+    <div class="row section bg-light-blue">
+      <div class="col-md-2 d-flex justify-content-center align-items-center">
+        <!-- You can replace this with an actual image or SVG -->
+        <i class="icon bi bi-gear-fill"></i>
+        <img src="/cardsEffect2/place2.jpg" width="450" height="300" class="float-left rounded" alt="care1" />
+      </div>
+      <div class="col-md-10">
+        <h2 class="fw-bold">19.00-21.00 วันศุกร์</h2>
+        <p>ม.รังสิต - โรงอาหาร ตึก6 </p>
+      </div>
+    </div>
+
+    <!-- <section class="container-cards">
     <div class="category_container">
       <div class="content">
         <img src="/cardsEffect2/place1.jpg" class="professio_image" alt="Profession" />
@@ -71,9 +120,8 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
         </div>
       </div>
     </div>
-  </section>
-  
-  <Footer />
+  </section> -->
+
+    <Footer />
+  </div>
 </Layout>
-
-

@@ -1,0 +1,58 @@
+---
+import Header from '$components/saweria/Header.astro'
+import Navbar from '$components/saweria/Navbar.astro'
+import Layout from '../layouts/SeedBKK.astro'
+import Footer from '$components/Footer.astro'
+---
+<style>
+  
+    .section {
+        padding: 50px 20px;
+    }
+    .icon {
+        font-size: 40px;
+    }
+    .bg-light-blue {
+        background-color: #dce6f2; /* Light blue */
+    }
+    .bg-lighter {
+        background-color: #f7f9fc; /* Slightly lighter background */
+    }
+</style>
+<Layout
+  title="คริสตจักรเมล็ดพันธุ์กรุงเทพ | SEEDBKK"
+  description="สถานที่ที่คุณสามารถพบกับเพื่อนใหม่ สร้างความสัมพันธ์ที่ยั่งยืน และค้นหาความหมายในชีวิต ร่วมกันกับเพื่อนๆวัยรุ่นที่มีความเชื่อและเป้าหมายเดียวกัน เรามีกิจกรรมสนุกสนาน การนมัสการที่สดใส และการสนับสนุนจากทีมงานที่มีประสบการณ์ มาร่วมเดินทางในเส้นทางแห่งความเชื่อและความรักกับเราในโบสวัยรุ่น"
+  pubDate={new Date('July 09 2024')}
+>
+  <Navbar />
+  <Header />
+  <div class="container-fluid">
+    <div class="row section bg-light-blue">
+      <div class="col-md-2 d-flex justify-content-center align-items-center">
+        <!-- You can replace this with an actual image or SVG -->
+        <i class="icon bi bi-gear-fill"></i>
+      </div>
+      <div class="col-md-10">
+        <h2 class="fw-bold">ทดสอบ</h2>
+        <p>
+          Each piece of the component can be easily customized to your liking. You can toggle individual elements
+          visibility or change their appearance with CSS.
+        </p>
+      </div>
+    </div>
+
+    <div class="row section bg-lighter">
+      <div class="col-md-2 d-flex justify-content-center align-items-center">
+        <i class="icon bi bi-speedometer2"></i>
+      </div>
+      <div class="col-md-10">
+        <h2 class="fw-bold">OPTIMIZED</h2>
+        <p>Optimized for performance, the component updates and renders very fast even with complex setups.</p>
+      </div>
+    </div>
+
+
+
+
+  <Footer />
+</Layout>
