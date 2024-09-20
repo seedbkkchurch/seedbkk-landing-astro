@@ -10,17 +10,16 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
 ---
 
 <style>
-  .section {
-    padding: 100px 20px;
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full viewport height */
+    text-align: center; /* Center text horizontally */
   }
-  .bg-light-blue {
-    background-color:  #e3fbd5	; /* Light blue */
-  }
-  .bg-lighter {
-    background-color: #f7f9fc; /* Slightly lighter background */
-  }
-  p {
-    font-size: 30px;
+  .large {
+    font-size: 4vw; /* Font size scales with viewport width */
   }
 </style>
 <Layout
@@ -29,17 +28,14 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
   pubDate={new Date('Septerber 09 2023')}
 >
   <Navbar />
-  <Header />
-  <!-- <div class="loop_css3">
-    <div>กลุ่มแคร์วันพุธ 19.00 pm. </div>
-    <div> at SCC Creative Space</div>
-    <div>กลุ่มแคร์วันพุธ 19.00 pm. </div>
-    <div> at SCC Creative Space</div>
-   </div> -->
 
-    
+  <div class="center-container">
+    <h1 class="large">ราชเทวี - creative space วันพุธ 19.00-21.00</h1>
+    <h1 class="large">ม.เกษตร - อาคารเรียนรวม 3 วันพฤษหัส 18.00-20.00</h1>
+    <h1 class="large">ม.รังสิต - โรงอาหาร ตึก 6 วันศุกร์ 19.00-21.00</h1>
+  </div>
 
-    <!-- <section class="container-cards">
+  <!-- <section class="container-cards">
     <div class="category_container">
       <div class="content">
         <img src="/cardsEffect2/place1.jpg" class="professio_image" alt="Profession" />
@@ -86,6 +82,5 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
     </div>
   </section> -->
 
-    <Footer />
-  </div>
+  <Footer />
 </Layout>
