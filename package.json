@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "dev-allow-host": "astro --host 0.0.0.0 dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "preview-allow-host": "astro --host 0.0.0.0 preview",
     "astro": "astro",
     "format": "prettier --write --plugin-search-dir=. ."
   },
