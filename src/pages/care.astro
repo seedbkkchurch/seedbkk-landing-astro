@@ -7,6 +7,7 @@ import Layout from '../layouts/SeedBKK.astro'
 import Footer from '$components/Footer.astro'
 import ContainerCards from '@/components/saweria/ContainerCards.astro'
 import LoopImages from '@/components/saweria/LoopImages.astro'
+import ImageGallery from '@/components/ImageGallery'
 ---
 
 <style>
@@ -24,14 +25,10 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
 </style>
 <Layout>
   <Navbar />
+  <!-- <ImageGallery client:only="react" /> -->
+  <h1 class="large text-center">ราชเทวี - creative space วันพุธ 19.00-21.00</h1>
 
-  <div class="center-container">
-    <h1 class="large">ราชเทวี - creative space วันพุธ 19.00-21.00</h1>
-    <h1 class="large">ม.เกษตร - อาคารเรียนรวม 3 วันพฤษหัส 18.00-20.00</h1>
-    <h1 class="large">ม.รังสิต - โรงอาหาร ตึก 6 วันศุกร์ 19.00-21.00</h1>
-  </div>
-
-  <!-- <section class="container-cards">
+  <section class="container-cards">
     <div class="category_container">
       <div class="content">
         <img src="/cardsEffect2/place1.jpg" class="professio_image" alt="Profession" />
@@ -40,7 +37,7 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
           <span>สถานที่</span>
           <p></p>
         </div>
-  
+
         <div class="wrapper">
           <div class="profile_quote">
             <p>เจอตึกสภามองซ้าย</p>
@@ -69,14 +66,72 @@ import LoopImages from '@/components/saweria/LoopImages.astro'
         </div>
         <div class="wrapper">
           <div class="profile_quote">
-            <p>
-              คาเฟ่ส่งต่อความรักของพระเจ้า 
-            </p>
+            <p>คาเฟ่ส่งต่อความรักของพระเจ้า</p>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <Footer />
+  <h1 class="large text-center">ม.เกษตร - อาคารเรียนรวม 3 วันพฤหัส 18.00-20.00</h1>
+  <div class="container py-4">
+    <div class="row g-3">
+      <div class="col-12 col-md-4">
+        <img
+          src="https://placehold.co/300x300"
+          alt="LEGO bricks"
+          class="img-fluid w-100 h-100 object-fit-cover rounded"
+          style={{ minHeight: '300px' }}
+        />
+      </div>
+      <div class="col-12 col-md-4">
+        <img
+          src="https://placehold.co/300x300"
+          alt="Digital interface presentation"
+          class="img-fluid w-100 h-100 object-fit-cover rounded"
+          style={{ minHeight: '300px' }}
+        />
+      </div>
+      <div class="col-12 col-md-4">
+        <img
+          src="https://placehold.co/300x300"
+          alt="Digital interface presentation"
+          class="img-fluid w-100 h-100 object-fit-cover rounded"
+          style={{ minHeight: '300px' }}
+        />
+      </div>
+    </div>
+    <h1 class="large text-center">ม.รังสิต - โรงอาหาร ตึก 6 วันศุกร์ 19.00-21.00</h1>
+
+    <div class="container py-4">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <img
+            src="https://placehold.co/300x300"
+            alt="LEGO bricks"
+            class="img-fluid w-100 h-100 object-fit-cover rounded"
+            style={{ minHeight: '300px' }}
+          />
+        </div>
+        <div class="col-12 col-md-4">
+          <img
+            src="https://placehold.co/300x300"
+            alt="Digital interface presentation"
+            class="img-fluid w-100 h-100 object-fit-cover rounded"
+            style={{ minHeight: '300px' }}
+          />
+        </div>
+        <div class="col-12 col-md-4">
+          <img
+            src="https://placehold.co/300x300"
+            alt="Digital interface presentation"
+            class="img-fluid w-100 h-100 object-fit-cover rounded"
+            style={{ minHeight: '300px' }}
+          />
+        </div>
+      </div>
+    </div>
+
+    <Footer />
+  </div>
 </Layout>
