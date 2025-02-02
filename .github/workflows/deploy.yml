@@ -28,12 +28,17 @@ jobs:
             # package-manager: yarn # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: gh-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      needs: build
+      runs-on: ubuntu-latest
+      environment:
+        name: gh-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v1
+        - name: Upload artifact
+          uses: actions/upload-artifact@v3
+          with:
+            name: my-artifact
+            path: path/to/artifact
