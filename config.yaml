@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: seedchurchbkk
+  site: 'https://www.seedchurchbkk.org'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: seedchurchbkk
+    template: '%s — seedchurchbkk'
+  description: "\U0001F680 เราคือชุมชนคริสเตียนวัยรุ่น คริสเตียนคือคนที่เชื่อ รัก และติดตามคำสอนของพระเยซูคริสต์ เราเชื่อว่าพระเจ้าเป็นผู้สร้างทุกสิ่งรวมถึงชีวิตของคุณด้วย"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: seedchurchbkk
     images:
       - url: '~/assets/images/default.png'
         width: 1200
