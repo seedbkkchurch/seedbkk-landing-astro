@@ -11,6 +11,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -342,10 +343,35 @@ const metadata = {
       },
     ]}
   />
+  <!-- CallToAction Widget *********** -->
 
-  <!-- Stats Widget ****************** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'เข้าร่วมกับเรา',
+        href: '',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      คุณมีคำถามมากมายเกี่ยวกับคริสเตียน&nbsp; &nbsp;<br class="block sm:hidden" />
+      <span class="sm:whitespace-nowrap">
+        ลองถาม ChatGPT แล้วก็ยังไม่เข้าใจ 
+      </span>
+    </Fragment>
 
-  <Stats
+    <Fragment slot="subtitle">
+      <br class="hidden md:inline" />  สิบปากว่าไม่เท่าตาเห็น สิบหูได้ยินไม่เท่าได้ยินเอง
+
+    </Fragment>
+  </CallToAction>
+
+    <!-- Stats Widget ****************** -->
+
+    <Stats
     stats={[
       { title: 'Downloads', amount: '132K' },
       { title: 'Stars', amount: '24.8K' },
@@ -353,27 +379,4 @@ const metadata = {
       { title: 'Users', amount: '48.4K' },
     ]}
   />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
 </Layout>
