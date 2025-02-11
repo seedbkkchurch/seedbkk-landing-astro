@@ -1,232 +1,229 @@
 #wrapper {
-    padding: 50px 0;
-    background: #fff;
-    text-align: center;
-    overflow: hidden;
-  }
-  
+  padding: 50px 0;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+}
 
+.loop_css1 {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  width: 100vw;
+  height: 150px;
+  overflow: hidden;
+}
+
+.loop_css1 img {
+  width: auto;
+  height: 100%;
+  will-change: transform;
+}
+
+@media screen and (min-width: 900px) {
   .loop_css1 {
-    position: relative;
-    display: -webkit-flex;
-    display: flex;
-    width: 100vw;
-    height: 150px;
-    overflow: hidden;
+    height: calc(100vw * 0.17);
   }
-  
+
   .loop_css1 img {
     width: auto;
+    /* min-width: 110vw; */
     height: 100%;
-    will-change: transform;
+    padding: 10px;
   }
-  
-  @media screen and (min-width: 900px) {
-    .loop_css1 {
-      height: calc(100vw * 0.17);
-    }
-  
-    .loop_css1 img {
-      width: auto;
-      /* min-width: 110vw; */
-      height: 100%;
-      padding:10px
-    }
-  }
-  
-  .loop_css1 img:first-child {
-    -webkit-animation: loop 50s -25s linear infinite;
-    animation: loop 50s -25s linear infinite;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform;
-  }
-  
-  .loop_css1 img + img {
-    -webkit-animation: loop2 50s linear infinite;
-    animation: loop2 50s linear infinite;
-  }
-  
-  .loop_css2 {
-    position: relative;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    width: 100vw;
-    overflow: hidden;
-  }
-  
-  .loop_css2 ul {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .loop_css2 li {
-    display: inline-block;
-    width: calc(100vw / 2);
-    min-width: 150px;
-    margin: 0 20px 0 0;
-    list-style: none;
-    text-align: center;
-  }
-  
-  .loop_css2 li a {
-    display: block;
-  }
-  
-  .loop_css2 li img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .loop_css2 li a:hover {
-    opacity: 0.7;
-  }
-  
-  .loop_css2 ul:first-child {
-    -webkit-animation: loop 50s -25s linear infinite;
-    animation: loop 50s -25s linear infinite;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform;
-  }
-  
-  .loop_css2 ul + ul {
-    -webkit-animation: loop2 50s linear infinite;
-    animation: loop2 50s linear infinite;
-  }
-  
-  .loop_css2:hover ul {
-    animation-play-state: paused;
-  }
-  
-  .loop_css3 {
-    position: relative;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-    background-color: #f2f2f2;
-    overflow: hidden;
-  }
-  
+}
 
-    .loop_css3 {
-    position: relative;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-    background-color: #f2f2f2;
-    overflow: hidden;
-  }
-  
+.loop_css1 img:first-child {
+  -webkit-animation: loop 50s -25s linear infinite;
+  animation: loop 50s -25s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.loop_css1 img + img {
+  -webkit-animation: loop2 50s linear infinite;
+  animation: loop2 50s linear infinite;
+}
+
+.loop_css2 {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.loop_css2 ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.loop_css2 li {
+  display: inline-block;
+  width: calc(100vw / 2);
+  min-width: 150px;
+  margin: 0 20px 0 0;
+  list-style: none;
+  text-align: center;
+}
+
+.loop_css2 li a {
+  display: block;
+}
+
+.loop_css2 li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.loop_css2 li a:hover {
+  opacity: 0.7;
+}
+
+.loop_css2 ul:first-child {
+  -webkit-animation: loop 50s -25s linear infinite;
+  animation: loop 50s -25s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.loop_css2 ul + ul {
+  -webkit-animation: loop2 50s linear infinite;
+  animation: loop2 50s linear infinite;
+}
+
+.loop_css2:hover ul {
+  animation-play-state: paused;
+}
+
+.loop_css3 {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.loop_css3 {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.loop_css3 div {
+  flex: 0 0 auto;
+  padding: 24px 12px;
+  font-size: 2.4rem;
+  font-family: 'Bai Jamjuree', 'Josefin Slab', serif;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+@media screen and (min-width: 900px) {
   .loop_css3 div {
-    flex: 0 0 auto;
-    padding: 24px 12px;
-    font-size: 2.4rem;
-    font-family: "Bai Jamjuree","Josefin Slab", serif;
-    white-space: nowrap;
-    will-change: transform;
+    font-size: 4rem;
   }
-  
-  @media screen and (min-width: 900px) {
-    .loop_css3 div {
-      font-size: 4rem;
-    }
+}
+
+.loop_css3 div:nth-child(odd) {
+  -webkit-animation: loop 50s -25s linear infinite;
+  animation: loop 50s -25s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.loop_css3 div:nth-child(even) {
+  -webkit-animation: loop2 50s linear infinite;
+  animation: loop2 50s linear infinite;
+}
+
+@-webkit-keyframes loop {
+  0% {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
   }
-  
-  .loop_css3 div:nth-child(odd) {
-    -webkit-animation: loop 50s -25s linear infinite;
-    animation: loop 50s -25s linear infinite;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform;
+
+  to {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
-  
-  .loop_css3 div:nth-child(even) {
-    -webkit-animation: loop2 50s linear infinite;
-    animation: loop2 50s linear infinite;
+}
+
+@keyframes loop {
+  0% {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
   }
-  
-  @-webkit-keyframes loop {
-    0% {
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-  
-    to {
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
+
+  to {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
-  
-  @keyframes loop {
-    0% {
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-  
-    to {
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
+}
+
+@-webkit-keyframes loop2 {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
-  
-  @-webkit-keyframes loop2 {
-    0% {
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
-    }
-  
-    to {
-      -webkit-transform: translateX(-200%);
-      -ms-transform: translateX(-200%);
-      transform: translateX(-200%);
-    }
+
+  to {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%);
   }
-  
-  @keyframes loop2 {
-    0% {
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
-    }
-  
-    to {
-      -webkit-transform: translateX(-200%);
-      -ms-transform: translateX(-200%);
-      transform: translateX(-200%);
-    }
+}
+
+@keyframes loop2 {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
-  
-  .loop_js {
-    display: -webkit-flex;
-    display: flex;
-    height: auto;
-    overflow: hidden;
+
+  to {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%);
   }
-  
-  .loop_js > * {
-    width: 33.333333%;
-    height: auto;
-  }
-  
+}
+
+.loop_js {
+  display: -webkit-flex;
+  display: flex;
+  height: auto;
+  overflow: hidden;
+}
+
+.loop_js > * {
+  width: 33.333333%;
+  height: auto;
+}

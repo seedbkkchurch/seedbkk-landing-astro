@@ -1,19 +1,19 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayout.astro'
 
-import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import { getPermalink } from '~/utils/permalinks';
+import Header from '~/components/widgets/Header.astro'
+import Hero from '~/components/widgets/Hero.astro'
+import Content from '~/components/widgets/Content.astro'
+import CallToAction from '~/components/widgets/CallToAction.astro'
+import Features3 from '~/components/widgets/Features3.astro'
+import Testimonials from '~/components/widgets/Testimonials.astro'
+import Steps from '~/components/widgets/Steps.astro'
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'
+import { getPermalink } from '~/utils/permalinks'
 
 const metadata = {
   title: 'Personal Homepage Demo',
-};
+}
 ---
 
 <Layout metadata={metadata}>
@@ -92,7 +92,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">About me</h2>
       <p>
         Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
         pixel becomes a brushstroke in the canvas of imagination.
@@ -197,8 +197,6 @@ const metadata = {
       },
     ]}
   /> -->
-
-
 
   <!-- Testimonials Widget *********** -->
 

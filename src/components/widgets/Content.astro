@@ -1,10 +1,10 @@
 ---
-import type { Content as Props } from '~/types';
-import Headline from '../ui/Headline.astro';
-import WidgetWrapper from '../ui/WidgetWrapper.astro';
-import Image from '~/components/common/Image.astro';
-import Button from '~/components/ui/Button.astro';
-import ItemGrid from '../ui/ItemGrid.astro';
+import type { Content as Props } from '~/types'
+import Headline from '../ui/Headline.astro'
+import WidgetWrapper from '../ui/WidgetWrapper.astro'
+import Image from '~/components/common/Image.astro'
+import Button from '~/components/ui/Button.astro'
+import ItemGrid from '../ui/ItemGrid.astro'
 
 const {
   title = await Astro.slots.render('title'),
@@ -22,7 +22,7 @@ const {
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
-} = Astro.props;
+} = Astro.props
 ---
 
 <WidgetWrapper
@@ -43,12 +43,12 @@ const {
   />
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      <div class="md:basis-1/2 self-center">
+      <div class="self-center md:basis-1/2">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
 
         {
           callToAction && (
-            <div class="mt-[-40px] mb-8 text-primary">
+            <div class="mb-8 mt-[-40px] text-primary">
               <Button variant="link" {...callToAction} />
             </div>
           )

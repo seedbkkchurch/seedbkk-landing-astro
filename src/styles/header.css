@@ -1,9 +1,9 @@
-@font-face{
-	font-family: 'FuturaHandwritten';
-	font-style: normal;
-	src: url('/fonts/FuturaHandwritten.ttf') format('truetype');
+@font-face {
+  font-family: 'FuturaHandwritten';
+  font-style: normal;
+  src: url('/fonts/FuturaHandwritten.ttf') format('truetype');
 }
 
 .title-futuraHandwritten {
-  font-family: 'FuturaHandwritten'
+  font-family: 'FuturaHandwritten';
 }

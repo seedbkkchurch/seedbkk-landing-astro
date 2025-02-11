@@ -1,10 +1,7 @@
 ---
-
 const isHasGod =
   'https://www.seedchurch-thailand.com/%E0%B8%A3-%E0%B8%88-%E0%B8%81%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%88-%E0%B8%B2'
 ---
-
-
 
 <div class="custom-header container">
   <div class="custom-header-title">
@@ -21,7 +18,7 @@ const isHasGod =
     </div>
     <!-- <img class="img-fluid rounded" width={600} height={272} src="./m6t4sv7x63y81.gif" alt="" />  -->
     <!-- <img class="img-fluid rounded" width={600} height={272} src="./seed-anime.gif" alt="" /> -->
-     <!-- <img class="" width={600} height={272} src="./bg.jfif" alt="" /> -->
+    <!-- <img class="" width={600} height={272} src="./bg.jfif" alt="" /> -->
   </div>
   <!-- <div class="custom-nav">
     <a class="btn btn-enter" href={isHasGod}>
@@ -35,11 +32,11 @@ const isHasGod =
 
 <script>
   function typing_animation() {
-    let text_element: Element = document.querySelector('.text')!
+    const text_element: Element = document.querySelector('.text')!
 
-    let text_array = text_element.innerHTML.split('')
-    let text_array_slice = text_element.innerHTML.split(' ')
-    let text_len = text_array.length
+    const text_array = text_element.innerHTML.split('')
+    const text_array_slice = text_element.innerHTML.split(' ')
+    const text_len = text_array.length
 
     const word_len = text_array_slice.map(word => {
       return word.length
@@ -47,19 +44,18 @@ const isHasGod =
 
     console.log(word_len)
 
-    let timings: KeyframeAnimationOptions = {
+    const timings: KeyframeAnimationOptions = {
       easing: `steps(${Number(word_len[0] + 1)}, end)`,
       delay: 1000,
       duration: 5000,
       fill: 'forwards',
     }
 
-    let cursor_timings = {
+    const cursor_timings = {
       duration: 700,
       iterations: Infinity,
       easing: 'cubic-bezier(0,.26,.44,.93)',
     }
-
 
     const cursorElement = document.querySelector('.text_cursor')
     if (cursorElement !== null) {
@@ -69,7 +65,7 @@ const isHasGod =
     if (text_array_slice.length == 1) {
       timings.easing = `steps(${Number(word_len[0])}, end)`
 
-      let reveal_animation = document
+      const reveal_animation = document
         .querySelector('.text_hide')!
         .animate([{ left: '0%' }, { left: `${(100 / text_len) * word_len[0]}%` }], timings)
 
@@ -113,7 +109,7 @@ const isHasGod =
         console.log(left_instance)
       }
 
-      let timings_2: KeyframeAnimationOptions = {
+      const timings_2: KeyframeAnimationOptions = {
         easing: `steps(${Number(single_word_len + 1)}, end)`,
         delay: (2 * (i + 1) + 2 * i) * 1000,
         // delay: ((i*2)-1)*1000,
@@ -123,7 +119,7 @@ const isHasGod =
 
       if (i == text_array_slice.length - 1) {
         timings_2.easing = `steps(${Number(single_word_len)}, end)`
-        let reveal_animation = document
+        const reveal_animation = document
           .querySelector('.text_hide')!
           .animate(
             [{ left: `${left_instance}%` }, { left: `${left_instance + (100 / text_len) * word_len[i]}%` }],

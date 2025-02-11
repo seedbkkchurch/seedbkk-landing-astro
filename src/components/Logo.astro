@@ -1,9 +1,10 @@
 ---
-import { SITE } from 'astrowind:config';
+import { SITE } from 'astrowind:config'
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
- 🌱 {SITE?.name}
-</span>
+<img
+  src="../assets/favicons//SEED_CHURCH_LOGO.webp"
+  class="ml-2 self-center whitespace-nowrap text-2xl font-bold text-gray-900 dark:text-white md:text-xl rtl:ml-0 rtl:mr-2"
+  alt="SeedChruch logo"
+/>
+{SITE?.name}

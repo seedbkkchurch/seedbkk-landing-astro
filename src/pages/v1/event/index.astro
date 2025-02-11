@@ -4,14 +4,13 @@ import Navbar from '$components/saweria/Navbar.astro'
 import Layout from '../../layouts/SeedBKK.astro'
 import Footer from '../../components/Footer.astro'
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
+import { getCollection } from 'astro:content'
+import FormattedDate from '../../components/FormattedDate.astro'
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 ---
+
 <style>
   main {
     width: 960px;
@@ -82,14 +81,12 @@ const posts = (await getCollection('blog')).sort(
   }
 </style>
 
-<Layout title="ＳＥＥＤＢＫＫ" description="โบสกรุงเทพตอนบ่าย โบสเมล็ดพันพันธุ์กรุงเทพ โบสวัยรุ่น" pubDate={new Date('Septerber 09 2023')}>
+<Layout
+  title="ＳＥＥＤＢＫＫ"
+  description="โบสกรุงเทพตอนบ่าย โบสเมล็ดพันพันธุ์กรุงเทพ โบสวัยรุ่น"
+  pubDate={new Date('Septerber 09 2023')}
+>
   <Navbar />
 
-  
-
-
-
-<Footer />
+  <Footer />
 </Layout>
-
-

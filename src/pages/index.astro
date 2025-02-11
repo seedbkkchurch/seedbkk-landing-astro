@@ -1,22 +1,22 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayout.astro'
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Image from '~/components/common/Image.astro';
+import Hero from '~/components/widgets/Hero.astro'
+import Note from '~/components/widgets/Note.astro'
+import Features from '~/components/widgets/Features.astro'
+import Features2 from '~/components/widgets/Features2.astro'
+import Steps from '~/components/widgets/Steps.astro'
+import Content from '~/components/widgets/Content.astro'
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'
+import FAQs from '~/components/widgets/FAQs.astro'
+import Stats from '~/components/widgets/Stats.astro'
+import CallToAction from '~/components/widgets/CallToAction.astro'
+import Image from '~/components/common/Image.astro'
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
-};
+}
 ---
 
 <Layout metadata={metadata}>
@@ -31,20 +31,23 @@ const metadata = {
         target: '_blank',
         icon: '',
       },
-      { text: 'ข้อมูลองค์กรคริสจักร', href: 'https://www.seedchurch-thailand.com/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87-%E0%B8%A3-%E0%B8%88-%E0%B8%81%E0%B9%82%E0%B8%9A%E0%B8%AA%E0%B8%96-1' },
+      {
+        text: 'ข้อมูลองค์กรคริสจักร',
+        href: 'https://www.seedchurch-thailand.com/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87-%E0%B8%A3-%E0%B8%88-%E0%B8%81%E0%B9%82%E0%B8%9A%E0%B8%AA%E0%B8%96-1',
+      },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      คริสตจักร 
-      <span class="text-green dark:text-white highlight"> เมล็ดพันธุ์</span> กรุงเทพ
+      คริสตจักร
+      <span class="highlight text-green dark:text-white"> เมล็ดพันธุ์</span> กรุงเทพ
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold text-blue-600">คริสตจักรแห่งการสร้างสาวกและตั้งคริสตจักร</span> 
-       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">คริสตจักรแห่งการสร้างสาวกและตั้งคริสตจักร</span>
+        <span class="font-semibold text-blue-600">คริสตจักรแห่งการสร้างสาวกและตั้งคริสตจักร</span>
+      </span>
+      <span class="mb-1 block font-bold text-blue-600 sm:hidden">คริสตจักรแห่งการสร้างสาวกและตั้งคริสตจักร</span>
       โบสที่มีวัยรุ่น 100% และ culture แบบวัยรุ่น
     </Fragment>
   </Hero>
@@ -61,23 +64,17 @@ const metadata = {
     title="Vision"
     subtitle=""
     items={[
-
       {
-        
-        title: 'Thailand Shall Be Safe', 
-        description:
-          'นำพระพรไปสู่คนไทย เพื่อเปลี่ยนแปลงชีวิตคนไทยให้ดึขึ้น',
+        title: 'Thailand Shall Be Safe',
+        description: 'นำพระพรไปสู่คนไทย เพื่อเปลี่ยนแปลงชีวิตคนไทยให้ดึขึ้น',
         // icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Teenatures Shall Be Leaders', 
+        title: 'Teenatures Shall Be Leaders',
         description:
-          'ปรารถนาที่จะเห็นเยาวชนเป็นผู้นำในการเปลี่ยนแปลงในการเปลี่ยนแปลงประเทศไปในทางที่ดีตามแบบอย่างพระเยซูคริสต์'
+          'ปรารถนาที่จะเห็นเยาวชนเป็นผู้นำในการเปลี่ยนแปลงในการเปลี่ยนแปลงประเทศไปในทางที่ดีตามแบบอย่างพระเยซูคริสต์',
         // icon: 'tabler:brand-tailwind',
       },
-      
-     
-     
     ]}
   />
 
@@ -90,8 +87,7 @@ const metadata = {
     items={[
       {
         title: 'เติบโตในการรู้จักพระเจ้า',
-        description:
-          'เราเติบโตผ่านการเฝ้าเดียว อธิฐาน อ่านพระคัมภีร์ นมันการ การสามัคคีอย่างสม่ำเสมอ',
+        description: 'เราเติบโตผ่านการเฝ้าเดียว อธิฐาน อ่านพระคัมภีร์ นมันการ การสามัคคีอย่างสม่ำเสมอ',
       },
       {
         title: 'เติบโตขึ้นในพระวิญญานบริสุทธิ์เพื่อเป้าหมายไพบูลย์พระคริสต์',
@@ -100,8 +96,7 @@ const metadata = {
       },
       {
         title: 'เติบโตในการใช้ของประทานเพื่อเสริมสร้างคริสตจักรและถวายเกียรติแด่พระเจ้า',
-        description:
-          'เติบโตในการยอมจำนนให้ชีวิตเป็นไปตามแผนการและน้ำพระทันพระเจ้าสำหรับชีวิตของเราแต่ละคน ',
+        description: 'เติบโตในการยอมจำนนให้ชีวิตเป็นไปตามแผนการและน้ำพระทันพระเจ้าสำหรับชีวิตของเราแต่ละคน ',
       },
       {
         title: 'เติบโตขึ้นในความรักตามพระมหาบัญญัติ',
@@ -115,8 +110,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">S = Spiritual Maturity</h3>
-    การเติบโตฝ่ายวิญญาณในพระคริสต์
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">S = Spiritual Maturity</h3>
+      การเติบโตฝ่ายวิญญาณในพระคริสต์
     </Fragment>
 
     <Fragment slot="bg">
@@ -136,13 +131,12 @@ const metadata = {
       },
       {
         title: 'ประกาศข่าวประเสริฐที่มีฤทธิ์เดชในการเปลี่ยนแปลงชีวิต',
-        description:
-          'ปลดปล่อยคนจากบาป  ความทุกข์ ปัญหาต่างๆ เพื่อเราจะเห็นสังคมที่ดีขึ้น',
+        description: 'ปลดปล่อยคนจากบาป  ความทุกข์ ปัญหาต่างๆ เพื่อเราจะเห็นสังคมที่ดีขึ้น',
       },
       {
-        title: 'ประกาศข่าวประเสริฐในทุกโอกาส เช่น งานวันเกิด งานแต่งงาน งานอาลัย งานขึ้นบ้านใหม่ และอื่นๆ กับคนทุกเพศ วัย ทุกสถานนะในสังคม',
-        description:
-          'ประกาศข่าวประเสริฐโดยการแสดงความรัก ผ่านการช่วยเหลือที่ยากลำบากในสังคม ผ่านมูลนิธิรักเพื่อนบ้าน',
+        title:
+          'ประกาศข่าวประเสริฐในทุกโอกาส เช่น งานวันเกิด งานแต่งงาน งานอาลัย งานขึ้นบ้านใหม่ และอื่นๆ กับคนทุกเพศ วัย ทุกสถานนะในสังคม',
+        description: 'ประกาศข่าวประเสริฐโดยการแสดงความรัก ผ่านการช่วยเหลือที่ยากลำบากในสังคม ผ่านมูลนิธิรักเพื่อนบ้าน',
       },
     ]}
     image={{
@@ -151,7 +145,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"> E = Evergelization</h3>  
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">E = Evergelization</h3>
        ประกาศด้วยใจเชื่อฟังพระมหาบัญชา
     </Fragment>
 
@@ -167,17 +161,19 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title:"เอเฟซัส 4:11-12",
-        description:'เอเฟซัส 1:22-23 พระเจ้า​วาง​ทุก​สิ่ง​ไว้​ใต้เท้า​ของ​พระคริสต์ และ​พระองค์​ตั้ง​พระคริสต์​เป็น​ศีรษะ​เหนือ​ทุกสิ่ง​เพื่อ​หมู่ประชุม​ของ​พระองค์ หมู่​ประชุม​นี้​คือ​ร่างกาย​ของ​พระคริสต์ และ​หมู่​ประชุม​นี้​เต็ม​เปี่ยม​ไป​ด้วย​พระคริสต์ และ​พระคริสต์​ทำให้​ทุกสิ่ง​เต็มเปี่ยม​ไปด้วย​พระองค์'
+        title: 'เอเฟซัส 4:11-12',
+        description:
+          'เอเฟซัส 1:22-23 พระเจ้า​วาง​ทุก​สิ่ง​ไว้​ใต้เท้า​ของ​พระคริสต์ และ​พระองค์​ตั้ง​พระคริสต์​เป็น​ศีรษะ​เหนือ​ทุกสิ่ง​เพื่อ​หมู่ประชุม​ของ​พระองค์ หมู่​ประชุม​นี้​คือ​ร่างกาย​ของ​พระคริสต์ และ​หมู่​ประชุม​นี้​เต็ม​เปี่ยม​ไป​ด้วย​พระคริสต์ และ​พระคริสต์​ทำให้​ทุกสิ่ง​เต็มเปี่ยม​ไปด้วย​พระองค์',
       },
       {
-        title:"ตั้งคริสตจักรทุกจังหวัดในประเทศไทย และส่งมิชชันนารีออกไปต่างประเทศ",
-        description:"ตั้งคริสตจักรที่แข็งแรงโดยวางรากฐานของความเชื่อในพระเยซูคริสต์และตามหลักการพระวจนะของพระเจ้า"
+        title: 'ตั้งคริสตจักรทุกจังหวัดในประเทศไทย และส่งมิชชันนารีออกไปต่างประเทศ',
+        description: 'ตั้งคริสตจักรที่แข็งแรงโดยวางรากฐานของความเชื่อในพระเยซูคริสต์และตามหลักการพระวจนะของพระเจ้า',
       },
       {
-        title:"ตั้งคริสจักรใหม่ด้วยการช่วยเหลือและสนับสนุนอย่างน้ำหนึ่งใจเดียวของคริสตจักรที่มีอยู่แล้ว",
-        description:"ตั้งคริสตจักรโดยการพึ่งพาการทรงนำจากพระเจ้าและแต่งตั้งผู้นำที่เติบโตฝ่ายวิญญาณมีชีวิตที่เป็ฯแบบอย่าง ในการดูแลคริสตจักร"
-      }
+        title: 'ตั้งคริสจักรใหม่ด้วยการช่วยเหลือและสนับสนุนอย่างน้ำหนึ่งใจเดียวของคริสตจักรที่มีอยู่แล้ว',
+        description:
+          'ตั้งคริสตจักรโดยการพึ่งพาการทรงนำจากพระเจ้าและแต่งตั้งผู้นำที่เติบโตฝ่ายวิญญาณมีชีวิตที่เป็ฯแบบอย่าง ในการดูแลคริสตจักร',
+      },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
@@ -185,8 +181,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"> E = Establish Church 
-      </h3>
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">E = Establish Church</h3>
       ตั้งคริสตจักรของพระคริสต์ของพระเจ้า ไม่ใช้ของเรา
     </Fragment>
 
@@ -202,25 +197,23 @@ const metadata = {
     items={[
       {
         title: 'สร้างสาวกด้วยการเรียนพระคัมภีร์อย่างเป็นระบบ',
-        description:
-          "สร้างสาวก 1:1 ในการสอนพระวจนะ ตักเตือน หนุนใจ เยียวยา เพื่อสาวกจะรับการขัดเกลาชีวิตอย่างแท้จริง",
+        description: 'สร้างสาวก 1:1 ในการสอนพระวจนะ ตักเตือน หนุนใจ เยียวยา เพื่อสาวกจะรับการขัดเกลาชีวิตอย่างแท้จริง',
         // icon: 'tabler:package',
       },
       {
         title: 'สร้างสาวกในผู้รับใช้พระเจ้า ทิโมธี',
-        description:
-          "เพื่อเข้าใจหลักการในการเป็นผู้นำและการดูแลคริสตจักรของพระเจ้า",
+        description: 'เพื่อเข้าใจหลักการในการเป็นผู้นำและการดูแลคริสตจักรของพระเจ้า',
         // icon: 'tabler:letter-case',
       },
       {
         title: 'สร้างสาวกผ่านกลุ่มย่อย ด้วยบทเรียนแคร์ เป้าหมายเพื่อประยุกต์ใช้ในชีวิตประจำวัน',
-        description:
-          'สร้างสาวก โดนผ่านการเข้าร่วมอบรบการเป็นผู้รับใช้หรือเรียนกับสถาบันพระคัมภีร์ที่เป็นการยอมรับ',
+        description: 'สร้างสาวก โดนผ่านการเข้าร่วมอบรบการเป็นผู้รับใช้หรือเรียนกับสถาบันพระคัมภีร์ที่เป็นการยอมรับ',
         // icon: 'tabler:paint',
       },
       {
         title: 'สร้างสาวกสู่รุ่นถัดไป',
-        description: '2 ทิโมธี 2:2 จงมอบคำสอนเหล่านั้นซึ่งท่านได้ยินจากข้าพเจ้าต่อหน้าพยานหลายๆ คนไว้กับบรรดาคนซื่อสัตย์ที่สามารถสอนคนอื่นได้ด้วย',
+        description:
+          '2 ทิโมธี 2:2 จงมอบคำสอนเหล่านั้นซึ่งท่านได้ยินจากข้าพเจ้าต่อหน้าพยานหลายๆ คนไว้กับบรรดาคนซื่อสัตย์ที่สามารถสอนคนอื่นได้ด้วย',
       },
     ]}
     image={{
@@ -292,160 +285,157 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2> -->
-      <!-- Content Widget **************** -->
+  <!-- Content Widget **************** -->
 
+  <!-- Content Widget **************** -->
 
-    
+  <Content
+    id="porfolio"
+    title="กลุ่มแคร์"
+    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    isReversed
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+      },
+      {
+        title: 'Role:',
+        description:
+          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: 'Tech Design Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
+        ราชเทวี @ Creative Space Cafe สภาคริสตจักร: <br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
 
-<!-- Content Widget **************** -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
-<Content
-  id="porfolio"
-  title="กลุ่มแคร์"
-  subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
-  isReversed
-  items={[
-    {
-      title: 'Description:',
-      description:
-        'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
-    },
-    {
-      title: 'Role:',
-      description:
-        'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
-    },
-  ]}
-  image={{
-    src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-    alt: 'Tech Design Image',
-  }}
-  callToAction={{
-    target: '_blank',
-    text: 'Go to the project',
-    icon: 'tabler:chevron-right',
-    href: '#',
-  }}
->
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      ราชเทวี @ Creative Space Cafe สภาคริสตจักร: <br /><span class="text-2xl"></span>
-    </h3>
-  </Fragment>
+  <!-- Content Widget **************** -->
 
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
+      },
+      {
+        title: 'Role:',
+        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Art and Music Poster Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
+        เกษตรศาสตร์ @ อาคารเรียนรวม3 KU : <br /><span class="text-2xl">Event poster for art & music festival</span>
+      </h3>
+    </Fragment>
 
-<!-- Content Widget **************** -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
-<Content
-  isReversed
-  isAfterContent={true}
-  items={[
-    {
-      title: 'Description:',
-      description:
-        'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
-    },
-    {
-      title: 'Role:',
-      description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
-    },
-  ]}
-  image={{
-    src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-    alt: 'Art and Music Poster Image',
-  }}
-  callToAction={{
-    target: '_blank',
-    text: 'Go to the project',
-    icon: 'tabler:chevron-right',
-    href: '#',
-  }}
->
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      เกษตรศาสตร์ @ อาคารเรียนรวม3  KU : <br /><span class="text-2xl">Event poster for art & music festival</span>
-    </h3>
-  </Fragment>
+  <!-- Content Widget **************** -->
 
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+      },
+      {
+        title: 'Role:',
+        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+      },
+    ]}
+    image={{
+      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Fashion e-commerce Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
+        รังสิต: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+      </h3>
+    </Fragment>
 
-<!-- Content Widget **************** -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+      },
+      {
+        title: 'Role:',
+        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+      },
+    ]}
+    image={{
+      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Fashion e-commerce Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
+        ศรีปทุม: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+      </h3>
+    </Fragment>
 
-<Content
-  isReversed
-  isAfterContent={true}
-  items={[
-    {
-      title: 'Description:',
-      description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-    },
-    {
-      title: 'Role:',
-      description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-    },
-  ]}
-  image={{
-    src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-    alt: 'Fashion e-commerce Image',
-  }}
-  callToAction={{
-    target: '_blank',
-    text: 'Go to the project',
-    icon: 'tabler:chevron-right',
-    href: '#',
-  }}
->
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      รังสิต: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-    </h3>
-  </Fragment>
-
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
-<Content
-  isReversed
-  isAfterContent={true}
-  items={[
-    {
-      title: 'Description:',
-      description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-    },
-    {
-      title: 'Role:',
-      description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-    },
-  ]}
-  image={{
-    src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-    alt: 'Fashion e-commerce Image',
-  }}
-  callToAction={{
-    target: '_blank',
-    text: 'Go to the project',
-    icon: 'tabler:chevron-right',
-    href: '#',
-  }}
->
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      ศรีปทุม: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-    </h3>
-  </Fragment>
-
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
@@ -480,7 +470,7 @@ const metadata = {
           "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
       },
       {
-        title: "อยู่ในสังคมคริสเตียนโดนล้างสมองหรืองมงายจริงป่าว?",
+        title: 'อยู่ในสังคมคริสเตียนโดนล้างสมองหรืองมงายจริงป่าว?',
         description:
           "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
       },
@@ -511,20 +501,17 @@ const metadata = {
   >
     <Fragment slot="title">
       คุณมีคำถามมากมายเกี่ยวกับคริสเตียน&nbsp; &nbsp;<br class="block sm:hidden" />
-      <span class="sm:whitespace-nowrap">
-        ลองถาม ChatGPT แล้วก็ยังไม่เข้าใจ 
-      </span>
+      <span class="sm:whitespace-nowrap"> ลองถาม ChatGPT แล้วก็ยังไม่เข้าใจ </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <br class="hidden md:inline" />  สิบปากว่าไม่เท่าตาเห็น สิบหูได้ยินไม่เท่าได้ยินเอง
-
+      <br class="hidden md:inline" /> สิบปากว่าไม่เท่าตาเห็น สิบหูได้ยินไม่เท่าได้ยินเอง
     </Fragment>
   </CallToAction>
 
-    <!-- Stats Widget ****************** -->
+  <!-- Stats Widget ****************** -->
 
-    <Stats
+  <Stats
     stats={[
       { title: 'Member', amount: '30 people' },
       { title: 'Age', amount: '23.5 year' },

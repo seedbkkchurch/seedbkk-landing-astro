@@ -8,6 +8,14 @@
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
 
+"@ampproject/remapping@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.3.0.tgz"
+  integrity sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==
+  dependencies:
+    "@jridgewell/gen-mapping" "^0.3.5"
+    "@jridgewell/trace-mapping" "^0.3.24"
+
 "@antfu/install-pkg@^0.4.0":
   version "0.4.0"
   resolved "https://registry.npmjs.org/@antfu/install-pkg/-/install-pkg-0.4.0.tgz"
@@ -777,7 +785,7 @@
   dependencies:
     "@types/estree" "*"
 
-"@types/estree@*", "@types/estree@^1.0.0", "@types/estree@^1.0.6", "@types/estree@1.0.6":
+"@types/estree@*", "@types/estree@^1.0.0", "@types/estree@^1.0.5", "@types/estree@^1.0.6", "@types/estree@1.0.6":
   version "1.0.6"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.6.tgz"
   integrity sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==
@@ -1037,7 +1045,12 @@ acorn-jsx@^5.0.0, acorn-jsx@^5.3.2:
   resolved "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz"
   integrity sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==
 
-"acorn@^6.0.0 || ^7.0.0 || ^8.0.0", acorn@^8.0.0, acorn@^8.11.3, acorn@^8.14.0, acorn@^8.8.0, acorn@^8.8.2:
+acorn-typescript@^1.4.13:
+  version "1.4.13"
+  resolved "https://registry.npmjs.org/acorn-typescript/-/acorn-typescript-1.4.13.tgz"
+  integrity sha512-xsc9Xv0xlVfwp2o7sQ+GCQ1PgbkdcpWdTzrwXxO3xDMTAywVS3oXVOcOHuRjAPkS4P9b+yc/qNF15460v+jp4Q==
+
+"acorn@^6.0.0 || ^7.0.0 || ^8.0.0", acorn@^8.0.0, acorn@^8.11.3, acorn@^8.12.1, acorn@^8.14.0, acorn@^8.8.0, acorn@^8.8.2, acorn@>=8.9.0:
   version "8.14.0"
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.14.0.tgz"
   integrity sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==
@@ -1126,7 +1139,7 @@ argparse@^2.0.1:
   resolved "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz"
   integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
-aria-query@^5.3.2:
+aria-query@^5.3.1, aria-query@^5.3.2:
   version "5.3.2"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz"
   integrity sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==
@@ -2015,6 +2028,11 @@ eslint-visitor-keys@^4.2.0:
     natural-compare "^1.4.0"
     optionator "^0.9.3"
 
+esm-env@^1.2.1:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/esm-env/-/esm-env-1.2.2.tgz"
+  integrity sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==
+
 espree@^10.0.0, espree@^10.0.1, espree@^10.3.0:
   version "10.3.0"
   resolved "https://registry.npmjs.org/espree/-/espree-10.3.0.tgz"
@@ -2033,6 +2051,13 @@ esquery@^1.5.0:
   version "1.5.0"
   dependencies:
     estraverse "^5.1.0"
+
+esrap@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.npmjs.org/esrap/-/esrap-1.4.3.tgz"
+  integrity sha512-Xddc1RsoFJ4z9nR7W7BFaEPIp4UXoeQ0+077UdWLxbafMQFyU79sQJMk7kxNgRwQ9/aVgaKacCHC2pUACGwmYw==
+  dependencies:
+    "@jridgewell/sourcemap-codec" "^1.4.15"
 
 esrecurse@^4.3.0:
   version "4.3.0"
@@ -2686,6 +2711,13 @@ is-plain-obj@^4.0.0:
   resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-4.1.0.tgz"
   integrity sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==
 
+is-reference@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/is-reference/-/is-reference-3.0.3.tgz"
+  integrity sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==
+  dependencies:
+    "@types/estree" "^1.0.6"
+
 is-wsl@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/is-wsl/-/is-wsl-3.1.0.tgz"
@@ -2859,6 +2891,11 @@ local-pkg@^0.5.0:
     mlly "^1.4.2"
     pkg-types "^1.0.3"
 
+locate-character@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/locate-character/-/locate-character-3.0.0.tgz"
+  integrity sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==
+
 locate-path@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz"
@@ -2905,7 +2942,7 @@ lru-cache@^10.2.0, lru-cache@^10.4.3:
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
-magic-string@^0.30.17:
+magic-string@^0.30.11, magic-string@^0.30.17:
   version "0.30.17"
   resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.30.17.tgz"
   integrity sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==
@@ -3923,7 +3960,7 @@ preferred-pm@^4.1.1:
 prelude-ls@^1.2.1:
   version "1.2.1"
 
-prettier-plugin-astro@^0.14.1, prettier-plugin-astro@>=0.11.0:
+prettier-plugin-astro@*, prettier-plugin-astro@^0.14.1, prettier-plugin-astro@>=0.11.0:
   version "0.14.1"
   resolved "https://registry.npmjs.org/prettier-plugin-astro/-/prettier-plugin-astro-0.14.1.tgz"
   integrity sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==
@@ -3932,10 +3969,20 @@ prettier-plugin-astro@^0.14.1, prettier-plugin-astro@>=0.11.0:
     prettier "^3.0.0"
     sass-formatter "^0.7.6"
 
-"prettier@^2.2 || ^3.0", prettier@^3.0.0, prettier@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-3.4.2.tgz"
-  integrity sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==
+prettier-plugin-svelte@*, prettier-plugin-svelte@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.npmjs.org/prettier-plugin-svelte/-/prettier-plugin-svelte-3.3.3.tgz"
+  integrity sha512-yViK9zqQ+H2qZD1w/bH7W8i+bVfKrD8GIFjkFe4Thl6kCT9SlAsXVNmt3jCvQOCsnOhcvYgsoVlRV/Eu6x5nNw==
+
+prettier-plugin-tailwindcss@^0.6.11:
+  version "0.6.11"
+  resolved "https://registry.npmjs.org/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.6.11.tgz"
+  integrity sha512-YxaYSIvZPAqhrrEpRtonnrXdghZg1irNg4qrjboCXrpybLWVs55cW2N3juhspVJiO0JBvYJT8SYsJpc8OQSnsA==
+
+"prettier@^2.2 || ^3.0", prettier@^3.0, prettier@^3.0.0, prettier@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-3.5.0.tgz"
+  integrity sha512-quyMrVt6svPS7CjQ9gKb3GLEX/rl3BCL2oa/QkNcXv4YNVBC9olt3s+H7ukto06q7B1Qz46PbrKLO34PR6vXcA==
 
 prettier@2.8.7:
   version "2.8.7"
@@ -4562,6 +4609,26 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+"svelte@^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0":
+  version "5.19.9"
+  resolved "https://registry.npmjs.org/svelte/-/svelte-5.19.9.tgz"
+  integrity sha512-860s752/ZZxHIsii31ELkdKBOCeAuDsfb/AGUXJyQyzUVLRSt4oqEw/BV5+2+mNg8mbqmD3OK+vMvwWMPM6f8A==
+  dependencies:
+    "@ampproject/remapping" "^2.3.0"
+    "@jridgewell/sourcemap-codec" "^1.5.0"
+    "@types/estree" "^1.0.5"
+    acorn "^8.12.1"
+    acorn-typescript "^1.4.13"
+    aria-query "^5.3.1"
+    axobject-query "^4.1.0"
+    clsx "^2.1.1"
+    esm-env "^1.2.1"
+    esrap "^1.4.3"
+    is-reference "^3.0.3"
+    locate-character "^3.0.0"
+    magic-string "^0.30.11"
+    zimmerframe "^1.1.2"
 
 svgo@^3.3.2, svgo@3.3.2:
   version "3.3.2"
@@ -5287,6 +5354,11 @@ yoctocolors@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/yoctocolors/-/yoctocolors-2.1.1.tgz"
   integrity sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==
+
+zimmerframe@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/zimmerframe/-/zimmerframe-1.1.2.tgz"
+  integrity sha512-rAbqEGa8ovJy4pyBxZM70hg4pE6gDgaQ0Sl9M3enG3I0d6H4XSAM3GeNGLKnsBpuijUow064sf7ww1nutC5/3w==
 
 zod-to-json-schema@^3.24.1:
   version "3.24.1"

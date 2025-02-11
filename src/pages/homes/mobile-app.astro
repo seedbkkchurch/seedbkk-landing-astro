@@ -1,28 +1,29 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayout.astro'
 
-import Header from '~/components/widgets/Header.astro';
+import Header from '~/components/widgets/Header.astro'
 
-import Hero2 from '~/components/widgets/Hero2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Content from '~/components/widgets/Content.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import Hero2 from '~/components/widgets/Hero2.astro'
+import CallToAction from '~/components/widgets/CallToAction.astro'
+import Features3 from '~/components/widgets/Features3.astro'
+import Content from '~/components/widgets/Content.astro'
+import Testimonials from '~/components/widgets/Testimonials.astro'
+import FAQs from '~/components/widgets/FAQs.astro'
+import Stats from '~/components/widgets/Stats.astro'
 
-import Button from '~/components/ui/Button.astro';
-import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro'
+import Image from '~/components/common/Image.astro'
 
-const appStoreImg = '~/assets/images/app-store.png';
-const appStoreDownloadLink = 'https://apps.apple.com/us/app/seed-church/id6654904118';
+const appStoreImg = '~/assets/images/app-store.png'
+const appStoreDownloadLink = 'https://apps.apple.com/us/app/seed-church/id6654904118'
 
-const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = 'https://play.google.com/store/apps/details?id=com.seedchurchthailand.seed&pcampaignid=web_share';
+const googlePlayImg = '~/assets/images/google-play.png'
+const googlePlayDownloadLink =
+  'https://play.google.com/store/apps/details?id=com.seedchurchthailand.seed&pcampaignid=web_share'
 
 const metadata = {
   title: 'Mobile App Homepage',
-};
+}
 ---
 
 <Layout metadata={metadata}>
@@ -56,9 +57,8 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      <span class="text-green dark:text-white highlight">Seed App</span>   <br /> เข้าใกล้เรามากขึ้น <span
-        class="hidden xl:inline">ผ่าน Application</span
-      >
+      <span class="highlight text-green dark:text-white">Seed App</span>
+      <br /> เข้าใกล้เรามากขึ้น <span class="hidden xl:inline">ผ่าน Application</span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -151,7 +151,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Main Features</h3>
     </Fragment>
   </Content>
 
@@ -188,7 +188,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Other features</h3>
     </Fragment>
   </Content>
 

@@ -11,7 +11,6 @@ type Props = CollectionEntry<'blog'>['data']
 const { title, description, pubDate, updatedDate } = Astro.props
 ---
 
-
 <style>
   .iframe-container {
     position: relative;
@@ -38,14 +37,14 @@ const { title, description, pubDate, updatedDate } = Astro.props
 
   <body>
     <main>
-      <iframe width="1300" height="1500"
-      src="https://www.youtube.com/embed/gzSySr_lQlQ?autoplay=1&loop=1&playlist=gzSySr_lQlQ"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-      
-      
+      <iframe
+        width="1300"
+        height="1500"
+        src="https://www.youtube.com/embed/gzSySr_lQlQ?autoplay=1&loop=1&playlist=gzSySr_lQlQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </main>
   </body>
 </html>

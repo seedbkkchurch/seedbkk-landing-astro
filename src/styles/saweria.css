@@ -1,16 +1,13 @@
-
-
-@font-face{
-	font-family: 'FuturaHandwritten';
-	font-style: normal;
-	src: url('/fonts/FuturaHandwritten.ttf') format('truetype');
+@font-face {
+  font-family: 'FuturaHandwritten';
+  font-style: normal;
+  src: url('/fonts/FuturaHandwritten.ttf') format('truetype');
 }
-
 
 body {
   font-family: 'IBM Plex Sans Thai Looped', monospace;
   margin: 0;
-  background: #FAF8F6;
+  background: #faf8f6;
   color: #333;
 }
 
@@ -236,7 +233,6 @@ body {
   margin-bottom: 1px;
 }
 
-
 #typing {
   border-right: 2px solid;
   white-space: nowrap;
@@ -245,6 +241,11 @@ body {
 }
 
 @keyframes blinkCursor {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }

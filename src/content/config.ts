@@ -1,5 +1,5 @@
-import { z, defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { z, defineCollection } from 'astro:content'
+import { glob } from 'astro/loaders'
 
 const metadataDefinition = () =>
   z
@@ -44,7 +44,7 @@ const metadataDefinition = () =>
         })
         .optional(),
     })
-    .optional();
+    .optional()
 
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
@@ -63,8 +63,8 @@ const postCollection = defineCollection({
 
     metadata: metadataDefinition(),
   }),
-});
+})
 
 export const collections = {
   post: postCollection,
-};
+}

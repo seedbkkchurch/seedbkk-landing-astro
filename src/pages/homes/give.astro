@@ -1,21 +1,21 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayout.astro'
 
-import Header from '~/components/widgets/Header.astro';
-import Hero2 from '~/components/widgets/Hero2.astro';
-import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
+import Header from '~/components/widgets/Header.astro'
+import Hero2 from '~/components/widgets/Hero2.astro'
+import Features from '~/components/widgets/Features.astro'
+import Steps2 from '~/components/widgets/Steps2.astro'
+import Content from '~/components/widgets/Content.astro'
+import Pricing from '~/components/widgets/Pricing.astro'
 
-import { headerData } from '~/navigation';
-import FAQs from '~/components/widgets/FAQs.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import Note from '~/components/widgets/Note.astro';
+import { headerData } from '~/navigation'
+import FAQs from '~/components/widgets/FAQs.astro'
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'
+import Note from '~/components/widgets/Note.astro'
 
 const metadata = {
   title: 'SaaS Landing Page',
-};
+}
 ---
 
 <Layout metadata={metadata}>
@@ -49,49 +49,40 @@ const metadata = {
     image={{
       src: '~/assets/images/QR_SEED_BKK_Account.png',
       alt: 'AstroWind Hero Image',
-
     }}
   >
     <Fragment slot="title">
-       ถวายทรัพย์ <br /> เลขบัญชี <span class="text-accent dark:text-white highlight"
-        ><br />SCB 420-196363-1</span
-      ><br />
+      ถวายทรัพย์ <br /> เลขบัญชี <span class="highlight text-accent dark:text-white"><br />SCB 420-196363-1</span><br />
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-         <span class="font-semibold">สาขาเซ็นเตอร์วันช้อปปิ้งพลาซ่า</span></span
-      >
+      <span class="hidden sm:inline"> <span class="font-semibold">สาขาเซ็นเตอร์วันช้อปปิ้งพลาซ่า</span></span>
       ชื่อบัญชีเอกมณีและวัธนีและพิชาม
     </Fragment>
   </Hero2>
   <Note />
   <Hero2
-  tagline="ถวายทรัพย์คริปโต"
-  actions={[
-    { variant: 'primary', target: '_blank', text: 'ถวายเป็น cryptocurrency', href: '' },
-    { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#features' },
-  ]}
-  image={{
-    src: '~/assets/images/QR_SEED_Wallet.png',
-    alt: 'AstroWind Hero Image',
+    tagline="ถวายทรัพย์คริปโต"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'ถวายเป็น cryptocurrency', href: '' },
+      { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#features' },
+    ]}
+    image={{
+      src: '~/assets/images/QR_SEED_Wallet.png',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      ถวายทรัพย์ <br /> Address wallet <span class="highlight text-green dark:text-white"><br />0x2c652...7cB28</span
+      ><br />
+    </Fragment>
 
-  }}
->
-  <Fragment slot="title">
-     ถวายทรัพย์ <br /> Address wallet <span class="text-green dark:text-white highlight"
-      ><br />0x2c652...7cB28</span
-    ><br />
-  </Fragment>
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline"> <span class="font-semibold">prefer BTC, ETH, USDT</span></span>
+      เหรียนของท่านจะถูกจัดเก็บใน hard wallet
+    </Fragment>
+  </Hero2>
 
-  <Fragment slot="subtitle">
-    <span class="hidden sm:inline">
-       <span class="font-semibold">prefer BTC, ETH, USDT</span></span
-    >
-    เหรียนของท่านจะถูกจัดเก็บใน  hard wallet 
-  </Fragment>
-</Hero2>
-  
   <!-- Features Widget *************** -->
 
   <!-- <Features
