@@ -13,6 +13,7 @@ import Stats from '~/components/widgets/Stats.astro'
 import CallToAction from '~/components/widgets/CallToAction.astro'
 import Image from '~/components/common/Image.astro'
 import Steps2 from '~/components/widgets/Steps2.astro'
+import CountdownTimer from '~/components/CountdownTimer'
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -58,7 +59,7 @@ const metadata = {
   <Note />
 
   <!-- Features Widget *************** -->
-
+  <CountdownTimer client:only="react" />
   <Features
     id="features"
     tagline=""
@@ -292,8 +293,8 @@ const metadata = {
 
   <Content
     id="porfolio"
-    title="กลุ่มแคร์"
-    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    title="Small group"
+    subtitle="หรือกลุ่มแคร์ที่เราจะได้รู้จักกันมากขึ้นและสามัคคีธรรม"
     isReversed
     items={[
       {
@@ -521,7 +522,7 @@ const metadata = {
     ]}
   />
 
-    <!-- Steps2 Widget ****************** -->
+  <!-- Steps2 Widget ****************** -->
 
   <Steps2
     title="ติดต่อเรา"

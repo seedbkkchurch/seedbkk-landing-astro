@@ -22,17 +22,22 @@
     "fix:prettier": "prettier -w ."
   },
   "dependencies": {
+    "@astrojs/react": "^4.2.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
     "@astrolib/analytics": "^0.6.1",
     "@astrolib/seo": "^1.0.0-beta.8",
     "@fontsource-variable/inter": "^5.1.1",
     "@fontsource/sarabun": "^5.1.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "astro": "^5.2.5",
     "astro-embed": "^0.9.0",
     "astro-icon": "^1.1.5",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "unpic": "^3.22.0"
   },
   "devDependencies": {
