@@ -42,10 +42,10 @@ export const headerData = {
     //       text: 'About us',
     //       href: getPermalink('/about'),
     //     },
-    //     {
-    //       text: 'Contact',
-    //       href: getPermalink('/contact'),
-    //     },
+        {
+          text: 'Contact',
+          href: getPermalink('/contact'),
+        },
     //     {
     //       text: 'Terms',
     //       href: getPermalink('/terms'),
@@ -124,7 +124,7 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'รู้จักพระเจ้า', href: '', target: '_blank' }],
+  actions: [{ text: 'Worship With Us', href: '', target: '_blank' }],
 }
 
 export const footerData = {

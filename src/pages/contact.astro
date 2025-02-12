@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro'
 import HeroText from '~/components/widgets/HeroText.astro'
 import ContactUs from '~/components/widgets/Contact.astro'
 import Features2 from '~/components/widgets/Features2.astro'
+import CountdownTimer from '~/components/CountdownTimer'
 
 const metadata = {
   title: 'Contact',
@@ -12,12 +13,13 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact" title="รอบนมัสการรอบถัดไป" />
+  <CountdownTimer client:only="react"/>
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="การเดินทางมายังคริสตจักร"
+    subtitle="ลง BTS ราชเทวี ทางออกประตู X ตึกสภาคริสจักร ชั้น 6 ห้องประชุม X"
     inputs={[
       {
         type: 'text',
@@ -42,7 +44,7 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="We are here to help!"
     items={[
       {
@@ -75,5 +77,5 @@ const metadata = {
         icon: 'tabler:map-pin',
       },
     ]}
-  />
+  /> -->
 </Layout>

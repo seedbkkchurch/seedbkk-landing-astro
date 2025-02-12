@@ -40,6 +40,8 @@ const metadata = {
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
+
+  
     <Fragment slot="title">
       คริสตจักร
       <span class="highlight text-green dark:text-white"> เมล็ดพันธุ์</span> กรุงเทพ
@@ -54,12 +56,14 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <CountdownTimer client:only="react" />
+
+
   <!-- Note Widget ******************* -->
 
   <Note />
 
   <!-- Features Widget *************** -->
-  <CountdownTimer client:only="react" />
   <Features
     id="features"
     tagline=""
@@ -522,31 +526,5 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="ติดต่อเรา"
-    subtitle="มีคำถามหรือข้อสงสัย? เกี่ยวกับเรา"
-    callToAction={{
-      text: 'Contact us',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Email us',
-        description: 'seedch.bkk@gmail.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Call us',
-        description: '064 992 2255',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Chat with us',
-        description: 'facebook.com/seedbangkokcitychurch',
-        icon: 'tabler:brand-twitter',
-      },
-    ]}
-  />
 </Layout>
