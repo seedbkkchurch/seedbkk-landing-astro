@@ -38,7 +38,6 @@ export default {
     plugin(({ addVariant }) => {
       addVariant('intersect', '&:not([no-intersect])')
     }),
-
   ],
   darkMode: 'class',
 }

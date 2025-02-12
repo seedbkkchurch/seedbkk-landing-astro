@@ -42,10 +42,10 @@ export const headerData = {
     //       text: 'About us',
     //       href: getPermalink('/about'),
     //     },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
+    {
+      text: 'Contact',
+      href: getPermalink('/contact'),
+    },
     //     {
     //       text: 'Terms',
     //       href: getPermalink('/terms'),

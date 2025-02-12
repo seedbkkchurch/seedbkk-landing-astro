@@ -4,7 +4,6 @@ import Layout from '~/layouts/PageLayout.astro'
 import Hero from '~/components/widgets/Hero.astro'
 import Note from '~/components/widgets/Note.astro'
 import Features from '~/components/widgets/Features.astro'
-import Features2 from '~/components/widgets/Features2.astro'
 import Steps from '~/components/widgets/Steps.astro'
 import Content from '~/components/widgets/Content.astro'
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'
@@ -40,8 +39,6 @@ const metadata = {
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
-
-  
     <Fragment slot="title">
       คริสตจักร
       <span class="highlight text-green dark:text-white"> เมล็ดพันธุ์</span> กรุงเทพ
@@ -55,10 +52,9 @@ const metadata = {
       โบสที่มีวัยรุ่น 100% และ culture แบบวัยรุ่น
     </Fragment>
   </Hero>
-  
- 
+
   <CountdownTimer client:only="react" />
-  <Note quote="Note:" text="รอบนมัสการรอบถัดไป" />
+  <Note quote="Note:" text="รอบนมัสการรอบถัดไป วันอาทิตย์ วันอาทิตย์ 14.00" />
 
   <!-- Features Widget *************** -->
   <Features
@@ -292,7 +288,7 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     id="porfolio"
     title="Small group"
     subtitle="หรือกลุ่มแคร์ที่เราจะได้รู้จักกันมากขึ้นและสามัคคีธรรม"
@@ -329,11 +325,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -367,11 +363,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -404,8 +400,8 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
-  <Content
+  </Content> -->
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -438,7 +434,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
@@ -448,8 +444,8 @@ const metadata = {
                         Astro is a very interesting technology. Thanks.
                 `}
   />
-    
-    <!-- Note Widget ******************* -->
+
+  <!-- Note Widget ******************* -->
 
   <Note quote="Quote:" text="คุณเปลี่ยนแปลงตัวเองไม่ได้ แต่พระเจ้าเปลี่ยนคุณได้" />
   <!-- FAQs Widget ******************* -->
@@ -525,6 +521,4 @@ const metadata = {
       // { title: 'Users', amount: '48.4K' },
     ]}
   />
-
-
 </Layout>
