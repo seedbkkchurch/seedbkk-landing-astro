@@ -12,6 +12,7 @@ import FAQs from '~/components/widgets/FAQs.astro'
 import Stats from '~/components/widgets/Stats.astro'
 import CallToAction from '~/components/widgets/CallToAction.astro'
 import Image from '~/components/common/Image.astro'
+import Steps2 from '~/components/widgets/Steps2.astro'
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -105,7 +106,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/SEED_CHURCH_LOGO.png',
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
       alt: 'SeedChruch logo',
     }}
   >
@@ -513,10 +514,38 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Member', amount: '30 people' },
-      { title: 'Age', amount: '23.5 year' },
+      { title: 'Member', amount: '30+' },
+      { title: 'Age Avg', amount: '23.5 year' },
       { title: 'Age Chruch', amount: '2 year' },
       // { title: 'Users', amount: '48.4K' },
+    ]}
+  />
+
+    <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="ติดต่อเรา"
+    subtitle="มีคำถามหรือข้อสงสัย? เกี่ยวกับเรา"
+    callToAction={{
+      text: 'Contact us',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Email us',
+        description: 'seedch.bkk@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call us',
+        description: '064 992 2255',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Chat with us',
+        description: 'facebook.com/seedbangkokcitychurch',
+        icon: 'tabler:brand-twitter',
+      },
     ]}
   />
 </Layout>

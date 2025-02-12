@@ -59,10 +59,10 @@ export const headerData = {
     {
       text: 'Event',
       links: [
-        // {
-        //   text: 'Lead Generation',
-        //   href: getPermalink('/landing/lead-generation'),
-        // },
+        {
+          text: 'Lead Generation',
+          href: getPermalink('/landing/lead-generation'),
+        },
         // {
         //   text: 'Long-form Sales',
         //   href: getPermalink('/landing/sales'),
