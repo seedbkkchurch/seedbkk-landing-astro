@@ -2,6 +2,11 @@
 import { Icon } from 'astro-icon/components'
 import { SITE } from 'astrowind:config'
 import { getHomePermalink } from '~/utils/permalinks'
+import Button from '~/components/ui/Button.astro'
+import Image from '~/components/common/Image.astro'
+
+const appStoreImg = '~/assets/images/app-store.png'
+const appStoreDownloadLink = 'https://apps.apple.com/us/app/seed-church/id6654904118'
 
 interface Link {
   text?: string
@@ -35,6 +40,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
           <a class="inline-block text-xl font-bold" href={getHomePermalink()}>{SITE?.name}</a>
+          
         </div>
         <div class="flex gap-1 text-sm text-muted">
           {

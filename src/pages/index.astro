@@ -14,6 +14,15 @@ import Image from '~/components/common/Image.astro'
 import Steps2 from '~/components/widgets/Steps2.astro'
 import CountdownTimer from '~/components/CountdownTimer'
 
+import Button from '~/components/ui/Button.astro'
+
+const appStoreImg = '~/assets/images/app-store.png'
+const appStoreDownloadLink = 'https://apps.apple.com/us/app/seed-church/id6654904118'
+
+const googlePlayImg = '~/assets/images/google-play.png'
+const googlePlayDownloadLink =
+  'https://play.google.com/store/apps/details?id=com.seedchurchthailand.seed&pcampaignid=web_share'
+
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
@@ -481,7 +490,7 @@ const metadata = {
       {
         title: 'คริสเตียนเป็นพวกไร้ความรับชอบเอาแต่พึ่งพาพระเจ้าจริงหรอ',
         description:
-          "คริสเตียนไม่ได้ไร้ความรับผิดชอบ แต่เชื่อว่าต้อง ทำหน้าที่ของตัวเองให้ดีที่สุด พร้อมกับพึ่งพาพระเจ้าในเรื่องที่ควบคุมไม่ได้ พระคัมภีร์สอนให้ ขยัน ซื่อสัตย์ และรับผิดชอบ เช่น  ใครไม่ยอมทำงาน ก็อย่าให้เขากิน (2 เธสะโลนิกา 3:10)  จงทำทุกสิ่งเหมือนทำถวายพระเจ้า (โคโลสี 3:23) คริสเตียนที่แท้จริง ต้องลงมือทำ ไม่ใช่แค่อธิษฐานแล้วรอให้ทุกอย่างเกิดขึ้นเอง ",
+          'คริสเตียนไม่ได้ไร้ความรับผิดชอบ แต่เชื่อว่าต้อง ทำหน้าที่ของตัวเองให้ดีที่สุด พร้อมกับพึ่งพาพระเจ้าในเรื่องที่ควบคุมไม่ได้ พระคัมภีร์สอนให้ ขยัน ซื่อสัตย์ และรับผิดชอบ เช่น  ใครไม่ยอมทำงาน ก็อย่าให้เขากิน (2 เธสะโลนิกา 3:10)  จงทำทุกสิ่งเหมือนทำถวายพระเจ้า (โคโลสี 3:23) คริสเตียนที่แท้จริง ต้องลงมือทำ ไม่ใช่แค่อธิษฐานแล้วรอให้ทุกอย่างเกิดขึ้นเอง ',
       },
     ]}
   />
@@ -518,4 +527,5 @@ const metadata = {
       // { title: 'Users', amount: '48.4K' },
     ]}
   />
+
 </Layout>
