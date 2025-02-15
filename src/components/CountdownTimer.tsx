@@ -1,12 +1,28 @@
 import { useEffect, useState } from 'react'
 
 export default function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 3,
-    hours: 17,
-    minutes: 43,
-    seconds: 11,
-  })
+  const getNextWorshipTime = () => {
+    const currentDate = new Date()
+    const nextWorshipDate = new Date()
+
+    // Set the worship day and time (e.g., Sunday at 10:00 AM)
+    nextWorshipDate.setDate(currentDate.getDate() + ((7 - currentDate.getDay()) % 7))
+    nextWorshipDate.setHours(10, 0, 0, 0) // 10:00 AM
+
+    if (nextWorshipDate <= currentDate) {
+      nextWorshipDate.setDate(nextWorshipDate.getDate() + 7)
+    }
+
+    const timeDifference = nextWorshipDate.getTime() - currentDate.getTime()
+
+    return {
+      days: Math.floor(timeDifference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((timeDifference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((timeDifference / (1000 * 60)) % 60),
+      seconds: Math.floor((timeDifference / 1000) % 60),
+    }
+  }
+  const [timeLeft, setTimeLeft] = useState(getNextWorshipTime())
 
   useEffect(() => {
     const timer = setInterval(() => {

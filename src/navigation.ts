@@ -42,10 +42,7 @@ export const headerData = {
     //       text: 'About us',
     //       href: getPermalink('/about'),
     //     },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
-    },
+  
     //     {
     //       text: 'Terms',
     //       href: getPermalink('/terms'),
@@ -56,35 +53,35 @@ export const headerData = {
     //     },
     //   ],
     // },
-    {
-      text: 'Event',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        // {
-        //   text: 'Long-form Sales',
-        //   href: getPermalink('/landing/sales'),
-        // },
-        // {
-        //   text: 'Click-Through',
-        //   href: getPermalink('/landing/click-through'),
-        // },
-        // {
-        //   text: 'Product Details (or Services)',
-        //   href: getPermalink('/landing/product'),
-        // },
-        // {
-        //   text: 'Coming Soon or Pre-Launch',
-        //   href: getPermalink('/landing/pre-launch'),
-        // },
-        // {
-        //   text: 'Subscription',
-        //   href: getPermalink('/landing/subscription'),
-        // },
-      ],
-    },
+    // {
+    //   text: 'Event',
+    //   links: [
+    //     {
+    //       text: 'Lead Generation',
+    //       href: getPermalink('/landing/lead-generation'),
+    //     },
+    //     {
+    //       text: 'Long-form Sales',
+    //       href: getPermalink('/landing/sales'),
+    //     },
+    //     {
+    //       text: 'Click-Through',
+    //       href: getPermalink('/landing/click-through'),
+    //     },
+    //     {
+    //       text: 'Product Details (or Services)',
+    //       href: getPermalink('/landing/product'),
+    //     },
+    //     {
+    //       text: 'Coming Soon or Pre-Launch',
+    //       href: getPermalink('/landing/pre-launch'),
+    //     },
+    //     {
+    //       text: 'Subscription',
+    //       href: getPermalink('/landing/subscription'),
+    //     },
+    //   ],
+    // },
     {
       text: 'Blog',
       links: [
@@ -123,8 +120,12 @@ export const headerData = {
         },
       ],
     },
+    {
+      text: 'Contact',
+      href: getPermalink('/contact'),
+    },
   ],
-  actions: [{ text: 'Worship With Us', href: '', target: '_blank' }],
+  actions: [{ text: 'Worship With Us',  href: getPermalink('/contact')  , target: '_blank' }],
 }
 
 export const footerData = {
