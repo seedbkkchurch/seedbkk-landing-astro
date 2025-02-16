@@ -199,7 +199,7 @@ export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: Pagin
 
   const posts = await fetchPosts()
   const categories = {}
-  posts.map(post => {
+  posts.forEach(post => {
     if (post.category?.slug) {
       categories[post.category?.slug] = post.category
     }
@@ -223,9 +223,9 @@ export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFu
 
   const posts = await fetchPosts()
   const tags = {}
-  posts.map(post => {
+  posts.forEach(post => {
     if (Array.isArray(post.tags)) {
-      post.tags.map(tag => {
+      post.tags.forEach(tag => {
         tags[tag?.slug] = tag
       })
     }

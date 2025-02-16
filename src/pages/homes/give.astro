@@ -14,7 +14,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'
 import Note from '~/components/widgets/Note.astro'
 
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'ถวายทรัพย์',
 }
 ---
 
@@ -41,14 +41,15 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
+    id='bank'
     tagline="ถวายทรัพย์เงินบาท"
     actions={[
-      { variant: 'primary', target: ' ', text: 'ถวายเป็น cryptocurrency', href: '' },
-      { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#features' },
+      { variant: 'primary', target: '', text: 'ถวายเป็น cryptocurrency', href: '#crypto' },
+      { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#faqs' },
     ]}
     image={{
       src: '~/assets/images/QR_SEED_Account.png',
-      alt: 'AstroWind Hero Image',
+      alt: 'Seed Account Bank Image',
     }}
   >
     <Fragment slot="title">
@@ -62,10 +63,11 @@ const metadata = {
   </Hero2>
   <Note  quote="Note:" text="ท่านใดที่ยังไม่เข้าใจเรื่องการถวายสิบลด ให้ขอการถวายเลื่อนผ่านหน้าท่านไปก่อน"/>
   <Hero2
+    id='crypto'
     tagline="ถวายทรัพย์คริปโต"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'ถวายเป็น cryptocurrency', href: '' },
-      { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#features' },
+      { variant: 'primary', target: '', text: 'ถวายเป็นสกุลเงิน', href: '#bank' },
+      { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#faqs' },
     ]}
     image={{
       src: '~/assets/images/QR_SEED_Wallet.png',
@@ -295,6 +297,7 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id='faqs'
     title="Frequently Asked Questions"
     items={[
       {
@@ -330,7 +333,7 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with AstroWind's blog"
+    title="Latest Posts"
     information={``}
   >
     <Fragment slot="bg">
