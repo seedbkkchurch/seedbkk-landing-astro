@@ -7,10 +7,10 @@ export default function CountdownTimer() {
 
     // Set the worship day and time (e.g., Sunday at 10:00 AM)
     nextWorshipDate.setDate(currentDate.getDate() + ((7 - currentDate.getDay()) % 7))
-    nextWorshipDate.setHours(10, 0, 0, 0) // 10:00 AM
+    nextWorshipDate.setHours(14, 30, 0, 0) // 10:00 AM
 
     if (nextWorshipDate <= currentDate) {
-      nextWorshipDate.setDate(nextWorshipDate.getDate() + 7)
+      nextWorshipDate.setDate(nextWorshipDate.getDate() + 6)
     }
 
     const timeDifference = nextWorshipDate.getTime() - currentDate.getTime()
