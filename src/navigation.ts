@@ -42,7 +42,7 @@ export const headerData = {
     //       text: 'About us',
     //       href: getPermalink('/about'),
     //     },
-  
+
     //     {
     //       text: 'Terms',
     //       href: getPermalink('/terms'),
@@ -125,7 +125,7 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Worship With Us',  href: getPermalink('/contact')  , target: '_blank' }],
+  actions: [{ text: 'Worship With Us', href: getPermalink('/contact'), target: '_blank' }],
 }
 
 export const footerData = {
