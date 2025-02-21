@@ -6,45 +6,44 @@ import Features2 from '~/components/widgets/Features2.astro'
 import CountdownTimer from '~/components/CountdownTimer'
 
 const metadata = {
-  title: 'Contact',
+    title: 'Contact',
 }
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+    <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="" title="รอบนมัสการรอบถัดไป วันอาทิตย์ 14.00" />
-  <CountdownTimer client:only="react" />
+    <HeroText tagline="" title="รอบนมัสการรอบถัดไป วันอาทิตย์ 14.00" />
+    <CountdownTimer client:only="react" />
 
-  <ContactUs
-    id="form"
-    title="การเดินทางมายังคริสตจักร"
-    subtitle="ลง BTS ราชเทวี ทางออกประตู 1 (ผ่านป้ายโรงแรมเอเชีย) ตึกสภาคริสจักร ชั้น 6 ห้องประชุม 2"
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
+    <ContactUs
+        id="form"
+        title="การเดินทางมายังคริสตจักร"
+        subtitle="ลง BTS ราชเทวี ทางออกประตู 1 (ผ่านป้ายโรงแรมเอเชีย) ตึกสภาคริสจักร ชั้น 6 ห้องประชุม 2"
+        inputs={[
+            {
+                type: 'text',
+                name: 'name',
+                label: 'Name',
+            },
+            {
+                type: 'email',
+                name: 'email',
+                label: 'Email',
+            },
+        ]}
+        textarea={{
+            label: 'Message',
+        }}
+        disclaimer={{
+            label: 'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        }}
+        description="Our support team typically responds within 24 business hours."
+    />
 
-  <!-- Features2 Widget ************** -->
+    <!-- Features2 Widget ************** -->
 
-  <!-- <Features2
+    <!-- <Features2
     title="We are here to help!"
     items={[
       {

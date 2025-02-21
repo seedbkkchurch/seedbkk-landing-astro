@@ -12,12 +12,12 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'
 import { getPermalink } from '~/utils/permalinks'
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+    title: 'Personal Homepage Demo',
 }
 ---
 
 <Layout metadata={metadata}>
-  <!-- <Fragment slot="announcement"></Fragment>
+    <!-- <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
     <Header
       links={[
@@ -39,114 +39,111 @@ const metadata = {
     />
   </Fragment> -->
 
-  <!-- Hero2 Widget ******************* -->
+    <!-- Hero2 Widget ******************* -->
 
-  <Hero
-    id="hero"
-    title="Prapan Meepiankij"
-    tagline="ศิยาภิบาลคริสตเมล็ดพันธุ์"
-    actions={[{ variant: 'primary', text: 'About me', href: '#about' }]}
-  >
-    <Fragment slot="subtitle">
-      ผู้ที่ได้รับการทรงเรียกให้รับใช้พระเจ้า และได้นำประสบการณ์กว่า 14 ปี ในด้านการตลาดมาสนับสนุนพันธกิจของคริสตจักร
-      ด้วยความเชี่ยวชาญด้าน การสร้างแบรนด์ การสื่อสาร และการจัดอีเวนต์
-    </Fragment>
-  </Hero>
+    <Hero
+        id="hero"
+        title="Prapan Meepiankij"
+        tagline="ศิยาภิบาลคริสตเมล็ดพันธุ์"
+        actions={[{ variant: 'primary', text: 'About me', href: '#about' }]}
+    >
+        <Fragment slot="subtitle">
+            ผู้ที่ได้รับการทรงเรียกให้รับใช้พระเจ้า และได้นำประสบการณ์กว่า 14 ปี
+            ในด้านการตลาดมาสนับสนุนพันธกิจของคริสตจักร ด้วยความเชี่ยวชาญด้าน การสร้างแบรนด์ การสื่อสาร และการจัดอีเวนต์
+        </Fragment>
+    </Hero>
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <Content
-    id="about"
-    columns={3}
-    items={[
-      {
-        icon: 'tabler:brand-dribbble',
-        callToAction: {
-          target: '_blank',
-          text: 'Dribbble',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-behance',
-        callToAction: {
-          target: '_blank',
-          text: 'Behance',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-pinterest',
-        callToAction: {
-          target: '_blank',
-          text: 'Pinterest',
-          href: '#',
-        },
-      },
-    ]}
-    image={{
-      src: '~/assets/images/pastor.jpg',
-      alt: 'Colorful Image',
-      loading: 'eager',
-    }}
-  >
-    <Fragment slot="content">
-      <h2 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">About me</h2>
-      <p>ผมเป็นคริสเตียนที่มีความเชื่อในพระเจ้า และมีความมุ่งมั่นที่จะเปลี่ยนแปลงประเทศไทยให้เป็นประเทศคริสเตียน</p>
-      <br />
-      <p>ที่มีความเชื่อในพระเจ้า และมีความมุ่งมั่นที่จะเปลี่ยนแปลงประเทศไทยให้เป็นประเทศคริสเตียน</p>
-      <br />
-      <p></p>
-    </Fragment>
+    <Content
+        id="about"
+        columns={3}
+        items={[
+            {
+                icon: 'tabler:brand-dribbble',
+                callToAction: {
+                    target: '_blank',
+                    text: 'Dribbble',
+                    href: '#',
+                },
+            },
+            {
+                icon: 'tabler:brand-behance',
+                callToAction: {
+                    target: '_blank',
+                    text: 'Behance',
+                    href: '#',
+                },
+            },
+            {
+                icon: 'tabler:brand-pinterest',
+                callToAction: {
+                    target: '_blank',
+                    text: 'Pinterest',
+                    href: '#',
+                },
+            },
+        ]}
+        image={{
+            src: '~/assets/images/pastor.jpg',
+            alt: 'Colorful Image',
+            loading: 'eager',
+        }}
+    >
+        <Fragment slot="content">
+            <h2 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">About me</h2>
+            <p>
+                ผมเป็นคริสเตียนที่มีความเชื่อในพระเจ้า และมีความมุ่งมั่นที่จะเปลี่ยนแปลงประเทศไทยให้เป็นประเทศคริสเตียน
+            </p>
+            <br />
+            <p>ที่มีความเชื่อในพระเจ้า และมีความมุ่งมั่นที่จะเปลี่ยนแปลงประเทศไทยให้เป็นประเทศคริสเตียน</p>
+            <br />
+            <p></p>
+        </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
 
-  <!-- Steps Widget ****************** -->
+    <!-- Steps Widget ****************** -->
 
-  <Steps
-    id="resume"
-    title="ประสบการณ์"
-    items={[
-      {
-        title:
-          'ศิยาภิบาล <br /> <span class="font-normal">คริสตจักรเมล็ดพันธ์กรุงเทพ</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'วิทยากรการตลาด <br /> <span class="font-normal">สมาคมธรุกิจคริสเตียนแห่งประเทศไทย</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'ศิยาภิบาล <br /> <span class="font-normal">คริสตจักรเมล็ดพันธ์ภูเก็ตซิตี้</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'CEO <br /> <span class="font-normal">Inspire Marketing</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'Onwner and Maneger Event <br /> <span class="font-normal">Mayucos</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
+    <Steps
+        id="resume"
+        title="ประสบการณ์"
+        items={[
+            {
+                title: 'ศิยาภิบาล <br /> <span class="font-normal">คริสตจักรเมล็ดพันธ์กรุงเทพ</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+                description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+                icon: 'tabler:briefcase',
+            },
+            {
+                title: 'วิทยากรการตลาด <br /> <span class="font-normal">สมาคมธรุกิจคริสเตียนแห่งประเทศไทย</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+                description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+                icon: 'tabler:briefcase',
+            },
+            {
+                title: 'ศิยาภิบาล <br /> <span class="font-normal">คริสตจักรเมล็ดพันธ์ภูเก็ตซิตี้</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+                description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+                icon: 'tabler:briefcase',
+            },
+            {
+                title: 'CEO <br /> <span class="font-normal">Inspire Marketing</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+                description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+                icon: 'tabler:briefcase',
+            },
+            {
+                title: 'Onwner and Maneger Event <br /> <span class="font-normal">Mayucos</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+                description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+                icon: 'tabler:briefcase',
+            },
+        ]}
+        classes={{ container: 'max-w-3xl' }}
+    />
 
-  <!-- Steps Widget ****************** -->
+    <!-- Steps Widget ****************** -->
 
-  <!-- <Steps
+    <!-- <Steps
     id="resume"
     title="Education"
     items={[
@@ -162,9 +159,9 @@ const metadata = {
     classes={{ container: 'max-w-3xl' }}
   /> -->
 
-  <!-- Features3 Widget ************** -->
+    <!-- Features3 Widget ************** -->
 
-  <!-- <Features3
+    <!-- <Features3
     title="Skills"
     subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
     columns={3}
@@ -209,9 +206,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Testimonials Widget *********** -->
+    <!-- Testimonials Widget *********** -->
 
-  <!-- <Testimonials
+    <!-- <Testimonials
     title="Client testimonials"
     subtitle="Discover what clients have to say about their experiences working with me."
     testimonials={[
@@ -272,9 +269,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
-  <!-- <CallToAction
+    <!-- <CallToAction
     title="Let's create together"
     subtitle="Ready to transform your vision into captivating designs?"
     actions={[
@@ -286,15 +283,15 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- BlogLatestPost Widget **************** -->
+    <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
-    id="blog"
-    title="อ่านบทความ"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+    <BlogLatestPosts
+        id="blog"
+        title="อ่านบทความ"
+        information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </BlogLatestPosts>
 </Layout>

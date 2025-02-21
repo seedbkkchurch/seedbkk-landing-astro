@@ -1,24 +1,22 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "forceConsistentCasingInFileNames": false,
-    "strictNullChecks": true,
-    "allowJs": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "~/*": ["src/*"],
-      "$types/*": ["src/@types/*"],
-      "$components/*": ["src/components/*"],
-      "$constants/*": ["src/constants/*"],
-      "$functions/*": ["src/functions/*"],
-      "$layouts/*": ["src/layouts/*"]
+    "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+        "forceConsistentCasingInFileNames": false,
+        "strictNullChecks": true,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "~/*": ["src/*"],
+            "$types/*": ["src/@types/*"],
+            "$components/*": ["src/components/*"],
+            "$constants/*": ["src/constants/*"],
+            "$functions/*": ["src/functions/*"],
+            "$layouts/*": ["src/layouts/*"]
+        },
+        "jsx": "react-jsx",
+        "jsxImportSource": "react"
     },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist/"]
+    "include": [".astro/types.d.ts", "**/*"],
+    "exclude": ["dist/"]
 }

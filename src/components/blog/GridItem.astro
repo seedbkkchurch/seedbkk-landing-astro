@@ -8,7 +8,7 @@ import { findImage } from '~/utils/images'
 import { getPermalink } from '~/utils/permalinks'
 
 export interface Props {
-  post: Post
+    post: Post
 }
 
 const { post } = Astro.props
@@ -18,54 +18,57 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 ---
 
 <article
-  class="intersect-once intersect-quarter mb-6 transition motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+    class="intersect-once intersect-quarter mb-6 transition motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
 >
-  <div class="relative mb-6 rounded bg-gray-400 shadow-lg dark:bg-slate-700 md:h-64">
-    {
-      image &&
-        (link ? (
-          <a href={link}>
-            <Image
-              src={image}
-              class="w-full rounded bg-gray-400 shadow-lg dark:bg-slate-700 md:h-full"
-              widths={[400, 900]}
-              width={400}
-              sizes="(max-width: 900px) 400px, 900px"
-              alt={post.title}
-              aspectRatio="16:9"
-              layout="cover"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-        ) : (
-          <Image
-            src={image}
-            class="w-full rounded bg-gray-400 shadow-lg dark:bg-slate-700 md:h-full"
-            widths={[400, 900]}
-            width={400}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt={post.title}
-            aspectRatio="16:9"
-            layout="cover"
-            loading="lazy"
-            decoding="async"
-          />
-        ))
-    }
-  </div>
+    <div class="relative mb-6 rounded bg-gray-400 shadow-lg dark:bg-slate-700 md:h-64">
+        {
+            image &&
+                (link ? (
+                    <a href={link}>
+                        <Image
+                            src={image}
+                            class="w-full rounded bg-gray-400 shadow-lg dark:bg-slate-700 md:h-full"
+                            widths={[400, 900]}
+                            width={400}
+                            sizes="(max-width: 900px) 400px, 900px"
+                            alt={post.title}
+                            aspectRatio="16:9"
+                            layout="cover"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </a>
+                ) : (
+                    <Image
+                        src={image}
+                        class="w-full rounded bg-gray-400 shadow-lg dark:bg-slate-700 md:h-full"
+                        widths={[400, 900]}
+                        width={400}
+                        sizes="(max-width: 900px) 400px, 900px"
+                        alt={post.title}
+                        aspectRatio="16:9"
+                        layout="cover"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                ))
+        }
+    </div>
 
-  <h3 class="mb-2 font-heading text-xl font-bold leading-tight dark:text-slate-300 sm:text-2xl">
-    {
-      link ? (
-        <a class="inline-block transition duration-200 ease-in hover:text-primary dark:hover:text-blue-700" href={link}>
-          {post.title}
-        </a>
-      ) : (
-        post.title
-      )
-    }
-  </h3>
+    <h3 class="mb-2 font-heading text-xl font-bold leading-tight dark:text-slate-300 sm:text-2xl">
+        {
+            link ? (
+                <a
+                    class="inline-block transition duration-200 ease-in hover:text-primary dark:hover:text-blue-700"
+                    href={link}
+                >
+                    {post.title}
+                </a>
+            ) : (
+                post.title
+            )
+        }
+    </h3>
 
-  <p class="text-lg text-muted dark:text-slate-400">{post.excerpt}</p>
+    <p class="text-lg text-muted dark:text-slate-400">{post.excerpt}</p>
 </article>
