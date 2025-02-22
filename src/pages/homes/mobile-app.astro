@@ -19,16 +19,16 @@ const appStoreDownloadLink = 'https://apps.apple.com/us/app/seed-church/id665490
 
 const googlePlayImg = '~/assets/images/google-play.png'
 const googlePlayDownloadLink =
-  'https://play.google.com/store/apps/details?id=com.seedchurchthailand.seed&pcampaignid=web_share'
+    'https://play.google.com/store/apps/details?id=com.seedchurchthailand.seed&pcampaignid=web_share'
 
 const metadata = {
-  title: 'Mobile App Homepage',
+    title: 'Mobile App',
 }
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
-  <!-- <Fragment slot="header">
+    <Fragment slot="announcement"></Fragment>
+    <!-- <Fragment slot="header">
     <Header
       position="left"
       links={[
@@ -47,40 +47,43 @@ const metadata = {
     />
   </Fragment> -->
 
-  <!-- Hero2 Widget ******************* -->
+    <!-- Hero2 Widget ******************* -->
 
-  <Hero2
-    tagline="Mobile App"
-    image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
-  >
-    <Fragment slot="title">
-      <span class="highlight text-green dark:text-white">Seed App</span>
-      <br /> เข้าใกล้เรามากขึ้น <span class="hidden xl:inline">ผ่าน Application</span>
-    </Fragment>
+    <Hero2
+        tagline="Mobile App"
+        image={{
+            src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+            alt: 'Seed App Image',
+        }}
+    >
+        <Fragment slot="title">
+            <span class="highlight text-green dark:text-green">Seed App</span>
+            <br /> เข้าใกล้เรามากขึ้น <span class="hidden xl:inline">ผ่าน Application</span>
+        </Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        แอพพลิเคชั่น Seed จัดทำโดยองค์กรคริสตจักรเมล็ดพันธุ์ เพื่อรวบรวมคำสอนต่างๆ คำเทศนา คำพยาน บทเฝ้าเดี่ยว ข่าวสารขององค์กร เพื่อความสะดวกของสมาชิกในองค์กร ศึกษาเรื่องราวของพระเจ้า และติดตามข่าวสารต่างๆ ซึ่งสิ่งเหล่านี้ได้รวมไว้ในแอพพลิเคชั่น Seed แล้ว      </span>
-      <!-- Download now and embark on a journey to elevate your projects like never before. -->
-    </Fragment>
+        <Fragment slot="subtitle">
+            <span class="hidden sm:inline">
+                แอพพลิเคชั่น Seed จัดทำโดยองค์กรคริสตจักรเมล็ดพันธุ์ เพื่อรวบรวมคำสอนต่างๆ คำเทศนา คำพยาน บทเฝ้าเดี่ยว
+                ข่าวสารขององค์กร เพื่อความสะดวกของสมาชิกในองค์กร ศึกษาเรื่องราวของพระเจ้า และติดตามข่าวสารต่างๆ
+                ซึ่งสิ่งเหล่านี้ได้รวมไว้ในแอพพลิเคชั่น Seed แล้ว
+            </span>
+            <!-- Download now and embark on a journey to elevate your projects like never before. -->
+        </Fragment>
 
-    <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
+        <div slot="actions" class="flex max-w-sm gap-4">
+            <Button variant="link" href={appStoreDownloadLink}>
+                <Image src={appStoreImg} alt="App Store Image" width={200} />
+            </Button>
 
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
-      </Button>
-    </div>
-  </Hero2>
+            <Button variant="link" href={googlePlayDownloadLink}>
+                <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+            </Button>
+        </div>
+    </Hero2>
 
-  <!-- Features3 Widget ************** -->
+    <!-- Features3 Widget ************** -->
 
-  <!-- <Features3
+    <!-- <Features3
     id="features"
     title="How to use our app?"
     subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
@@ -115,9 +118,9 @@ const metadata = {
     }}
   /> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isReversed
     items={[
       {
@@ -154,9 +157,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isAfterContent
     items={[
       {
@@ -191,9 +194,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Stats Widget ****************** -->
+    <!-- Stats Widget ****************** -->
 
-  <!-- <Stats
+    <!-- <Stats
     title="Statistics of our app"
     stats={[
       { amount: '20K', icon: 'tabler:download' },
@@ -202,9 +205,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Testimonials Widget *********** -->
+    <!-- Testimonials Widget *********** -->
 
-  <!-- <Testimonials
+    <!-- <Testimonials
     title="What our users say?"
     testimonials={[
       {
@@ -244,9 +247,9 @@ const metadata = {
     }}
   /> -->
 
-  <!-- FAQs Widget ******************* -->
+    <!-- FAQs Widget ******************* -->
 
-  <!-- <FAQs
+    <!-- <FAQs
     title="Still have some doubts?"
     items={[
       {
@@ -276,21 +279,21 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    id="download"
-    title="Download our app now!"
-    subtitle="แอพพลิเคชั่น Seed จัดทำโดยองค์กรคริสตจักรเมล็ดพันธุ์ เพื่อรวบรวมคำสอนต่างๆ คำเทศนา คำพยาน บทเฝ้าเดี่ยว ข่าวสารขององค์กร เพื่อความสะดวกของสมาชิกในองค์กร ศึกษาเรื่องราวของพระเจ้า และติดตามข่าวสารต่างๆ ซึ่งสิ่งเหล่านี้ได้รวมไว้ในแอพพลิเคชั่น Seed แล้ว"
-  >
-    <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
+    <CallToAction
+        id="download"
+        title="Download our app now!"
+        subtitle="แอพพลิเคชั่น Seed จัดทำโดยองค์กรคริสตจักรเมล็ดพันธุ์ เพื่อรวบรวมคำสอนต่างๆ คำเทศนา คำพยาน บทเฝ้าเดี่ยว ข่าวสารขององค์กร เพื่อความสะดวกของสมาชิกในองค์กร ศึกษาเรื่องราวของพระเจ้า และติดตามข่าวสารต่างๆ ซึ่งสิ่งเหล่านี้ได้รวมไว้ในแอพพลิเคชั่น Seed แล้ว"
+    >
+        <div slot="actions" class="flex max-w-sm gap-4">
+            <Button variant="link" href={appStoreDownloadLink}>
+                <Image src={appStoreImg} alt="App Store Image" width={200} />
+            </Button>
 
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
-      </Button>
-    </div>
-  </CallToAction>
+            <Button variant="link" href={googlePlayDownloadLink}>
+                <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+            </Button>
+        </div>
+    </CallToAction>
 </Layout>

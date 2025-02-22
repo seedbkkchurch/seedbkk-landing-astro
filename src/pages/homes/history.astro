@@ -14,49 +14,53 @@ import Brands from '~/components/widgets/Brands.astro'
 import { YouTube } from 'astro-embed'
 
 const metadata = {
+<<<<<<< HEAD
   title: 'ประวัติ',
+=======
+    title: 'History',
+>>>>>>> 0b63af4ad7d91d2b604bb8f9e02036af84fc3cce
 }
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+    <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="ประวัติองค์กรคริสตจักรองค์กรคริสตจักรเมล็ดพันธุ์"
-    actions={[
-      {
-        variant: 'primary',
-        target: '_blank',
-        text: 'Leadership',
-        href: 'https://www.seedchurch-thailand.com/leadership',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: 'https://www.seedchurch-thailand.com/' },
-    ]}
-  >
-    <Fragment slot="title">
-      ประวัติองค์กรคริสตจักร <span class="hidden sm:inline"></span>
-      <span class="highlight text-green dark:text-white">เมล็ดพันธุ์</span> on Youtube
-    </Fragment>
+    <Hero
+        tagline="ประวัติองค์กรคริสตจักรองค์กรคริสตจักรเมล็ดพันธุ์"
+        actions={[
+            {
+                variant: 'primary',
+                target: '_blank',
+                text: 'Leadership',
+                href: 'https://www.seedchurch-thailand.com/leadership',
+                icon: 'tabler:download',
+            },
+            { text: 'Learn more', href: 'https://www.seedchurch-thailand.com/' },
+        ]}
+    >
+        <Fragment slot="title">
+            ประวัติองค์กรคริสตจักร <span class="hidden sm:inline"></span>
+            <span class="highlight text-green dark:text-white">เมล็ดพันธุ์</span>
+        </Fragment>
 
-    <Fragment slot="subtitle">
-      เรื่องราวของศาสนาจารย์ ธิคุณ ภาพเสน่ห์และศาสนาจารย์กรรฐิมา ภาพเสน่ห์ <span class="font-semibold"></span>
-    </Fragment>
+        <Fragment slot="subtitle">
+            เรื่องราวของศาสนาจารย์ ธิคุณ ภาพเสน่ห์และศาสนาจารย์กรรฐิมา ภาพเสน่ห์ <span class="font-semibold"></span>
+        </Fragment>
 
-    <Fragment slot="image">
-      <YouTube id="DtNZMdzVdso" title="ประวัติองค์คริสตจักรเมล็ดพันธุ์" />
-      <style is:inline>
-        lite-youtube {
-          margin: 0 auto;
-          max-width: 100%;
-        }
-      </style>
-    </Fragment>
-  </Hero>
+        <Fragment slot="image">
+            <YouTube id="DtNZMdzVdso" title="ประวัติองค์คริสตจักรเมล็ดพันธุ์" />
+            <style is:inline>
+                lite-youtube {
+                    margin: 0 auto;
+                    max-width: 100%;
+                }
+            </style>
+        </Fragment>
+    </Hero>
 
-  <!-- Features2 Widget ************** -->
+    <!-- Features2 Widget ************** -->
 
-  <!-- <Features2
+    <!-- <Features2
     title="About us"
     subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 5.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
   >
@@ -65,9 +69,9 @@ const metadata = {
     </Fragment>
   </Features2> -->
 
-  <!-- Stats Widget ****************** -->
+    <!-- Stats Widget ****************** -->
 
-  <!-- <Stats
+    <!-- <Stats
     title="Discover the impressive impact of Astrowind"
     subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
     stats={[
@@ -78,9 +82,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Brands Widget ****************** -->
+    <!-- Brands Widget ****************** -->
 
-  <!-- <Brands
+    <!-- <Brands
     title="Partnerships & Collaborations"
     subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
     icons={[]}
@@ -125,9 +129,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Features2 Widget ************** -->
+    <!-- Features2 Widget ************** -->
 
-  <!-- <Features2
+    <!-- <Features2
     title="What services do we provide?"
     subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
     items={[
@@ -156,9 +160,9 @@ const metadata = {
     </Fragment>
   </Features2> -->
 
-  <!-- Features Widget *************** -->
+    <!-- Features Widget *************** -->
 
-  <!-- <Features
+    <!-- <Features
     id="features"
     title="Main features of our templates"
     subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
@@ -200,9 +204,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- FAQs Widget ******************* -->
+    <!-- FAQs Widget ******************* -->
 
-  <!-- <FAQs
+    <!-- <FAQs
     title="Frequently Asked Questions"
     items={[
       {
@@ -242,9 +246,9 @@ const metadata = {
     </Fragment>
   </FAQs> -->
 
-  <!-- Features3 Widget ************** -->
+    <!-- Features3 Widget ************** -->
 
-  <!-- <Features3
+    <!-- <Features3
     title="Let us know how we can help"
     subtitle="We’re here to help and answer any question you might have."
     columns={4}
@@ -292,9 +296,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
-  <!-- <CallToAction
+    <!-- <CallToAction
     actions={[
       {
         variant: 'primary',

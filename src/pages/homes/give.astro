@@ -14,12 +14,16 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'
 import Note from '~/components/widgets/Note.astro'
 
 const metadata = {
+<<<<<<< HEAD
   title: 'ถวายทรัพย์',
+=======
+    title: 'ถวายทรัพย์',
+>>>>>>> 0b63af4ad7d91d2b604bb8f9e02036af84fc3cce
 }
 ---
 
 <Layout metadata={metadata}>
-  <!-- <Fragment slot="header">
+    <!-- <Fragment slot="header">
     <Header
       {...headerData}
       actions={[
@@ -38,54 +42,58 @@ const metadata = {
     />
   </Fragment> -->
 
-  <!-- Hero2 Widget ******************* -->
+    <!-- Hero2 Widget ******************* -->
 
-  <Hero2
-    tagline="ถวายทรัพย์เงินบาท"
-    actions={[
-      { variant: 'primary', target: '_blank', text: 'ถวายเป็น cryptocurrency', href: '' },
-      { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#features' },
-    ]}
-    image={{
-      src: '~/assets/images/QR_SEED_BKK_Account.png',
-      alt: 'AstroWind Hero Image',
-    }}
-  >
-    <Fragment slot="title">
-      ถวายทรัพย์ <br /> เลขบัญชี <span class="highlight text-accent dark:text-white"><br />SCB 420-196363-1</span><br />
-    </Fragment>
+    <Hero2
+        id="bank"
+        tagline="ถวายทรัพย์เงินบาท"
+        actions={[
+            { variant: 'primary', target: '', text: 'ถวายเป็น cryptocurrency', href: '#crypto' },
+            { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#faqs' },
+        ]}
+        image={{
+            src: '~/assets/images/QR_SEED_Account.png',
+            alt: 'Seed Account Bank Image',
+        }}
+    >
+        <Fragment slot="title">
+            ถวายทรัพย์ <br /> เลขบัญชี <span class="highlight text-accent dark:text-white"><br />SCB 420-196363-1</span
+            ><br />
+        </Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline"> <span class="font-semibold">สาขาเซ็นเตอร์วันช้อปปิ้งพลาซ่า</span></span>
-      ชื่อบัญชีเอกมณีและวัธนีและพิชาม
-    </Fragment>
-  </Hero2>
-  <Note  quote="Note:" text="ท่านใดที่ยังไม่เข้าใจเรื่องการถวายสิบลดขอให้ QR เลื่อนผ่านหน้าท่านไปก่อน"/>
-  <Hero2
-    tagline="ถวายทรัพย์คริปโต"
-    actions={[
-      { variant: 'primary', target: '_blank', text: 'ถวายเป็น cryptocurrency', href: '' },
-      { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#features' },
-    ]}
-    image={{
-      src: '~/assets/images/QR_SEED_Wallet.png',
-      alt: 'AstroWind Hero Image',
-    }}
-  >
-    <Fragment slot="title">
-      ถวายทรัพย์ <br /> Address wallet <span class="highlight text-green dark:text-white"><br />0x2c652...7cB28</span
-      ><br />
-    </Fragment>
+        <Fragment slot="subtitle">
+            <span class="hidden sm:inline"> <span class="font-semibold">สาขาเซ็นเตอร์วันช้อปปิ้งพลาซ่า</span></span>
+            ชื่อบัญชีเอกมณีและวัธนีและพิชาม
+        </Fragment>
+    </Hero2>
+    <Note quote="Note:" text="ท่านใดที่ยังไม่เข้าใจเรื่องการถวายสิบลด ให้ขอการถวายเลื่อนผ่านหน้าท่านไปก่อน" />
+    <Hero2
+        id="crypto"
+        tagline="ถวายทรัพย์คริปโต"
+        actions={[
+            { variant: 'primary', target: '', text: 'ถวายเป็นสกุลเงิน', href: '#bank' },
+            { text: 'เรียนรู้เพิ่มเติมถ้าคุณยังไม่เข้าใจเรื่องนี้', href: '#faqs' },
+        ]}
+        image={{
+            src: '~/assets/images/QR_SEED_Wallet.png',
+            alt: 'AstroWind Hero Image',
+        }}
+    >
+        <Fragment slot="title">
+            ถวายทรัพย์ <br /> Address wallet <span class="highlight text-green dark:text-white"
+                ><br />0x2c652...7cB28</span
+            ><br />
+        </Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline"> <span class="font-semibold">prefer BTC, ETH, USDT</span></span>
-      เหรียนของท่านจะถูกจัดเก็บใน hard wallet
-    </Fragment>
-  </Hero2>
+        <Fragment slot="subtitle">
+            <span class="hidden sm:inline"> <span class="font-semibold">prefer BTC, ETH, USDT</span></span>
+            เหรียนของท่านจะถูกจัดเก็บใน hard wallet
+        </Fragment>
+    </Hero2>
 
-  <!-- Features Widget *************** -->
+    <!-- Features Widget *************** -->
 
-  <!-- <Features
+    <!-- <Features
     id="features"
     title="Why choose AstroWind?"
     subtitle="Each of the following features enhances AstroWind's value proposition."
@@ -126,9 +134,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     title="ถวายด้วย Cryptocurrency"
     subtitle="การถวายด้วยคริปโตเคอร์เรนซีเป็นทางเลือกใหม่สำหรับผู้ที่ไม่มีเงิน fiat "
     isReversed
@@ -159,9 +167,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isAfterContent={true}
     items={[
       {
@@ -189,9 +197,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -220,9 +228,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     items={[
       {
         title: 'Description:',
@@ -249,9 +257,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Pricing Widget ******************* -->
+    <!-- Pricing Widget ******************* -->
 
-  <!-- <Pricing
+    <!-- <Pricing
     title="Flexible pricing plans"
     prices={[
       {
@@ -292,49 +300,46 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- FAQs Widget ******************* -->
+    <!-- FAQs Widget ******************* -->
 
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'เงินถวายคืออะไร?',
-        description:
-          'เงินถวายคือเงินที่คริสเตียนบริจาคให้กับคริสตจักรหรือองค์กรคริสเตียนอื่นๆ เพื่อสนับสนุนพันธกิจต่างๆ ของคริสตจักร เช่น การประกาศพระกิตติคุณ การช่วยเหลือผู้ยากไร้ การบำรุงรักษาสถานที่ และอื่นๆ ',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'ทำไมถึงต้องถวายเงิน?',
-        description: `การถวายเงินเป็นส่วนหนึ่งของการนมัสการพระเจ้า เป็นการแสดงออกถึงความเชื่อ ความรัก และความขอบคุณต่อพระเจ้าสำหรับพระพรต่างๆ ที่ได้รับ นอกจากนี้ เงินถวายยังเป็นแหล่งสนับสนุนที่สำคัญสำหรับพันธกิจของคริสตจักร`,
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'สิบลดคืออะไร?',
-        description:
-          'สิบลดคือการถวาย 10% ของรายได้ให้กับคริสตจักร ซึ่งเป็นแนวคิดที่มาจากพระคัมภีร์เดิม เป็นการแสดงออกถึงความเชื่อ ความเคารพ และความขอบคุณต่อพระเจ้า',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: 'เงินถวายเอาไปทำอะไร?',
-        description: `เงินถวายในโบสถ์ไม่ได้ถูกใช้เพื่อแสวงหากำไร แต่เป็นการให้ด้วยใจเพื่อสนับสนุนพันธกิจของโบสถ์ ช่วยเหลือสังคม และเผยแพร่ศาสนา การบริหารจัดการขึ้นอยู่กับนโยบายของแต่ละโบสถ์ บางแห่งมีการเปิดเผยรายรับรายจ่ายเพื่อให้สมาชิกมีส่วนร่วมและมั่นใจในการใช้เงินอย่างโปร่งใส การถวายไม่ใช่ภาระหน้าที่ แต่เป็นการให้ด้วยใจกับพระเจ้าและเพื่อนมนุษย์`,
-        icon: 'tabler:chevrons-right',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
+    <FAQs
+        id="faqs"
+        title="Frequently Asked Questions"
+        items={[
+            {
+                title: 'เงินถวายคืออะไร?',
+                description:
+                    'เงินถวายคือเงินที่คริสเตียนบริจาคให้กับคริสตจักรหรือองค์กรคริสเตียนอื่นๆ เพื่อสนับสนุนพันธกิจต่างๆ ของคริสตจักร เช่น การประกาศพระกิตติคุณ การช่วยเหลือผู้ยากไร้ การบำรุงรักษาสถานที่ และอื่นๆ ',
+                icon: 'tabler:chevrons-right',
+            },
+            {
+                title: 'ทำไมถึงต้องถวายเงิน?',
+                description: `การถวายเงินเป็นส่วนหนึ่งของการนมัสการพระเจ้า เป็นการแสดงออกถึงความเชื่อ ความรัก และความขอบคุณต่อพระเจ้าสำหรับพระพรต่างๆ ที่ได้รับ นอกจากนี้ เงินถวายยังเป็นแหล่งสนับสนุนที่สำคัญสำหรับพันธกิจของคริสตจักร`,
+                icon: 'tabler:chevrons-right',
+            },
+            {
+                title: 'สิบลดคืออะไร?',
+                description:
+                    'สิบลดคือการถวาย 10% ของรายได้ให้กับคริสตจักร ซึ่งเป็นแนวคิดที่มาจากพระคัมภีร์เดิม เป็นการแสดงออกถึงความเชื่อ ความเคารพ และความขอบคุณต่อพระเจ้า',
+                icon: 'tabler:chevrons-right',
+            },
+            {
+                title: 'เงินถวายเอาไปทำอะไร?',
+                description: `เงินถวายในโบสถ์ไม่ได้ถูกใช้เพื่อแสวงหากำไร แต่เป็นการให้ด้วยใจเพื่อสนับสนุนพันธกิจของโบสถ์ ช่วยเหลือสังคม และเผยแพร่ศาสนา การบริหารจัดการขึ้นอยู่กับนโยบายของแต่ละโบสถ์ บางแห่งมีการเปิดเผยรายรับรายจ่ายเพื่อให้สมาชิกมีส่วนร่วมและมั่นใจในการใช้เงินอย่างโปร่งใส การถวายไม่ใช่ภาระหน้าที่ แต่เป็นการให้ด้วยใจกับพระเจ้าและเพื่อนมนุษย์`,
+                icon: 'tabler:chevrons-right',
+            },
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </FAQs>
 
-  <!-- BlogLatestPost Widget **************** -->
+    <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
-    id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={``}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+    <BlogLatestPosts id="blog" title="Latest Posts" information={``}>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </BlogLatestPosts>
 </Layout>
