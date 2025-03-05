@@ -66,30 +66,30 @@ export default function CountdownTimer() {
         <div className="count-down-main flex w-full items-start justify-center gap-4">
             <div className="timer w-16">
                 <div className="overflow-hidden rounded-lg bg-slate-950 px-2 py-4">
-                    <h3 className="countdown-element days font-Cormorant text-center text-2xl font-semibold text-white"></h3>
+                    <h3 className="countdown-element days font-Cormorant text-center text-2xl font-semibold text-white dark:text-green"></h3>
                 </div>
-                <p className="font-Cormorant mt-1 w-full text-center text-lg font-medium text-gray-900">days</p>
+                <p className="font-Cormorant mt-1 w-full text-center text-lg font-medium text-gray-900 dark:text-white">days</p>
             </div>
             <h3 className="font-manrope text-2xl font-semibold text-gray-900">:</h3>
             <div className="timer w-16">
                 <div className="overflow-hidden rounded-lg bg-slate-950 px-2 py-4">
-                    <h3 className="countdown-element hours font-Cormorant text-center text-2xl font-semibold text-white"></h3>
+                    <h3 className="countdown-element hours font-Cormorant text-center text-2xl font-semibold text-white dark:text-green"></h3>
                 </div>
-                <p className="font-Cormorant mt-1 w-full text-center text-lg font-normal text-gray-900">hours</p>
+                <p className="font-Cormorant mt-1 w-full text-center text-lg font-normal text-gray-900 dark:text-white">hours</p>
             </div>
             <h3 className="font-manrope text-2xl font-semibold text-gray-900">:</h3>
             <div className="timer w-16">
                 <div className="overflow-hidden rounded-lg bg-slate-950 px-2 py-4">
-                    <h3 className="countdown-element minutes font-Cormorant text-center text-2xl font-semibold text-white"></h3>
+                    <h3 className="countdown-element minutes font-Cormorant text-center text-2xl font-semibold text-white dark:text-green"></h3>
                 </div>
-                <p className="font-Cormorant mt-1 w-full text-center text-lg font-normal text-gray-900">minutes</p>
+                <p className="font-Cormorant mt-1 w-full text-center text-lg font-normal  text-gray-900 dark:text-white">minutes</p>
             </div>
             <h3 className="font-manrope text-2xl font-semibold text-gray-900">:</h3>
             <div className="timer w-16">
                 <div className="overflow-hidden rounded-lg bg-slate-950 px-2 py-4">
-                    <h3 className="countdown-element seconds font-Cormorant animate-countinsecond text-center text-2xl font-semibold text-white"></h3>
+                    <h3 className="countdown-element seconds font-Cormorant animate-countinsecond text-center text-2xl font-semibold text-white dark:text-green"></h3>
                 </div>
-                <p className="font-Cormorant mt-1 w-full text-center text-lg font-normal text-gray-900">seconds</p>
+                <p className="font-Cormorant mt-1 w-full text-center text-lg font-normal  text-gray-900 dark:text-white">seconds</p>
             </div>
         </div>
     )
