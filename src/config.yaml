@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
     title:
-        default: AstroWind
-        template: '%s — AstroWind'
+        default: SeedChurchBKK
+        template: '%s — SeedChurchBKK'
     description: "\U0001F680  เราเป็นโบสที่มีวัยรุ่น 100% เรามี culture แบบวันรุ่นและเน้นการมีความสัมพันธ์ที่ดีกับพระเจ้า."
     robots:
         index: true
         follow: true
     openGraph:
-        site_name: AstroWind
+        site_name: SeedChurchBKK
         images:
             - url: '~/assets/images/default.png'
               width: 1200
