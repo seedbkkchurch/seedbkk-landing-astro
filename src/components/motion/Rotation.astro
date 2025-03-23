@@ -1,0 +1,20 @@
+---
+
+---
+
+<div class="box"></div>
+
+<script type="module">
+    import { animate } from 'https://cdn.jsdelivr.net/npm/motion@12/+esm'
+
+    animate('.box', { rotate: 360 }, { duration: 1 })
+</script>
+
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #9911ff;
+        border-radius: 10px;
+    }
+</style>
