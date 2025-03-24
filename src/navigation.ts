@@ -21,6 +21,10 @@ export const headerData = {
                     text: 'Pastor',
                     href: getPermalink('/homes/pastor'),
                 },
+                {
+                    text: 'culture',
+                    href: getPermalink('/homes/culture'),
+                },
             ],
         },
         // {
@@ -133,10 +137,10 @@ export const headerData = {
                 },
             ],
         },
-        {
-            text: 'Contact',
-            href: getPermalink('/contact'),
-        },
+        // {
+        //     text: 'Contact',
+        //     href: getPermalink('/contact'),
+        // },
     ],
     actions: [{ text: 'Worship With Us', href: getPermalink('/contact'), target: '_blank' }],
 }

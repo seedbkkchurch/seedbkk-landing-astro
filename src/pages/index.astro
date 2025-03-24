@@ -15,6 +15,8 @@ import Steps2 from '~/components/widgets/Steps2.astro'
 import CountdownTimer from '~/components/CountdownTimer'
 
 import Button from '~/components/ui/Button.astro'
+import { desc } from 'motion/react-client'
+import Features2 from '@/components/widgets/Features2.astro'
 
 const appStoreImg = '~/assets/images/app-store.png'
 const appStoreDownloadLink = 'https://apps.apple.com/us/app/seed-church/id6654904118'
@@ -58,6 +60,7 @@ const metadata = {
                 <span class="font-semibold text-blue-600">คริสตจักรแห่งการสร้างสาวกและตั้งคริสตจักร</span>
             </span>
             <span class="mb-1 block font-bold text-blue-600 sm:hidden">คริสตจักรแห่งการสร้างสาวกและตั้งคริสตจักร</span>
+            
         </Fragment>
     </Hero>
 
@@ -82,219 +85,82 @@ const metadata = {
                     'ปรารถนาที่จะเห็นเยาวชนเป็นผู้นำในการเปลี่ยนแปลงประเทศไปในทางที่ดีตามแบบอย่างพระเยซูคริสต์',
                 // icon: 'tabler:brand-tailwind',
             },
-        ]}
-    />
-
-    <!-- Content Widget **************** -->
-
-    <Content
-        isReversed
-        tagline="Inside template"
-        title="Our Culture"
-        items={[
             {
-                title: 'เติบโตในการรู้จักพระเจ้า',
-                description: 'เราเติบโตผ่านการเฝ้าเดียว อธิฐาน อ่านพระคัมภีร์ นมัสการ การสามัคคีอย่างสม่ำเสมอ',
-            },
-            {
-                title: 'เติบโตขึ้นในพระวิญญานบริสุทธิ์เพื่อเป้าหมายไพบูลย์พระคริสต์',
+                title: 'Grow and Multiply',
                 description:
-                    'กาลาเทีย 5:22 ส่วนผลของพระวิญญาณนั้น คือความรัก ความยินดี สันติสุข ความอดทน ความกรุณา ความดี ความซื่อสัตย์ ความสุภาพอ่อนโยน การรู้จักบังคับตน เรื่องอย่างนี้ไม่มีธรรมบัญญัติห้ามไว้เลย',
+                    ' คือการเป็นคริสตจักรที่เติบโตและขยายออกไปในกลุ่มคนรุ่นใหม่ โดยเฉพาะในมหาวิทยาลัยต่างๆ ทั่วกรุงเทพฯ และรังสิต',
             },
             {
-                title: 'เติบโตในการใช้ของประทานเพื่อเสริมสร้างคริสตจักรและถวายเกียรติแด่พระเจ้า',
-                description: 'เติบโตในการยอมจำนนให้ชีวิตเป็นไปตามแผนการและน้ำพระทันพระเจ้าสำหรับชีวิตของเราแต่ละคน ',
-            },
-            {
-                title: 'เติบโตขึ้นในความรักตามพระมหาบัญญัติ',
+                title: 'Rooted in Faith, Growing the Next Generation',
                 description:
-                    'เขาทูลตอบว่า “พวกท่านจงรักองค์พระผู้เป็นเจ้าผู้เป็นพระเจ้าของท่านด้วยสุดใจของท่าน ด้วยสุดจิตของท่าน ด้วยสุดกำลังของท่าน และด้วยสุดความคิดของท่าน และจงรักเพื่อนบ้านเหมือนรักตนเอง',
+                    'เรามุ่งมั่นที่จะสร้างชุมชนแห่งความเชื่อที่อบอุ่น และช่วยให้คนรุ่นใหม่ได้เติบโตในทางของพระเจ้า',
             },
         ]}
-        image={{
-            src: '~/assets/images/culture/SpiritualMaturity.jpg',
-            alt: 'SpiritualMaturity',
-        }}
-    >
-        <Fragment slot="content">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">S = Spiritual Maturity</h3>
-            การเติบโตฝ่ายวิญญาณในพระคริสต์
-        </Fragment>
-
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
-
-    <!-- Content Widget **************** -->
-
-    <Content
-        isAfterContent
-        items={[
-            {
-                title: 'ประกาศพระกิตติคุณสมบูรณ์',
-                description:
-                    'และอธิฐานเผื่อคนที่ยังไม่รู้จักพระเจ้าเสมอด้วยหัวใจแห่งความรักและห่วงใยคนที่ยังไม่ได้รับความรอดโดยเริ่มต้นที่คนในครอบครัว',
-            },
-            {
-                title: 'ประกาศข่าวประเสริฐที่มีฤทธิ์เดชในการเปลี่ยนแปลงชีวิต',
-                description: 'ปลดปล่อยคนจากบาป  ความทุกข์ ปัญหาต่างๆ เพื่อเราจะเห็นสังคมที่ดีขึ้น',
-            },
-            {
-                title: 'ประกาศข่าวประเสริฐในทุกโอกาส เช่น งานวันเกิด งานแต่งงาน งานอาลัย งานขึ้นบ้านใหม่ และอื่นๆ กับคนทุกเพศ วัย ทุกสถานนะในสังคม',
-                description:
-                    'ประกาศข่าวประเสริฐโดยการแสดงความรัก ผ่านการช่วยเหลือที่ยากลำบากในสังคม ผ่านมูลนิธิรักเพื่อนบ้าน',
-            },
-        ]}
-        image={{
-            src: '~/assets/images/culture/Evergelization.jpg',
-            alt: 'Evergelization',
-        }}
-    >
-        <Fragment slot="content">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">E = Evergelization</h3>
-             ประกาศด้วยใจเชื่อฟังพระมหาบัญชา
-        </Fragment>
-
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
-
-    <!-- Content Widget **************** -->
-
-    <Content
-        isReversed
-        isAfterContent
-        items={[
-            {
-                title: 'เอเฟซัส 4:11-12',
-                description:
-                    'เอเฟซัส 1:22-23 พระเจ้า​วาง​ทุก​สิ่ง​ไว้​ใต้เท้า​ของ​พระคริสต์ และ​พระองค์​ตั้ง​พระคริสต์​เป็น​ศีรษะ​เหนือ​ทุกสิ่ง​เพื่อ​หมู่ประชุม​ของ​พระองค์ หมู่​ประชุม​นี้​คือ​ร่างกาย​ของ​พระคริสต์ และ​หมู่​ประชุม​นี้​เต็ม​เปี่ยม​ไป​ด้วย​พระคริสต์ และ​พระคริสต์​ทำให้​ทุกสิ่ง​เต็มเปี่ยม​ไปด้วย​พระองค์',
-            },
-            {
-                title: 'ตั้งคริสตจักรทุกจังหวัดในประเทศไทย และส่งมิชชันนารีออกไปต่างประเทศ',
-                description:
-                    'ตั้งคริสตจักรที่แข็งแรงโดยวางรากฐานของความเชื่อในพระเยซูคริสต์และตามหลักการพระวจนะของพระเจ้า',
-            },
-            {
-                title: 'ตั้งคริสจักรใหม่ด้วยการช่วยเหลือและสนับสนุนอย่างน้ำหนึ่งใจเดียวของคริสตจักรที่มีอยู่แล้ว',
-                description:
-                    'ตั้งคริสตจักรโดยการพึ่งพาการทรงนำจากพระเจ้าและแต่งตั้งผู้นำที่เติบโตฝ่ายวิญญาณมีชีวิตที่เป็ฯแบบอย่าง ในการดูแลคริสตจักร',
-            },
-        ]}
-        image={{
-            src: '~/assets/images/culture/EstablishChurch.jpeg',
-            alt: 'EstablishChurch',
-        }}
-    >
-        <Fragment slot="content">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">E = Establish Church</h3>
-            ตั้งคริสตจักรของพระคริสต์ของพระเจ้า ไม่ใช่ของเรา
-        </Fragment>
-
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
-
-    <!-- Steps Widget ****************** -->
-
-    <Steps
-        title="D = Discipleship สร้างสาวกแบบพระคริสต์"
-        items={[
-            {
-                title: 'สร้างสาวกด้วยการเรียนพระคัมภีร์อย่างเป็นระบบ',
-                description:
-                    'สร้างสาวก 1:1 ในการสอนพระวจนะ ตักเตือน หนุนใจ เยียวยา เพื่อสาวกจะรับการขัดเกลาชีวิตอย่างแท้จริง',
-                // icon: 'tabler:package',
-            },
-            {
-                title: 'สร้างสาวกในผู้รับใช้พระเจ้า ทิโมธี',
-                description: 'เพื่อเข้าใจหลักการในการเป็นผู้นำและการดูแลคริสตจักรของพระเจ้า',
-                // icon: 'tabler:letter-case',
-            },
-            {
-                title: 'สร้างสาวกผ่านกลุ่มย่อย ด้วยบทเรียนแคร์ เป้าหมายเพื่อประยุกต์ใช้ในชีวิตประจำวัน',
-                description:
-                    'สร้างสาวก โดนผ่านการเข้าร่วมอบรบการเป็นผู้รับใช้หรือเรียนกับสถาบันพระคัมภีร์ที่เป็นการยอมรับ',
-                // icon: 'tabler:paint',
-            },
-            {
-                title: 'สร้างสาวกสู่รุ่นถัดไป',
-                description:
-                    '2 ทิโมธี 2:2 จงมอบคำสอนเหล่านั้นซึ่งท่านได้ยินจากข้าพเจ้าต่อหน้าพยานหลายๆ คนไว้กับบรรดาคนซื่อสัตย์ที่สามารถสอนคนอื่นได้ด้วย',
-            },
-        ]}
-        image={{
-            src: '~/assets/images/culture/Discipleship.jpeg',
-            alt: 'Discipleship',
-        }}
     />
 
     <!-- Features2 Widget ************** -->
 
-    <!-- <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2> -->
+    <Features2
+        title="Perspective"
+        subtitle="การมองเห็นศักยภาพของคนรุ่นใหม่ และเชื่อว่าพระเจ้าทรงมีแผนการที่ยิ่งใหญ่สำหรับพวกเขา เราจึงมุ่งเน้นการสร้างบรรยากาศการนมัสการที่สดใหม่ การเทศนาที่เข้าใจและเข้าถึงชีวิตของวัยรุ่น และกิจกรรมที่ช่วยให้พวกเขาได้เติบโตทั้งทางจิตวิญญาณและสังคม"
+        tagline=""
+        items={[
+            // {
+            //   title: 'Headers',
+            //   description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+            //   icon: 'flat-color-icons:template',
+            // },
+            // {
+            //   title: 'Heros',
+            //   description:
+            //     "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+            //   icon: 'flat-color-icons:gallery',
+            // },
+            // {
+            //   title: 'Features',
+            //   description:
+            //     'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+            //   icon: 'flat-color-icons:approval',
+            // },
+            // {
+            //   title: 'Content',
+            //   description:
+            //     "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+            //   icon: 'flat-color-icons:document',
+            // },
+            // {
+            //   title: 'Call-to-Action',
+            //   description:
+            //     'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+            //   icon: 'flat-color-icons:advertising',
+            // },
+            // {
+            //   title: 'Pricing',
+            //   description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+            //   icon: 'flat-color-icons:currency-exchange',
+            // },
+            // {
+            //   title: 'Testimonial',
+            //   description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+            //   icon: 'flat-color-icons:voice-presentation',
+            // },
+            // {
+            //   title: 'Contact',
+            //   description:
+            //     'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+            //   icon: 'flat-color-icons:business-contact',
+            // },
+            // {
+            //   title: 'Footers',
+            //   description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+            //   icon: 'flat-color-icons:database',
+            // },
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
     <!-- Content Widget **************** -->
 
     <!-- Content Widget **************** -->
