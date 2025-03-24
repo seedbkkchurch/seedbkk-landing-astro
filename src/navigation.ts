@@ -129,11 +129,11 @@ export const headerData = {
             links: [
                 {
                     text: 'สำรวจของประทาน',
-                    href:  "https://seedbkkchurch.github.io/GiftFromGod/",
+                    href: 'https://seedbkkchurch.github.io/GiftFromGod/',
                 },
                 {
                     text: 'generate QR code',
-                    href: "https://seedbkkchurch.github.io/qr-code-seed/",
+                    href: 'https://seedbkkchurch.github.io/qr-code-seed/',
                 },
             ],
         },

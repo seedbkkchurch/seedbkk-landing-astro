@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { AnimatePresence, motion } from "motion/react"
-import { useState } from "react"
+import { AnimatePresence, motion } from 'motion/react'
+import { useState } from 'react'
 
 export default function ExitAnimation() {
     const [isVisible, setIsVisible] = useState(true)
@@ -19,12 +19,8 @@ export default function ExitAnimation() {
                     />
                 ) : null}
             </AnimatePresence>
-            <motion.button
-                style={button}
-                onClick={() => setIsVisible(!isVisible)}
-                whileTap={{ y: 1 }}
-            >
-                {isVisible ? "Hide" : "Show"}
+            <motion.button style={button} onClick={() => setIsVisible(!isVisible)} whileTap={{ y: 1 }}>
+                {isVisible ? 'Hide' : 'Show'}
             </motion.button>
         </div>
     )
@@ -35,26 +31,26 @@ export default function ExitAnimation() {
  */
 
 const container: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
     width: 100,
     height: 160,
-    position: "relative",
+    position: 'relative',
 }
 
 const box: React.CSSProperties = {
     width: 100,
     height: 100,
-    backgroundColor: "#0cdcf7",
-    borderRadius: "10px",
+    backgroundColor: '#0cdcf7',
+    borderRadius: '10px',
 }
 
 const button: React.CSSProperties = {
-    backgroundColor: "#0cdcf7",
-    borderRadius: "10px",
-    padding: "10px 20px",
-    color: "#0f1115",
-    position: "absolute",
+    backgroundColor: '#0cdcf7',
+    borderRadius: '10px',
+    padding: '10px 20px',
+    color: '#0f1115',
+    position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
