@@ -44,7 +44,7 @@ const {
     <div class="mx-auto max-w-7xl p-4 md:px-8">
         <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
             <div class="self-center md:basis-1/2">
-                {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
+                {content && <div class="mb-12 text-lg text-default dark:text-slate-400" set:html={content} />}
 
                 {
                     callToAction && (
@@ -61,7 +61,7 @@ const {
                     classes={{
                         container: `gap-y-4 md:gap-y-8`,
                         panel: 'max-w-none',
-                        title: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+                        title: 'text-lg font-medium leading-6 text-default dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
                         description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
                         icon: 'flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1',
                         action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
