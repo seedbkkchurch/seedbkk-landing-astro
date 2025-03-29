@@ -19,8 +19,8 @@ metadata:
         site_name: SeedChurchBKK
         images:
             - url: '~/assets/images/og.png'
-              width: 652
-              height: 360
+              width: 1200
+              height: 630
         type: website
     twitter:
         handle: '@onwidget'

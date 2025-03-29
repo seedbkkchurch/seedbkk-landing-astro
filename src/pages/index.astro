@@ -44,7 +44,7 @@ const metadata = {
                 icon: '',
             },
             {
-                text: 'ข้อมูลองค์กรคริสจักร',
+                text: 'ข้อมูลองค์กรคริสตจักร',
                 href: 'https://www.seedchurch-thailand.com/%E0%B8%AA%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87-%E0%B8%A3-%E0%B8%88-%E0%B8%81%E0%B9%82%E0%B8%9A%E0%B8%AA%E0%B8%96-1',
             },
         ]}
@@ -66,263 +66,18 @@ const metadata = {
 
     <CountdownTimer client:only="react" />
     <Note quote="Note:" text="รอบนมัสการรอบถัดไป วันอาทิตย์ วันอาทิตย์ 14.00" />
-
-    <!-- Features Widget *************** -->
-    <Features
-        id="features"
-        tagline=""
-        title="Vision"
-        subtitle=""
-        items={[
+    <CallToAction
+        title="รู้จักเราให้มากขึ้น"
+        subtitle="จากความห่วงใยในชีวิตของน้องๆ นักศึกษาที่เข้ามาเรียนต่อในกรุงเทพฯ และการติดตามดูแลของศิษยาภิบาลและภรรยา..."
+        actions={[
             {
-                title: 'Thailand Shall Be Safe',
-                description: 'นำพระพรไปสู่คนไทย เพื่อเปลี่ยนแปลงชีวิตคนไทยให้ดึขึ้น',
-                // icon: 'tabler:brand-tailwind',
-            },
-            {
-                title: 'Teenatures Shall Be Leaders',
-                description:
-                    'ปรารถนาที่จะเห็นเยาวชนเป็นผู้นำในการเปลี่ยนแปลงประเทศไปในทางที่ดีตามแบบอย่างพระเยซูคริสต์',
-                // icon: 'tabler:brand-tailwind',
-            },
-            {
-                title: 'Grow and Multiply',
-                description:
-                    ' คือการเป็นคริสตจักรที่เติบโตและขยายออกไปในกลุ่มคนรุ่นใหม่ โดยเฉพาะในมหาวิทยาลัยต่างๆ ทั่วกรุงเทพฯ และรังสิต',
-            },
-            {
-                title: 'Rooted in Faith, Growing the Next Generation',
-                description:
-                    'เรามุ่งมั่นที่จะสร้างชุมชนแห่งความเชื่อที่อบอุ่น และช่วยให้คนรุ่นใหม่ได้เติบโตในทางของพระเจ้า',
+                variant: 'primary',
+                text: 'About Us',
+                href: '/about',
+                icon: 'tabler:cross',
             },
         ]}
     />
-
-    <!-- Features2 Widget ************** -->
-
-    <Features2
-        title="Perspective"
-        subtitle="การมองเห็นศักยภาพของคนรุ่นใหม่ และเชื่อว่าพระเจ้าทรงมีแผนการที่ยิ่งใหญ่สำหรับพวกเขา เราจึงมุ่งเน้นการสร้างบรรยากาศการนมัสการที่สดใหม่ การเทศนาที่เข้าใจและเข้าถึงชีวิตของวัยรุ่น และกิจกรรมที่ช่วยให้พวกเขาได้เติบโตทั้งทางจิตวิญญาณและสังคม"
-        tagline=""
-        items={[
-            // {
-            //   title: 'Headers',
-            //   description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-            //   icon: 'flat-color-icons:template',
-            // },
-            // {
-            //   title: 'Heros',
-            //   description:
-            //     "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-            //   icon: 'flat-color-icons:gallery',
-            // },
-            // {
-            //   title: 'Features',
-            //   description:
-            //     'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-            //   icon: 'flat-color-icons:approval',
-            // },
-            // {
-            //   title: 'Content',
-            //   description:
-            //     "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-            //   icon: 'flat-color-icons:document',
-            // },
-            // {
-            //   title: 'Call-to-Action',
-            //   description:
-            //     'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-            //   icon: 'flat-color-icons:advertising',
-            // },
-            // {
-            //   title: 'Pricing',
-            //   description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-            //   icon: 'flat-color-icons:currency-exchange',
-            // },
-            // {
-            //   title: 'Testimonial',
-            //   description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-            //   icon: 'flat-color-icons:voice-presentation',
-            // },
-            // {
-            //   title: 'Contact',
-            //   description:
-            //     'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-            //   icon: 'flat-color-icons:business-contact',
-            // },
-            // {
-            //   title: 'Footers',
-            //   description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-            //   icon: 'flat-color-icons:database',
-            // },
-        ]}
-    >
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Features2>
-    <!-- Content Widget **************** -->
-
-    <!-- Content Widget **************** -->
-
-    <!-- <Content
-    id="porfolio"
-    title="Small group"
-    subtitle="หรือกลุ่มแคร์ที่เราจะได้รู้จักกันมากขึ้นและสามัคคีธรรม"
-    isReversed
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'กลุ่มสายฮาของคน cool เราเรียนรู้คำของพระเจ้าและเติบโตไปด้วยกัน  เราปรึกษาและทานอาหารร่วมกัน ',
-      },
-      {
-        title: 'วิธีการเดินทางมา:',
-        description:
-          'ลง BTS ลง bts สถานีบางบัวนะครับ พายเรือมา10กิโลแล้วข้ามสะพานมาจะเจอ',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Tech Design Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
-        มอ.ศรีปทุม @ข้างคาเฟ่อเมซอล มอ.ศรีปทุม: <br /><span class="text-2xl"></span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-    <!-- Content Widget **************** -->
-
-    <!-- <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
-      },
-      {
-        title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
-        เกษตรศาสตร์ @ อาคารเรียนรวม3 KU : <br /><span class="text-2xl">Event poster for art & music festival</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-    <!-- Content Widget **************** -->
-
-    <!-- <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-      },
-      {
-        title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-      },
-    ]}
-    image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
-        รังสิต: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-    <!-- <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-      },
-      {
-        title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-      },
-    ]}
-    image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
-        ศรีปทุม: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-    <!-- HighlightedPosts Widget ******* -->
-
-    <BlogLatestPosts
-        title="Find out more content in our Blog"
-        information={`ข่าวสาร กิจกรรม และคำสอนจากพระคัมภีร์ล่าสุด`}
-    />
-
-    <!-- Note Widget ******************* -->
-
-    <Note quote="Quote:" text="คุณเปลี่ยนแปลงตัวเองไม่ได้ แต่พระเจ้าเปลี่ยนคุณได้" />
-    <!-- FAQs Widget ******************* -->
 
     <FAQs
         title="Frequently Asked Questions"
@@ -390,7 +145,7 @@ const metadata = {
     <Stats
         stats={[
             { title: 'Member', amount: '30+' },
-            { title: 'Age Avg', amount: '23.5 year' },
+            { title: 'Age Avg', amount: '22.5 year' },
             { title: 'Age Chruch', amount: '2 year' },
             // { title: 'Users', amount: '48.4K' },
         ]}

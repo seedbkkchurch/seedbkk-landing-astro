@@ -22,61 +22,66 @@ const metadata = {
         }}
     >
         <Fragment slot="title">
-            Elevate your online presence with our <br />
-            <span class="highlight text-accent dark:text-white"> Beautiful Website Templates</span>
+            Beginning<br />
+            <span class="highlight text-green dark:text-white"> คริสตจักรเมล็ดพันธุ์กรุงเทพฯ</span>
         </Fragment>
 
         <Fragment slot="subtitle">
-            Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue.
-            Donec quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis
-            nisi tempus. Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+            เรื่องราวของการนำทางของพระเจ้าที่ชัดเจน เริ่มต้นจากความห่วงใยในชีวิตของน้องๆ
+            นักศึกษาที่เข้ามาเรียนต่อในกรุงเทพฯ และการติดตามดูแลของศิษยาภิบาลและภรรยา
+            ที่ไม่ยอมทิ้งให้ใครหลุดหายไปจากทางของพระเจ้า แม้ว่าจะมีช่วงเวลาที่น้องๆ เหล่านั้นห่างหายจากคริสตจักร
+            แต่พระเจ้ายังคงทำงานผ่านชีวิตของพวกเขา และนำไปสู่การเริ่มต้นของคริสตจักรเมล็ดพันธุ์กรุงเทพฯ
         </Fragment>
     </Hero>
 
     <!-- Stats Widget ****************** -->
 
     <Stats
-        title="Statistics about us"
+        title="จากสมาชิกเพียง 4 คน ที่รวมตัวกันด้วยความรักและความเชื่อในพระเจ้า และเติบโตขึ้นเป็น 30 คนภายในเวลาเพียง 2 ปี 90% ของสมาชิกเป็นวัยรุ่นที่มีอายุเฉลี่ยเพียง 22.5 ปี ทำให้คริสตจักรแห่งนี้เป็นคริสตจักรของคนรุ่นใหม่ ที่เต็มไปด้วยพลังและความกระตือรือร้นในการรับใช้พระเจ้า"
         stats={[
-            { title: 'Offices', amount: '4' },
-            { title: 'Employees', amount: '248' },
-            { title: 'Templates', amount: '12' },
-            { title: 'Awards', amount: '24' },
+            { title: 'Member', amount: '~30' },
+            { title: 'Age Avg', amount: '22.5 year' },
+            { title: 'Age Chruch', amount: '2 year' },
         ]}
     />
 
     <!-- Features3 Widget ************** -->
 
     <Features3
-        title="Our templates"
-        subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-        columns={3}
+        title="Vision"
+        subtitle="การเป็นคริสตจักรที่เติบโตและขยายออกไปในกลุ่มคนรุ่นใหม่ โดยเฉพาะในมหาวิทยาลัยต่างๆ ทั่วกรุงเทพฯ และรังสิต เรามุ่งมั่นที่จะสร้างชุมชนแห่งความเชื่อที่อบอุ่น และช่วยให้คนรุ่นใหม่ได้เติบโตในทางของพระเจ้า"
+        columns={2}
         isBeforeContent={true}
         items={[
             {
-                title: 'Educational',
-                description:
-                    'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-                icon: 'tabler:template',
+                title: 'Thailand Shall Be Safe',
+                description: 'นำพระพรไปสู่คนไทย เพื่อเปลี่ยนแปลงชีวิตคนไทยให้ดึขึ้น',
+                icon: 'tabler:home-shield',
             },
             {
-                title: 'Interior Design',
+                title: 'Teenatures Shall Be Leaders',
                 description:
-                    'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-                icon: 'tabler:template',
+                    'ปรารถนาที่จะเห็นเยาวชนเป็นผู้นำในการเปลี่ยนแปลงประเทศไปในทางที่ดีตามแบบอย่างพระเยซูคริสต์',
+                icon: 'tabler:transform',
             },
             {
-                title: 'Photography',
+                title: 'Grow and Multiply',
                 description:
-                    'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-                icon: 'tabler:template',
+                    ' การเป็นคริสตจักรที่เติบโตและขยายออกไปในกลุ่มคนรุ่นใหม่ โดยเฉพาะในมหาวิทยาลัยต่างๆ ทั่วกรุงเทพฯ และรังสิต',
+                icon: 'tabler:seedling',
+            },
+            {
+                title: 'Rooted in Faith, Growing the Next Generation',
+                description:
+                    'เรามุ่งมั่นที่จะสร้างชุมชนแห่งความเชื่อที่อบอุ่น และช่วยให้คนรุ่นใหม่ได้เติบโตในทางของพระเจ้า',
+                icon: 'tabler:cross',
             },
         ]}
     />
 
     <!-- Features3 Widget ************** -->
 
-    <Features3
+    <!-- <Features3
         columns={3}
         isAfterContent={true}
         items={[
@@ -121,34 +126,65 @@ const metadata = {
             src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
             alt: 'Colorful Image',
         }}
-    />
+    /> -->
 
     <!-- Steps2 Widget ****************** -->
 
     <Steps2
-        title="Our values"
-        subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+        title="Perspective & Goals"
+        subtitle="เป้าหมายของเราคือการให้น้องๆ ทุกคนรู้ว่าพระเจ้าใช้เขาได้ เรามุ่งมั่นที่จะสร้างคนรุ่นใหม่ที่เต็มไปด้วยความเชื่อและความรักในพระเจ้า และพร้อมที่จะเป็นเครื่องมือของพระองค์ในการเปลี่ยนแปลงสังคมและประเทศชาติ"
         items={[
             {
-                title: 'Customer-centric approach',
+                title: 'มองเห็นศักยภาพของคนรุ่นใหม่',
                 description:
-                    'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+                    'คริสตจักรเมล็ดพันธุ์กรุงเทพฯ เชื่อว่าคนรุ่นใหม่มีคุณค่าและศักยภาพที่พระเจ้าทรงมอบให้',
             },
             {
-                title: 'Constant Improvement',
+                title: 'เชื่อว่าพระเจ้าทรงมีแผนการที่ยิ่งใหญ่สำหรับคนรุ่นใหม่',
                 description:
-                    'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+                    'ทุกคนไม่ได้เกิดมาโดยบังเอิญ แต่พระเจ้าทรงมีเป้าหมายและแผนการเพื่อชีวิตของพวกเขา',
             },
             {
-                title: 'Ethical Practices',
+                title: 'มุ่งเน้นการสร้างบรรยากาศการนมัสการที่สดใหม่',
                 description:
-                    'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+                    'เพื่อให้การนมัสการสัมผัสใจและเป็นประสบการณ์ที่มีชีวิตชีวาสำหรับคนรุ่นใหม่',
+            },
+            {
+                title: 'การเทศนาที่เข้าใจและเข้าถึงชีวิตของวัยรุ่น',
+                description:
+                    'เนื้อหาการเทศนาเน้นความเข้าใจง่าย สัมพันธ์กับชีวิตจริง และตอบโจทย์ความคิดของวัยรุ่น',
+            },
+            {
+                title: 'กิจกรรมที่ช่วยให้คนรุ่นใหม่เติบโตทั้งทางจิตวิญญาณและสังคม',
+                description:
+                    'ไม่ใช่แค่ด้านความเชื่อ แต่รวมถึงการพัฒนาในความสัมพันธ์ การทำงานเป็นทีม และการมีบทบาทในสังคม',
             },
         ]}
     />
 
-    <!-- Steps2 Widget ****************** -->
+   
+    <Hero
+    tagline=""
+    image={{
+        src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        alt: 'Caos Image',
+    }}
+>
+    <Fragment slot="title">
+        การบุกเบิกคริสตจักร<br />
+        <span class="highlight text-green dark:text-white"> </span>
+    </Fragment>
 
+    <Fragment slot="subtitle">
+         เริ่มต้นจากการติดตามน้องๆ นักศึกษา 
+        และการเปิดกลุ่มนมัสการในมหาวิทยาลัยต่างๆ ปัจจุบันเรามีกลุ่มนมัสการใน 5 มหาวิทยาลัยทั่วกรุงเทพฯ 
+        และรังสิต ซึ่งเป็นจุดเริ่มต้นของการขยายงานของพระเจ้าในกลุ่มคนรุ่นใหม่
+       
+        <br />
+        เมล็ดพันธุ์กรุงเทพฯ คือการเริ่มต้นเล็กๆ ที่พระเจ้าทรงใช้เพื่อสร้างสิ่งยิ่งใหญ่ เราเชื่อว่าเมล็ดพันธุ์แห่งความเชื่อที่ถูกหว่านลงในใจของคนรุ่นใหม่ จะเติบโตและเกิดผลมากมายในอนาคต คริสตจักรเมล็ดพันธุ์กรุงเทพฯ จึงเป็นเหมือนดินดีที่พร้อมจะรับเมล็ดพันธุ์แห่งความเชื่อ และช่วยให้มันเติบโตอย่างแข็งแรงในทางของพระเจ้า
+    </Fragment>
+</Hero>
+<!-- 
     <Steps2
         title="Achievements"
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
@@ -177,10 +213,10 @@ const metadata = {
                 icon: 'tabler:award',
             },
         ]}
-    />
+    /> -->
 
     <!-- Features2 Widget ************** -->
-
+<!-- 
     <Features2
         title="Our locations"
         tagline="Find us"
@@ -203,11 +239,11 @@ const metadata = {
                 description: '3456 Lorem Ipsum St, 34567, São Paulo',
             },
         ]}
-    />
+    /> -->
 
     <!-- Features2 Widget ************** -->
 
-    <Features2
+    <!-- <Features2
         title="Technical Support"
         tagline="Contact us"
         columns={2}
@@ -225,5 +261,5 @@ const metadata = {
                 icon: 'tabler:headset',
             },
         ]}
-    />
+    /> -->
 </Layout>
