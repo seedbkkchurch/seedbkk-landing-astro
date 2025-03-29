@@ -17,10 +17,10 @@ export const headerData = {
                     text: 'Mobile App',
                     href: getPermalink('/homes/mobile-app'),
                 },
-                // {
-                //     text: 'Pastor',
-                //     href: getPermalink('/homes/pastor'),
-                // },
+                {
+                    text: 'About us',
+                    href: getPermalink('/homes/about'),
+                },
                 {
                     text: 'culture',
                     href: getPermalink('/homes/culture'),
