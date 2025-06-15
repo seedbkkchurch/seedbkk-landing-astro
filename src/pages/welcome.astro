@@ -1,89 +1,101 @@
 ---
-import '../styles/welcome.css';
+import '../styles/welcome.css'
 ---
+
 <html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <!-- เพิ่ม font Pridi จาก Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="overflow-hidden">
-    <div class="fixed inset-0 z-[-1] h-full w-full">
-        <video class="absolute h-full w-full object-cover" autoplay muted loop playsinline id="background-video">
-            <source src="/videos/space.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome</title>
+        <!-- เพิ่ม font Pridi จาก Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="overflow-hidden">
+            <div class="fixed inset-0 z-[-1] h-full w-full">
+                <video
+                    class="absolute h-full w-full object-cover"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    id="background-video"
+                >
+                    <source src="/videos/nebular.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
 
-<!-- ข้อความตรงกลาง -->
-<div class="flex items-center justify-center h-screen w-full absolute inset-0">
-    <div class="text-center p-8 bg-black bg-opacity-50 rounded-lg shadow-lg max-w-5xl mx-auto">
-            <h1 class="church-title mb-4 ">คริสตจักรเมล็ดพันธุ์กรุงเทพ</h1>
-        <h1 class="subtitle mb-4">The Seed Of Bangkok City Church</h1>
-    </div>
-</div>
+        <!-- ข้อความตรงกลาง -->
+        <div class="absolute inset-0 flex h-screen w-full items-center justify-center">
+            <div class="mx-auto max-w-5xl rounded-lg bg-black bg-opacity-50 p-8 text-center shadow-lg">
+                <h1 class="church-title mb-4">คริสตจักรเมล็ดพันธุ์กรุงเทพ</h1>
+                <h1 class="subtitle mb-4">The Seed Of Bangkok City Church</h1>
+            </div>
+        </div>
 
-<style is:inline>
-    body, html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        font-family: 'Pridi', serif;
-    }
-    
-    .church-title {
-        font-size: 3rem;
-        font-weight: 400;
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        color: #ffffff; /* เปลี่ยนเป็นสีเขียวสด */
-    }
+        <style is:inline>
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                font-family: 'Pridi', serif;
+            }
 
-    .subtitle {
-        font-size: 2rem;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01em;
-        color: #ffffff; /* เปลี่ยนเป็นสีเขียวสด */
-    }
-    
-    @media (min-width: 768px) {
-        .church-title {
-            font-size: 7rem;
-        }
-        
-        .subtitle {
-            font-size: 3.5rem;
-        }
-    }
+            .church-title {
+                font-size: 3rem;
+                font-weight: 400;
+                line-height: 1.1;
+                letter-spacing: -0.02em;
+                color: #ffffff; /* เปลี่ยนเป็นสีเขียวสด */
+            }
 
-    @media (min-width: 1024px) {
-        .church-title {
-            font-size: 9rem;
-        }
-        
-        .subtitle {
-            font-size: 4.5rem;
-        }
-    }
-    
-    #background-video {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-    }
-</style>
-</body>
+            .subtitle {
+                font-size: 2rem;
+                font-weight: 300;
+                line-height: 1.2;
+                letter-spacing: 0.01em;
+                color: #ffffff; /* เปลี่ยนเป็นสีเขียวสด */
+            }
+
+            @media (min-width: 768px) {
+                .church-title {
+                    font-size: 7rem;
+                }
+
+                .subtitle {
+                    font-size: 3.5rem;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .church-title {
+                    font-size: 9rem;
+                }
+
+                .subtitle {
+                    font-size: 4.5rem;
+                }
+            }
+
+            #background-video {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -1;
+            }
+        </style>
+    </body>
 </html>
