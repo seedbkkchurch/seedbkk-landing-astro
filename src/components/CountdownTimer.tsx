@@ -5,12 +5,22 @@ export default function CountdownTimer() {
         const currentDate = new Date()
         const nextWorshipDate = new Date()
 
-        // Set the worship day and time (e.g., Sunday at 10:00 AM)
-        nextWorshipDate.setDate(currentDate.getDate() + ((7 - currentDate.getDay()) % 7))
-        nextWorshipDate.setHours(14, 30, 0, 0) // 10:00 AM
+        // Set the worship day and time (Sunday at 2:30 PM)
+        const daysUntilSunday = (7 - currentDate.getDay()) % 7
 
-        if (nextWorshipDate <= currentDate) {
-            nextWorshipDate.setDate(nextWorshipDate.getDate() + 6)
+        if (currentDate.getDay() === 0) {
+            // Today is Sunday
+            nextWorshipDate.setDate(currentDate.getDate())
+            nextWorshipDate.setHours(14, 30, 0, 0)
+
+            // If worship time has already passed today, move to next Sunday
+            if (nextWorshipDate <= currentDate) {
+                nextWorshipDate.setDate(nextWorshipDate.getDate() + 7)
+            }
+        } else {
+            // It's not Sunday, calculate days until next Sunday
+            nextWorshipDate.setDate(currentDate.getDate() + daysUntilSunday)
+            nextWorshipDate.setHours(14, 30, 0, 0)
         }
 
         const timeDifference = nextWorshipDate.getTime() - currentDate.getTime()
@@ -35,8 +45,10 @@ export default function CountdownTimer() {
                     return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 }
                 } else if (prev.days > 0) {
                     return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 }
+                } else {
+                    // Timer reached zero, recalculate for next worship service
+                    return getNextWorshipTime()
                 }
-                return prev
             })
         }, 1000)
 
