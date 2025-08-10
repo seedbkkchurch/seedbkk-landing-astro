@@ -4,6 +4,8 @@ import Headline from '~/components/ui/Headline.astro'
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro'
 import type { Contact as Props } from '~/types'
 import Steps2 from './Steps2.astro'
+import { Links } from '@/const/Links'
+import { Link } from 'lucide-react'
 
 const {
     title = await Astro.slots.render('title'),
@@ -51,33 +53,38 @@ const {
         items={[
             {
                 title: 'Email us',
-                description: 'seedch.bkk@gmail.com',
+                description: Links.email,
                 icon: 'tabler:mail',
             },
             {
                 title: 'Call us',
-                description: '064 992 2255',
+                description: Links.telephone,
                 icon: 'tabler:headset',
             },
             {
                 title: 'facebook',
-                description: 'facebook.com/seedbangkokcitychurch',
+                description: Links.facebook,
                 icon: 'tabler:brand-facebook',
             },
             {
                 title: 'Location',
-                description: 'https://maps.app.goo.gl/wdg1pUCeVKRm5Khm9',
+                description: Links.location,
                 icon: 'tabler:brand-google-maps',
             },
             {
                 title: 'Youtube',
-                description: 'youtube.com/@seedbangkok',
+                description: Links.youtube,
                 icon: 'tabler:brand-youtube',
             },
             {
                 title: 'Instragram',
-                description: 'instagram.com/seedbkk.th',
+                description: Links.instagram,
                 icon: 'tabler:brand-instagram',
+            },
+            {
+                title: 'Tiktok',
+                description: Links.tiktok,
+                icon: 'tabler:brand-tiktok',
             },
         ]}
     />
