@@ -4,30 +4,42 @@ import Features3 from '~/components/widgets/Features3.astro'
 import Hero from '~/components/widgets/Hero.astro'
 import Stats from '~/components/widgets/Stats.astro'
 import Steps2 from '~/components/widgets/Steps2.astro'
-import Layout from '~/layouts/PageLayout.astro'
+import I18nLayout from '~/layouts/I18nLayout.astro'
+import { getLangFromUrl, useTranslations } from '~/i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 const metadata = {
-    title: 'About us',
+    title: t('about.title'),
 }
 ---
 
-<Layout metadata={metadata}>
+<I18nLayout metadata={metadata} lang={lang}>
     <!-- Hero Widget ******************* -->
 
     <Hero
-        tagline="About us"
+        tagline={t('about.tagline')}
         image={{
             src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
             alt: 'Caos Image',
         }}
     >
         <Fragment slot="title">
-            Elevate your online presence with our <br />
-            <span class="highlight text-accent dark:text-white"> Beautiful Website Templates</span>
+            {t('about.hero.title').split('Beautiful Website Templates').map((part, index) => (
+                index === 0 ? (
+                    <>{part}<br /></>
+                ) : (
+                    <>
+                        <span class="highlight text-accent dark:text-white">Beautiful Website Templates</span>
+                        {part}
+                    </>
+                )
+            ))}
         </Fragment>
 
         <Fragment slot="subtitle">
-            Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue.
+            {t('about.hero.subtitle')}
             Donec quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis
             nisi tempus. Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
         </Fragment>
