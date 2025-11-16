@@ -25,6 +25,10 @@ export const headerData = {
                     text: 'culture',
                     href: getPermalink('/homes/culture'),
                 },
+                {
+                    text: 'core value',
+                    href: getPermalink('/corevalue'),
+                },
             ],
         },
         // {
