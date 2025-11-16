@@ -45,6 +45,7 @@
         "react-dom": "^19.0.0",
         "svelte": "^5.20.2",
         "tailwindcss-animate": "^1.0.7",
+        "three": "^0.181.1",
         "unpic": "^3.22.0"
     },
     "devDependencies": {
