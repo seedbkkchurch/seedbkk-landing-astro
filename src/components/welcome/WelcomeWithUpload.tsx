@@ -1,65 +1,57 @@
-import { useState, useRef, useEffect } from 'react';
-import './WelcomeWithUpload.css';
+import { useState, useRef, useEffect } from 'react'
+import './WelcomeWithUpload.css'
 
 export default function WelcomeWithUpload() {
-    const [videoUrl, setVideoUrl] = useState<string>('/videos/warm.mp4');
-    const videoRef = useRef<HTMLVideoElement>(null);
-    const fileInputRef = useRef<HTMLInputElement>(null);
+    const [videoUrl, setVideoUrl] = useState<string>('/videos/warm.mp4')
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const fileInputRef = useRef<HTMLInputElement>(null)
 
     // Load saved video from localStorage on mount
     useEffect(() => {
-        const savedVideo = localStorage.getItem('welcomeBackgroundVideo');
+        const savedVideo = localStorage.getItem('welcomeBackgroundVideo')
         if (savedVideo) {
-            setVideoUrl(savedVideo);
+            setVideoUrl(savedVideo)
         }
-    }, []);
+    }, [])
 
     const handleVideoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-        
+        const file = event.target.files?.[0]
+
         if (file?.type.startsWith('video/')) {
             // Create a URL for the uploaded video
-            const newVideoUrl = URL.createObjectURL(file);
-            setVideoUrl(newVideoUrl);
+            const newVideoUrl = URL.createObjectURL(file)
+            setVideoUrl(newVideoUrl)
 
             // Save to localStorage
-            const reader = new FileReader();
-            reader.onload = (e) => {
+            const reader = new FileReader()
+            reader.onload = e => {
                 if (e.target?.result) {
                     try {
-                        localStorage.setItem('welcomeBackgroundVideo', e.target.result as string);
+                        localStorage.setItem('welcomeBackgroundVideo', e.target.result as string)
                     } catch {
-                        console.warn('Video too large to save to localStorage');
+                        console.warn('Video too large to save to localStorage')
                     }
                 }
-            };
-            reader.readAsDataURL(file);
+            }
+            reader.readAsDataURL(file)
 
             // Play the video
             if (videoRef.current) {
-                videoRef.current.load();
-                videoRef.current.play();
+                videoRef.current.load()
+                videoRef.current.play()
             }
         }
-    };
+    }
 
     const handleUploadClick = () => {
-        fileInputRef.current?.click();
-    };
+        fileInputRef.current?.click()
+    }
 
     return (
         <div className="welcome-container">
             {/* Background Video */}
             <div className="video-background">
-                <video
-                    ref={videoRef}
-                    className="background-video"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    key={videoUrl}
-                >
+                <video ref={videoRef} className="background-video" autoPlay muted loop playsInline key={videoUrl}>
                     <source src={videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -67,17 +59,13 @@ export default function WelcomeWithUpload() {
 
             {/* Upload Button - Bottom Right Corner */}
             <div className="upload-button-container">
-                <button
-                    onClick={handleUploadClick}
-                    className="upload-button"
-                    aria-label="Upload background video"
-                >
-                    <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="upload-icon" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
+                <button onClick={handleUploadClick} className="upload-button" aria-label="Upload background video">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="upload-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -101,9 +89,9 @@ export default function WelcomeWithUpload() {
             <div className="content-wrapper">
                 <div className="content-container">
                     <h1 className="church-title">คริสตจักรเมล็ดพันธุ์กรุงเทพ</h1>
-                    <h2 className="subtitle">The Seed Of Bangkok City Church</h2>
+                    <h2 className="subtitle">Seed Church Bangkok</h2>
                 </div>
             </div>
         </div>
-    );
+    )
 }
