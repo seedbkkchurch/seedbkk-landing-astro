@@ -1,0 +1,39 @@
+---
+import WelcomeWithUpload from '../components/welcome/WelcomeWithUpload';
+---
+
+<html lang="th">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome - The Seed Of Bangkok City Church</title>
+        
+        <!-- Pridi Font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <WelcomeWithUpload client:load />
+
+        <style is:global>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                font-family: 'Pridi', serif;
+            }
+        </style>
+    </body>
+</html>
