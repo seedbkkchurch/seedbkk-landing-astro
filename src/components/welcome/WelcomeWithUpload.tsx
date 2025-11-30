@@ -3,16 +3,36 @@ import './WelcomeWithUpload.css'
 
 export default function WelcomeWithUpload() {
     const [videoUrl, setVideoUrl] = useState<string>('/videos/warm.mp4')
+    const [showText, setShowText] = useState<boolean>(true)
+    const [textOpacity, setTextOpacity] = useState<number>(100)
+    const [thaiText, setThaiText] = useState<string>('คริสตจักรเมล็ดพันธุ์กรุงเทพ')
+    const [englishText, setEnglishText] = useState<string>('The Seed Of Bangkok City Church')
+    const [showControlPanel, setShowControlPanel] = useState<boolean>(false)
     const videoRef = useRef<HTMLVideoElement>(null)
     const fileInputRef = useRef<HTMLInputElement>(null)
 
-    // Load saved video from localStorage on mount
+    // Load saved video and settings from localStorage on mount
     useEffect(() => {
         const savedVideo = localStorage.getItem('welcomeBackgroundVideo')
-        if (savedVideo) {
-            setVideoUrl(savedVideo)
-        }
+        const savedShowText = localStorage.getItem('welcomeShowText')
+        const savedOpacity = localStorage.getItem('welcomeTextOpacity')
+        const savedThaiText = localStorage.getItem('welcomeThaiText')
+        const savedEnglishText = localStorage.getItem('welcomeEnglishText')
+        
+        if (savedVideo) setVideoUrl(savedVideo)
+        if (savedShowText) setShowText(savedShowText === 'true')
+        if (savedOpacity) setTextOpacity(Number(savedOpacity))
+        if (savedThaiText) setThaiText(savedThaiText)
+        if (savedEnglishText) setEnglishText(savedEnglishText)
     }, [])
+
+    // Save settings when they change
+    useEffect(() => {
+        localStorage.setItem('welcomeShowText', String(showText))
+        localStorage.setItem('welcomeTextOpacity', String(textOpacity))
+        localStorage.setItem('welcomeThaiText', thaiText)
+        localStorage.setItem('welcomeEnglishText', englishText)
+    }, [showText, textOpacity, thaiText, englishText])
 
     const handleVideoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0]
@@ -85,11 +105,87 @@ export default function WelcomeWithUpload() {
                 />
             </div>
 
+            {/* Control Panel - Top Right Corner */}
+            <div className="control-panel-container">
+                <button 
+                    className="control-toggle-button"
+                    onClick={() => setShowControlPanel(!showControlPanel)}
+                    aria-label="Toggle control panel"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m9-9h-6m-6 0H3"></path>
+                    </svg>
+                </button>
+
+                {showControlPanel && (
+                    <div className="control-panel">
+                        <h3 className="control-panel-title">Text Controls</h3>
+                        
+                        {/* Toggle Text Display */}
+                        <div className="control-group">
+                            <label className="control-label">
+                                <input 
+                                    type="checkbox" 
+                                    checked={showText}
+                                    onChange={(e) => setShowText(e.target.checked)}
+                                    className="control-checkbox"
+                                />
+                                <span>Show Text</span>
+                            </label>
+                        </div>
+
+                        {/* Text Opacity Slider */}
+                        <div className="control-group">
+                            <label className="control-label-block">
+                                <span>Text Opacity: {textOpacity}%</span>
+                                <input 
+                                    type="range" 
+                                    min="0" 
+                                    max="100" 
+                                    value={textOpacity}
+                                    onChange={(e) => setTextOpacity(Number(e.target.value))}
+                                    className="control-slider"
+                                />
+                            </label>
+                        </div>
+
+                        {/* Thai Text Input */}
+                        <div className="control-group">
+                            <label className="control-label-block">
+                                <span>Thai Text</span>
+                                <input 
+                                    type="text" 
+                                    value={thaiText}
+                                    onChange={(e) => setThaiText(e.target.value)}
+                                    className="control-input"
+                                    placeholder="คริสตจักรเมล็ดพันธุ์กรุงเทพ"
+                                />
+                            </label>
+                        </div>
+
+                        {/* English Text Input */}
+                        <div className="control-group">
+                            <label className="control-label-block">
+                                <span>English Text</span>
+                                <input 
+                                    type="text" 
+                                    value={englishText}
+                                    onChange={(e) => setEnglishText(e.target.value)}
+                                    className="control-input"
+                                    placeholder="The Seed Of Bangkok City Church"
+                                />
+                            </label>
+                        </div>
+                    </div>
+                )}
+            </div>
+
             {/* Main Content */}
-            <div className="content-wrapper">
+            <div className="content-wrapper" style={{ opacity: showText ? textOpacity / 100 : 0 }}>
                 <div className="content-container">
-                    <h1 className="church-title">คริสตจักรเมล็ดพันธุ์กรุงเทพ</h1>
-                    <h2 className="subtitle">Seed Church Bangkok</h2>
+                    <h1 className="church-title">{thaiText}</h1>
+                    <h2 className="subtitle">{englishText}</h2>
                 </div>
             </div>
         </div>
