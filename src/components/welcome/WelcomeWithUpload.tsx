@@ -7,6 +7,8 @@ export default function WelcomeWithUpload() {
     const [textOpacity, setTextOpacity] = useState<number>(100)
     const [thaiText, setThaiText] = useState<string>('คริสตจักรเมล็ดพันธุ์กรุงเทพ')
     const [englishText, setEnglishText] = useState<string>('The Seed Of Bangkok City Church')
+    const [thaiFontSize, setThaiFontSize] = useState<number>(144) // Base pixel size (9rem = 144px)
+    const [englishFontSize, setEnglishFontSize] = useState<number>(72) // Base pixel size (4.5rem = 72px)
     const [showControlPanel, setShowControlPanel] = useState<boolean>(false)
     const videoRef = useRef<HTMLVideoElement>(null)
     const fileInputRef = useRef<HTMLInputElement>(null)
@@ -18,12 +20,16 @@ export default function WelcomeWithUpload() {
         const savedOpacity = localStorage.getItem('welcomeTextOpacity')
         const savedThaiText = localStorage.getItem('welcomeThaiText')
         const savedEnglishText = localStorage.getItem('welcomeEnglishText')
-        
+        const savedThaiFontSize = localStorage.getItem('welcomeThaiFontSize')
+        const savedEnglishFontSize = localStorage.getItem('welcomeEnglishFontSize')
+
         if (savedVideo) setVideoUrl(savedVideo)
         if (savedShowText) setShowText(savedShowText === 'true')
         if (savedOpacity) setTextOpacity(Number(savedOpacity))
         if (savedThaiText) setThaiText(savedThaiText)
         if (savedEnglishText) setEnglishText(savedEnglishText)
+        if (savedThaiFontSize) setThaiFontSize(Number(savedThaiFontSize))
+        if (savedEnglishFontSize) setEnglishFontSize(Number(savedEnglishFontSize))
     }, [])
 
     // Save settings when they change
@@ -32,7 +38,9 @@ export default function WelcomeWithUpload() {
         localStorage.setItem('welcomeTextOpacity', String(textOpacity))
         localStorage.setItem('welcomeThaiText', thaiText)
         localStorage.setItem('welcomeEnglishText', englishText)
-    }, [showText, textOpacity, thaiText, englishText])
+        localStorage.setItem('welcomeThaiFontSize', String(thaiFontSize))
+        localStorage.setItem('welcomeEnglishFontSize', String(englishFontSize))
+    }, [showText, textOpacity, thaiText, englishText, thaiFontSize, englishFontSize])
 
     const handleVideoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0]
@@ -94,7 +102,6 @@ export default function WelcomeWithUpload() {
                         <polyline points="17 8 12 3 7 8"></polyline>
                         <line x1="12" y1="3" x2="12" y2="15"></line>
                     </svg>
-                    <span className="upload-text">Upload Video</span>
                 </button>
                 <input
                     ref={fileInputRef}
@@ -107,12 +114,19 @@ export default function WelcomeWithUpload() {
 
             {/* Control Panel - Top Right Corner */}
             <div className="control-panel-container">
-                <button 
+                <button
                     className="control-toggle-button"
                     onClick={() => setShowControlPanel(!showControlPanel)}
                     aria-label="Toggle control panel"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="control-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                    >
                         <circle cx="12" cy="12" r="3"></circle>
                         <path d="M12 1v6m0 6v6m9-9h-6m-6 0H3"></path>
                     </svg>
@@ -121,14 +135,14 @@ export default function WelcomeWithUpload() {
                 {showControlPanel && (
                     <div className="control-panel">
                         <h3 className="control-panel-title">Text Controls</h3>
-                        
+
                         {/* Toggle Text Display */}
                         <div className="control-group">
                             <label className="control-label">
-                                <input 
-                                    type="checkbox" 
+                                <input
+                                    type="checkbox"
                                     checked={showText}
-                                    onChange={(e) => setShowText(e.target.checked)}
+                                    onChange={e => setShowText(e.target.checked)}
                                     className="control-checkbox"
                                 />
                                 <span>Show Text</span>
@@ -139,12 +153,12 @@ export default function WelcomeWithUpload() {
                         <div className="control-group">
                             <label className="control-label-block">
                                 <span>Text Opacity: {textOpacity}%</span>
-                                <input 
-                                    type="range" 
-                                    min="0" 
-                                    max="100" 
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
                                     value={textOpacity}
-                                    onChange={(e) => setTextOpacity(Number(e.target.value))}
+                                    onChange={e => setTextOpacity(Number(e.target.value))}
                                     className="control-slider"
                                 />
                             </label>
@@ -154,10 +168,10 @@ export default function WelcomeWithUpload() {
                         <div className="control-group">
                             <label className="control-label-block">
                                 <span>Thai Text</span>
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     value={thaiText}
-                                    onChange={(e) => setThaiText(e.target.value)}
+                                    onChange={e => setThaiText(e.target.value)}
                                     className="control-input"
                                     placeholder="คริสตจักรเมล็ดพันธุ์กรุงเทพ"
                                 />
@@ -168,13 +182,77 @@ export default function WelcomeWithUpload() {
                         <div className="control-group">
                             <label className="control-label-block">
                                 <span>English Text</span>
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     value={englishText}
-                                    onChange={(e) => setEnglishText(e.target.value)}
+                                    onChange={e => setEnglishText(e.target.value)}
                                     className="control-input"
                                     placeholder="The Seed Of Bangkok City Church"
                                 />
+                            </label>
+                        </div>
+
+                        {/* Thai Font Size Controls */}
+                        <div className="control-group">
+                            <label className="control-label-block">
+                                <span>Thai Text Size: {thaiFontSize}px</span>
+                                <div className="font-size-controls">
+                                    <button
+                                        className="font-size-btn"
+                                        onClick={() => setThaiFontSize(Math.max(48, thaiFontSize - 12))}
+                                        aria-label="Decrease Thai font size"
+                                    >
+                                        A-
+                                    </button>
+                                    <input
+                                        type="range"
+                                        min="48"
+                                        max="288"
+                                        step="12"
+                                        value={thaiFontSize}
+                                        onChange={e => setThaiFontSize(Number(e.target.value))}
+                                        className="control-slider"
+                                    />
+                                    <button
+                                        className="font-size-btn"
+                                        onClick={() => setThaiFontSize(Math.min(288, thaiFontSize + 12))}
+                                        aria-label="Increase Thai font size"
+                                    >
+                                        A+
+                                    </button>
+                                </div>
+                            </label>
+                        </div>
+
+                        {/* English Font Size Controls */}
+                        <div className="control-group">
+                            <label className="control-label-block">
+                                <span>English Text Size: {englishFontSize}px</span>
+                                <div className="font-size-controls">
+                                    <button
+                                        className="font-size-btn"
+                                        onClick={() => setEnglishFontSize(Math.max(24, englishFontSize - 8))}
+                                        aria-label="Decrease English font size"
+                                    >
+                                        A-
+                                    </button>
+                                    <input
+                                        type="range"
+                                        min="24"
+                                        max="144"
+                                        step="8"
+                                        value={englishFontSize}
+                                        onChange={e => setEnglishFontSize(Number(e.target.value))}
+                                        className="control-slider"
+                                    />
+                                    <button
+                                        className="font-size-btn"
+                                        onClick={() => setEnglishFontSize(Math.min(144, englishFontSize + 8))}
+                                        aria-label="Increase English font size"
+                                    >
+                                        A+
+                                    </button>
+                                </div>
                             </label>
                         </div>
                     </div>
@@ -184,8 +262,18 @@ export default function WelcomeWithUpload() {
             {/* Main Content */}
             <div className="content-wrapper" style={{ opacity: showText ? textOpacity / 100 : 0 }}>
                 <div className="content-container">
-                    <h1 className="church-title">{thaiText}</h1>
-                    <h2 className="subtitle">{englishText}</h2>
+                    <h1 
+                        className="church-title" 
+                        style={{ fontSize: `${thaiFontSize}px` }}
+                    >
+                        {thaiText}
+                    </h1>
+                    <h2 
+                        className="subtitle" 
+                        style={{ fontSize: `${englishFontSize}px` }}
+                    >
+                        {englishText}
+                    </h2>
                 </div>
             </div>
         </div>

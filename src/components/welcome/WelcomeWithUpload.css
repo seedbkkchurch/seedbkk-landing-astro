@@ -75,15 +75,15 @@
     z-index: 999999;
 }
 
-/* Upload Button - High Visibility */
+/* Upload Button - High Visibility (Icon Only) */
 .upload-button {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #ffffff;
-    padding: 1rem 1.75rem;
-    border-radius: 9999px;
+    padding: 1rem;
+    border-radius: 50%;
     cursor: pointer;
     font-weight: 700;
     font-size: 1.1rem;
@@ -95,6 +95,8 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 999999;
+    width: 4rem;
+    height: 4rem;
 }
 
 .upload-button:hover {
@@ -112,8 +114,8 @@
 
 /* Upload Icon */
 .upload-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     transition: transform 0.3s ease;
 }
 
@@ -184,7 +186,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 
+    box-shadow:
         0 8px 32px rgba(16, 185, 129, 0.8),
         0 0 0 1px rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
@@ -194,7 +196,7 @@
 
 .control-toggle-button:hover {
     transform: scale(1.1) rotate(90deg);
-    box-shadow: 
+    box-shadow:
         0 12px 48px rgba(16, 185, 129, 1),
         0 0 0 2px rgba(255, 255, 255, 0.4);
 }
@@ -215,7 +217,7 @@
     border-radius: 1rem;
     padding: 1.5rem;
     min-width: 300px;
-    box-shadow: 
+    box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.5),
         0 0 0 1px rgba(255, 255, 255, 0.1);
     animation: slideIn 0.3s ease;
@@ -309,6 +311,47 @@
     border: 2px solid #ffffff;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Font Size Controls */
+.font-size-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.font-size-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+.font-size-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.6);
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.font-size-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
+}
+
+.font-size-controls .control-slider {
+    flex: 1;
+    margin: 0 0.5rem;
 }
 
 /* Text Input */
